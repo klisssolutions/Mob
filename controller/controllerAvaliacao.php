@@ -28,9 +28,12 @@ class controllerAvaliacao{
         
         //Verifica qual metodo esta sendo requisitado do formulario(POST ou GET)
         if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $nota = $_POST["sltNota"];
+            $nota = $_POST["nota"];
             $depoimento = $_POST["txtDepoimento"];
-            $idLocacao = $_POST["sltLocacao"];
+            $idLocacao = $_POST["idLocacao"];
+
+            $tipoAvaliacao = $_POST["tipoAvaliacao"];
+            $idAvaliado = $_POST["idAvaliado"];
 
 
             //Instancia da classe
@@ -43,7 +46,7 @@ class controllerAvaliacao{
 
             /* Chamada para o metodo de inserir no BD, passando como parâmetro o objeto
             contatoClass que tem todos os dados que serão inseridos no banco de dados */
-            return $avaliacaoDAO->insert($avaliacao);
+            return $avaliacaoDAO->insert($avaliacao, $tipoAvaliacao, $idAvaliado);
         }
     }
 
