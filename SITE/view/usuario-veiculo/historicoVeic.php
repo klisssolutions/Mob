@@ -58,7 +58,7 @@ $locacoes = $controllerLocacao->listarHistoricoLocacaoPorLocador();
                 <!-- ITEM - MENU -->
                 <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
-                    <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Minhas notificações</h2>
+                    <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
                 </div>
                 </a>
 

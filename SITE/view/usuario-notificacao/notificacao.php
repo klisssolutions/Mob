@@ -64,7 +64,7 @@ $solicitacao_locacoes[] = new Solicitacao_Locacao();
                 <!-- ITEM - MENU -->
                 <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario-clicado">
-                    <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Minhas notificações</h2>
+                    <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
                 </div>
                 </a>
 
