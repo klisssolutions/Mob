@@ -45,8 +45,8 @@ if(isset($_GET["btnFiltro"])){
 <head>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="images/anuncios.png" />
-    <title>Veículos | Mob'Share</title>
+    <link rel="shortcut icon" href="images/header.png" />
+    <title> Anuncios | MobShare</title>
 
 </head>
 <body>
@@ -184,7 +184,7 @@ if(isset($_GET["btnFiltro"])){
                             <img src="../images/5estrelas.png" width="150" height="30" alt="veiculo">
                         </div>
                         <div class="botao-veja">
-                            Alugar
+                            <a class="link-veic" href="../locacao/dadosVeiculo.php?id=<?php echo ($veiculos[$i]->getIdVeiculo()); ?>">Veja mais</a>
                         </div>
                     </div>
 

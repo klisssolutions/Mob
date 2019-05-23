@@ -49,7 +49,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
 <head>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="../images/anuncios.png" />
+    <link rel="shortcut icon" href="images/header.png" />
     <title>Avaliações | Mob'Share</title>
 </head>
 <body>
@@ -126,7 +126,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
 
                             </div>
                             <div class="botao-avaliacao">
-                                <button class="btn-av">Ver mais</button>
+                                <button class="btn-av"><a class="link-veic" href="../locacao/dadosVeiculo.php?id=<?php echo ($veiculos[$i]->getIdVeiculo()); ?>">Veja mais</a></button>
                             </div>
                         </div>
                         <!-- FINAL BOX-->

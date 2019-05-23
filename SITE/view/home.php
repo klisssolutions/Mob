@@ -52,8 +52,8 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="images/logoapp.png" />
-    <title>Home | Mob'Share</title>
+    <link rel="shortcut icon" href="images/header.png" />
+    <title>Pagina Inicial | MobShare</title>
 </head>
 
 <body>

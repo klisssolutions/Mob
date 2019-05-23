@@ -3,7 +3,7 @@
     <div class="logotipo">
         <div class="img-logotipo">
             <a href="<?php echo(LINK_SITE_HOME); ?>">
-                <img src="<?php echo(LINK_IMAGEM_LOGO); ?>" width="364" height="150"  alt="MobShare">
+                <img src="<?php echo(LINK_IMAGEM_LOGO); ?>" width="440" height="180"  alt="MobShare">
             </a>
         </div>
     </div>
@@ -45,7 +45,7 @@
                 </div>
             </a>
             <div class="texto-cadastrar">
-                <a href="usuario-inicio/inicioUsuario.php"><h1><?php echo($cliente->getNome()); ?></h1></a>
+                <a href="usuario-perfil/visualizarUsuario.php"><h1><?php echo($cliente->getNome()); ?></h1></a>
             </div>
         <?php } ?>
     </div>    

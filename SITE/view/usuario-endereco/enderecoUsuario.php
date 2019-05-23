@@ -6,6 +6,15 @@ require_once($_SESSION["importInclude"]);
     require_once(IMPORT_ENDERECO);
     require_once(IMPORT_ENDERECO_CONTROLLER);
 
+    require_once(IMPORT_CLIENTE);
+    require_once(IMPORT_CLIENTE_CONTROLLER);
+
+    $idCliente = $_SESSION['idCliente']['idCliente'];
+    
+    $controllerCliente = new controllerCliente();
+    $clientes[] = new Cliente();
+    $clientes = $controllerCliente->buscarCliente();
+
     $controllerEndereco = new controllerEndereco();
     $enderecos[] = new Endereco();
     $enderecos = $controllerEndereco->listarEnderecos();
@@ -29,32 +38,63 @@ require_once($_SESSION["importInclude"]);
         <div class="box-painel-usuario">
             <div class="menu-lateral-usuario">
                 <div class="img-usuario-menu">
-                    <div class="imagem-usuario">
-                        <img src="../images/jon.jpg" width="180" height="180"  alt="Usuário">
+                <div class="imagem-usuario">
+                        <img src="../../../arquivos/<?php echo ($clientes->getFotoPerfil());?>" width="180" height="180"  alt="Usuário">
                     </div>
+
                     <div class="nome-usuario-menu">
-                        <h1>Johnny Depp</h1>
+                        <h1><?php echo ($clientes->getNome());?></h1>
                     </div>
                 </div>
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
                 <div class="nav-menu-usuario">
-                    
                     <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
                 </div>
-                <div class="nav-menu-usuario-clicado">
-                    <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Endereços</h2>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <div class="nav-menu-usuario">
+                    <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Minhas notificações</h2>
                 </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
+                <div class="nav-menu-usuario-clicado">
+                    <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
+                </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
                 </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
                 </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
                 </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
                 </div>
+                </a>
+
                 <div class="nav-menu-usuario-button">
                     <h3>Sair</h3>
                 </div>

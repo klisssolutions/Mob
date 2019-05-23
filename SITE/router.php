@@ -118,7 +118,7 @@ if(isset($_GET["controller"])){
                     
                     $controllerCliente->atualizarCliente();
 
-                    echo("<script>ver()</script>");
+                    echo("<script>verPerfil()</script>");
 
                     //Encaminha para a pagina de usuario
                     

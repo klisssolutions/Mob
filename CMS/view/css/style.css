@@ -38,9 +38,10 @@ input{
 }
 
 .logomarca {
-    width: 400px;
+    width: 470px;
     height: 200px;
     margin-top: 50px;
+    margin-left: -30px;
 }
 
 .box-login{
@@ -102,10 +103,16 @@ input{
     font-family: Mont;
     text-transform: uppercase;
     margin-top: 30px;
-    background-color: #8ab1d8;
+    color: #fff;
+    background-color: #f6dc00;
     padding: 10px 10px 10px 10px;
     margin-left: 160px;
     font-weight: bold;
+}
+
+.btn-login:hover{
+    cursor: pointer;
+    background-color: #8ab1d8;
 }
 
 /* ESTILIZAÇÃO DENTRO DO CMS */
@@ -125,14 +132,15 @@ input{
 }
 
 .logo {    
-    width: 260px;
+    width: 280px;
     height: 100%;
     float: left;
 }
 
 .logo img{
-    margin-left: 10px;
-    margin-top: 10px;
+    width: 320px;
+    height: 130px;
+    margin-left: 15px;
     
 }
 .icone{
@@ -238,7 +246,7 @@ nav {
 }
 
 .link:hover{
-    background-color: #F74866;
+    background-color: #f6dc00;
     color: #fff;
     transition: 0.8s;
 }
@@ -334,7 +342,7 @@ nav {
 
 .menu {
     width: 1099px;
-    background-color: #8ab1d8;
+    background-color: #f6dc00;
     height: 100%;
     float: left;
     margin-top: -10px;

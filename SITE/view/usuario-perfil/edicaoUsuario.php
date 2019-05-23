@@ -152,9 +152,14 @@ if($id){
                             </div>
                         </div>
                         <div class="dados-perfil">
+                           
                             <div class="dados">
+                                <a href="visualizarUsuario.php">
                                 <input class="btn-usuario-canc" type="button" name="btnCancelar" value="Cancelar" onclick="">
+                                </a>
+                               
                             </div>
+                            
                             <div class="dados">
                                  <input class="btn-usuario" type="submit" name="btnSalvar" value="Salvar" onclick="<?php echo($router); ?>">
                             </div>

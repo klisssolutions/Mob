@@ -14,7 +14,7 @@
         -->
         <div class="principal-login">
             <div class="box-login">
-                <img src="view/imagens/logo.png" class="logomarca">
+                <img src="view/imagens/logo.png" class="logomarca" width="280">
                 <p>CMS - Sistema de Gerenciamento de Conteudo</p>
                 <form id="form" name="form">
                     <div class="txt-login">

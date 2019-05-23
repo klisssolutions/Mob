@@ -36,7 +36,7 @@
 
             <div class="logo">
                 <a href="#">
-                    <img src="view/imagens/logo.png" class="logo" heigth="150" width="200">
+                    <img src="view/imagens/logo.png" class="logo" heigth="230" width="230">
                 </a>
             </div>
 

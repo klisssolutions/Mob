@@ -43,7 +43,7 @@ header {
 }
 
 .img-logotipo {
-    margin-top: 10px;
+    margin-top: -10px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -76,8 +76,8 @@ header {
 
 .menu-item a:hover {
     transition: 2s;
-    color: #5e85e1;
-    border-bottom: 1px solid #5e85e1;
+    color: #ffd800;
+    border-bottom: 1px solid #ffd800;
     cursor: pointer;
 }
 
@@ -89,7 +89,7 @@ header {
 }
 
 .botao-login {
-    width: 60px;
+    width: 80px;
     padding: 10px 10px 10px 10px;
     margin-right: auto;
     margin-left: auto;
@@ -100,10 +100,11 @@ header {
     background-color: #002171;
     align-content: center;
     text-align: center;
+    border-radius: 25px;
 }
 
 .botao-login:hover {
-    background-color: #5e85e1;
+    background-color: #ffd800;
 }
 
 .texto-cadastrar h1 {
@@ -118,7 +119,7 @@ header {
 /******** CAIXA QUE FICA ABAIXO DO CABEÇALHO SEGURANDO AS INFORMAÇÕES *******/
 .content {
     width: 100%;
-    min-height: 500px;
+    min-height: 800px;
     height: auto;
     background-color: black;
 }
@@ -156,7 +157,7 @@ footer {
     height: 75%;
     margin-left: 120px;
     font-family: Mont;
-    color: #ba3135;
+    color: #ffd800;
     margin-top: 0px;
     font-size: 18px;
     align-content: center;
@@ -191,7 +192,7 @@ a:link {
 
 .menu-rodape-item a:hover {
     transition: 2s;
-    color: #5e85e1;
+    color: #ffd800;
 }
 
 .logotipo-rodape {
@@ -242,7 +243,7 @@ a:link {
     height: 75%;
     margin-left: 90px;
     font-family: Mont;
-    color: #ba3135;
+    color: #ffd800;
     margin-top: 0px;
     font-size: 18px;
     align-content: center;
@@ -291,25 +292,24 @@ a:link {
 
 /********** FORMATAÇÃO PADRONIZADA FINAL ************/
 .box-painel-usuario {
-    height: 1000px;
+    height: 1200px;
     width: 100%;
     background-color: #cecece;
 }
 
 .menu-lateral-usuario {
-    width: 20%;
+    width: 370px;
     height: 100%;
     background-color: #102840;
     float: left;
 }
 
 .conteudo-usuario {
-    width: 80%;
+    width: 1400px;
     height: 100%;
-    background-color: #cecece;
+    /* background-color: #ba3135; */
     float: left;
-    overflow: scroll;
-    overflow: auto;
+    margin-left: 20px;
 }
 
 .img-usuario-menu {
@@ -380,7 +380,7 @@ a:link {
 }
 
 .nav-menu-usuario-button h3 {
-    background-color: #5e85e1;
+    background-color: #ffd800;
     width: 100px;
     font-family: Mont;
     text-align: center;
@@ -389,7 +389,9 @@ a:link {
     float: right;
     margin-right: 20px;
     font-family: Mont;
+    border-radius: 28px;
 }
+
 
 .nav-menu-usuario-button h3:hover {
     background-color: #aca9a9;
@@ -438,6 +440,11 @@ a:link {
     height: 310px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 85px;
+}
+
+.foto-perfil img{
+    border-radius: 155px;
 }
 
 .dados-perfil {
@@ -492,7 +499,7 @@ a:link {
 .btn-usuario:hover,
 .btn-usuario-visu:hover,
 .btn-usuario-canc:hover {
-    background-color: #ba3135;
+    background-color: #ffd800;
     color: #fff;
     cursor: pointer;
 }

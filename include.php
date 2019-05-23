@@ -483,5 +483,27 @@ if(!isset($incluso)){
     define("LINK_IMAGEM_MAPA", RAIZ_LINK . "/SITE/view/images/map.png");
     define("LINK_IMAGEM_FONE", RAIZ_LINK . "/SITE/view/images/phone-call.png");
     define("LINK_IMAGEM_EMAIL", RAIZ_LINK . "/SITE/view/images/envelope.png");
+    //Constantes com os links da dahsboard
+    define("LINK_DASHBOARD_VISUALIZAR_PERFIL", RAIZ_LINK . "/SITE/view/usuario-perfil/visualizarUsuario.php");
+    define("LINK_DASHBOARD_EDITAR_PERFIL", RAIZ_LINK . "/SITE/view/usuario-perfil/edicaoUsuario.php");
+    define("LINK_DASHBOARD_VISUALIZAR_ENDERECO", RAIZ_LINK . "/SITE/view/usuario-endereco/enderecoUsuario.php");
+    define("LINK_DASHBOARD_EDITAR_ENDERECO", RAIZ_LINK . "/SITE/view/usuario-endereco/cadastroEndereco.php");
+    define("LINK_DASHBOARD_CADASTRAR_VEICULO_ALUGUEL", RAIZ_LINK . "/SITE/view/usuario-veiculo/cadastrarVeicAluguel.php");
+    define("LINK_DASHBOARD_CADASTRAR_VEICULO_VENDA", RAIZ_LINK . "/SITE/view/usuario-veiculo/cadastrarVeicVenda.php");
+    define("LINK_DASHBOARD_VEICULO_DEVOLUCAO", RAIZ_LINK . "/SITE/view/usuario-veiculo/devolucao.php");
+    define("LINK_DASHBOARD_HISTORICO_VEICULO", RAIZ_LINK . "/SITE/view/usuario-veiculo/historicoVeic.php");
+    define("LINK_DASHBOARD_LISTA_VEICULO_ALUGUEL", RAIZ_LINK . "/SITE/view/usuario-veiculo/listaVeicAluguel.php");
+    //define("LINK_DASHBOARD_LISTA_VEICULO_ALUGUEL", RAIZ_LINK . "/SITE/view/usuario-veiculo/listaVeicVenda.php");
+    define("LINK_DASHBOARD_OPCAO_VEICULO", RAIZ_LINK . "/SITE/view/usuario-veiculo/usuarioVeiculo.php");
+    define("LINK_DASHBOARD_NOTIFICACAO", RAIZ_LINK . "/SITE/view/usuario-notificacao/notificacao.php");
+    define("LINK_DASHBOARD_CUPONS", RAIZ_LINK . "/SITE/view/usuario-cupons/visualizarCupons.php");
+
+
+
+
+
+
+
+
 }
 ?>

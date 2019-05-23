@@ -41,25 +41,56 @@ require_once($_SESSION["importInclude"]);
                         <h1><?php echo ($clientes->getNome());?></h1>
                     </div>
                 </div>
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
                 <div class="nav-menu-usuario-clicado">
-                    
                     <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
                 </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
-                    <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Endereços</h2>
+                    <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Minhas notificações</h2>
                 </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
+                <div class="nav-menu-usuario">
+                    <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
+                </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
                 </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
                 </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
                 </div>
+                </a>
+
+                <!-- ITEM - MENU -->
+                <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
                 </div>
+                </a>
+
+                <!-- BOTAO -->
                 <div class="nav-menu-usuario-button">
                     <h3>Sair</h3>
                 </div>
