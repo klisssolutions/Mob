@@ -27,27 +27,27 @@ class controllerAvaliacao{
         $avaliacaoDAO = new avaliacaoDAO();
         
         //Verifica qual metodo esta sendo requisitado do formulario(POST ou GET)
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $nota = $_POST["nota"];
-            $depoimento = $_POST["txtDepoimento"];
-            $idLocacao = $_POST["idLocacao"];
+        
+        $nota = $_GET["nota"];
+        $depoimento = $_GET["txtDepoimento"];
+        $idLocacao = $_GET["idLocacao"];
 
-            $tipoAvaliacao = $_POST["tipoAvaliacao"];
-            $idAvaliado = $_POST["idAvaliado"];
+        $tipoAvaliacao = $_GET["tipoAvaliacao"];
+        $idAvaliado = $_GET["idAvaliado"];
 
 
-            //Instancia da classe
-            $avaliacao = new Avaliacao();
+        //Instancia da classe
+        $avaliacao = new Avaliacao();
 
-            //Guardando os dados do post no objeto da classe
-            $avaliacao->setNota($nota);
-            $avaliacao->setDepoimento($depoimento);
-            $avaliacao->setIdLocacao($idLocacao);
+        //Guardando os dados do post no objeto da classe
+        $avaliacao->setNota($nota);
+        $avaliacao->setDepoimento($depoimento);
+        $avaliacao->setIdLocacao($idLocacao);
 
-            /* Chamada para o metodo de inserir no BD, passando como parâmetro o objeto
-            contatoClass que tem todos os dados que serão inseridos no banco de dados */
-            return $avaliacaoDAO->insert($avaliacao, $tipoAvaliacao, $idAvaliado);
-        }
+        /* Chamada para o metodo de inserir no BD, passando como parâmetro o objeto
+        contatoClass que tem todos os dados que serão inseridos no banco de dados */
+        return $avaliacaoDAO->insert($avaliacao, $tipoAvaliacao, $idAvaliado);
+        
     }
 
     public function listarAvaliacao(){

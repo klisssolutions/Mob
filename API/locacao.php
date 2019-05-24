@@ -12,6 +12,8 @@ require_once(IMPORT_SOLICITACAO_LOCACAO_CONTROLLER);
 require_once(IMPORT_LOCACAO_CONTROLLER);
 require_once(IMPORT_SOLICITACAO_LOCACAO);
 require_once(IMPORT_VSOLICITACAO_LOCACAO);
+require_once(IMPORT_AVALIACAO_CONTROLLER);
+require_once(IMPORT_AVALIACAO_DAO);
 
 
 //Pegar as variáveis da url
@@ -22,6 +24,7 @@ $id = (isset($_GET["id"]) ? strtoupper($_GET["id"]) : null);
 $solicitacao_Locacao = new Solicitacao_Locacao();
 $controllerSolicitacao_Locacao = new controllerSolicitacao_Locacao();
 $controllerLocacao = new controllerLocacao();
+$controllerAvaliacao = new controllerAvaliacao();
 
 //
 if($modo == "INSERIR"){
@@ -40,6 +43,13 @@ if($modo == "INSERIR"){
 
 }else if($modo == "DEVOLVER"){
     $status = $controllerLocacao->devolver();
+
+    $result = array(
+        "status" => $status
+    );
+
+}else if($modo == "AVALIAR"){
+    $status = $controllerAvaliacao->inserirAvaliacao();
 
     $result = array(
         "status" => $status
