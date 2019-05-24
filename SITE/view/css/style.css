@@ -1029,7 +1029,7 @@ a:link {
 }
 
 .duvidas-titulo {
-    height: 30%;
+    height: 40%;
     width: 100%;
 }
 
@@ -1039,6 +1039,7 @@ a:link {
     float: left;
     height: auto;
     overflow: hidden;
+    margin-top: -120px;
 }
 
 .titulo-duvidas {
@@ -1069,17 +1070,19 @@ a:link {
     margin-right: auto;
     background-image: url(../images/problem.png);
     background-repeat: no-repeat;
-    background-size: 250px;
-    margin-top: 150px;
+    background-size: 350px;
+    margin-top: 100px;
 }
 
 .duvida {
     min-height: 50px;
     height: auto;
     width: 90%;
-    background-color: #e9f0f6;
+    background-color: #ebebeb;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .duvida h2 {
@@ -1128,7 +1131,7 @@ a:link {
 .titulo-fale-conosco h1 {
     font-family: Mont;
     font-size: 30px;
-    color: #5e85e1;
+    color: #ffd800;
     text-transform: uppercase;
     border-bottom: 1px solid #102840;
     margin-top: 40px;
@@ -1192,7 +1195,8 @@ a:link {
 }
 
 .btn-fale-conosco:hover {
-    background-color: #5e85e1;
+    background-color: #ffd800;
+    color: #000;
     cursor: pointer;
 }
 

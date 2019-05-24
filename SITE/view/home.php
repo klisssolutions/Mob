@@ -147,7 +147,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                 </div>
                 <div class="img-como-funciona">
 
-                    <img class="cm-segunda-imagem" src="<?php echo('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="700" height="590" alt="<?php echo($banners[$i]->getTitulo())?>">
+                    <img class="cm-segunda-imagem" src="<?php echo('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="590" alt="<?php echo($banners[$i]->getTitulo())?>">
 
                 </div>
 </div>
@@ -159,7 +159,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
       <div class="caixa-como-funciona">
                 <div class="img-como-funciona">
 
-                    <img class="cm-primeira-imagem" src="<?php echo('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="450" alt="<?php echo($banners[$i]->getTitulo())?>">
+                    <img class="cm-primeira-imagem" src="<?php echo('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="480" alt="<?php echo($banners[$i]->getTitulo())?>">
 
                 </div>
                 <div class="texto-como-funciona">
