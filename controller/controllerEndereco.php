@@ -47,51 +47,61 @@ class controllerEndereco{
 
             /* Chamada para o metodo de inserir no BD, passando como parâmetro o objeto
             marcaClass que tem todos os dados que serão inseridos no banco de dados */
-            return $enderecoDAO->insert($endereco);
+            $lastId = $enderecoDAO->insert($endereco);
+
+            return $enderecoDAO->insertRelacionamento($lastId);
+
+            
         }
     }
 
-    public function excluirCategorias(){
+    public function excluirEndereco(){
         //Instancia do DAO
-        $modeloDAO = new modeloDAO();
+        $enderecoDAO = new enderecoDAO();
         //Esse id foi enviado pela view no href, o arquivo de rota é quem chamou este método
         $id = $_GET["id"];
 
         //Chamada para o método de excluir um nivel
-        return $modeloDAO->delete($id);
+        return $enderecoDAO->delete($id);
     }
 
 
-    public function atualizarCategorias(){
+    public function atualizarEndereco(){
         if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             $id = $_GET["id"];
-            $nomeModelo = $_POST["txtModelo"];
-            $idMarca = $_POST["cbbMarca"];
+            $rua = $_POST["txtRua"];
+            $cidade = $_POST["txtCidade"];
+            $numero = $_POST["txtNumber"];
+            $uf = $_POST["txtUf"];
+            $complemento = $_POST["txtComplemento"];
 
             //Instancia da classe
-            $modelo = new Modelo();
-            $modeloDAO = new modeloDAO();
+            $endereco = new Endereco();
+            $enderecoDAO = new enderecoDAO();
 
             //Guardando os dados do post no objeto da classe
-            $modelo->setIdModelo($id);
-            $modelo->setNomeModelo($nomeModelo);
-            $modelo->setIdMarca($idMarca);
+            $endereco->setIdEndereco($id);
+            $endereco->setRua($rua);
+            $endereco->setCidade($cidade);
+            $endereco->setNumero($numero);
+            $endereco->setUf($uf);
+            $endereco->setComplemento($complemento);
             
             
             /* Chamada para o metodo de inserir no BD, passando como parâmetro o objeto
             contatoClass que tem todos os dados que serão inseridos no banco de dados */
-            return $modeloDAO->update($modelo);
+            return $enderecoDAO->update($endereco);
         }
     }
 
-    public function buscarCategorias(){
+    public function buscarEndereco(){
         //ARRUMAR A BUSCA para a pagina inicial
-        $id = 1;
+        $id = $_GET['id'];
 
-        $modeloDAO = new modeloDAO();
+        $enderecoDAO = new enderecoDAO();
         
-        return $modeloDAO->selectById($id);
+        return $enderecoDAO->selectById($id);
     }
 
       
