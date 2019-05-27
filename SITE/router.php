@@ -189,23 +189,23 @@ if(isset($_GET["controller"])){
 
             case "EXCLUIR":
                 //Chama o método para excluir o funcionario
-                $controllerFuncionamento->excluirFuncionamento();
+                $controllerEndereco->excluirEndereco();
 
                 //Encaminha para a pagina de funcionario
-                echo("<script>comoFunciona();</script>");
+                echo("<script>cadastrarEndereco();</script>");
             break;
 
             case "BUSCAR":
-                $funcionamento = $controllerFuncionamento->buscarFuncionamento();
+                $endereco = $controllerEndereco->buscarEndereco();
 
-                require_once(IMPORT_CADASTRO_FUNCIONAMENTO);
+                require_once(IMPORT_CADASTRO_ENDERECO);
 
             break;
 
             case "ATUALIZAR":
-                $controllerFuncionamento->atualizarFuncionamento();
+                $controllerEndereco->atualizarEndereco();
 
-                echo("<script>comoFunciona();</script>");
+                echo("<script>cadastrarEndereco();</script>");
             break;
         }       
     break;
