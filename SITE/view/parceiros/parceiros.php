@@ -14,35 +14,35 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="../images/anuncios.png" />
-    <script type="text/javascript" src="../js/jquery.js"></script>
-    <script type="text/javascript" src="../js/slider.js"></script>
-    <script type="text/javascript" src="../js/banner.js"></script>
-    <title>Home | Mob'Share</title>
+    <script src="../js/jquery.js"></script>
+    <script  src="../js/slider.js"></script>
+    <script  src="../js/banner.js"></script>
+    <title>Parceiros | Mob'Share</title>
 </head>
 <body>
+    <div class="caixa-principal">
     <!-- HEADER DO MENU-->
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <section class="content">
        <div class="box-parceiros">
-            
             <div class="box-parceiro">
                 <div class="slider-parceiros">
                 <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen -->
-        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../svg/loading/static-svg/spin.svg" />
-        </div>
+            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                <img alt="parceiro" style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../svg/loading/static-svg/spin.svg" />
+             </div>
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
             <?php
                 foreach($parceiros as $parceiro){ ?>    
                 <div>
-                    <img data-u="image" src="<?php echo("/Mobshare/arquivos/".$parceiro->getLogo()); ?>" />
+                    <img data-u="image" src="<?php echo("/Mobshare/arquivos/".$parceiro->getLogo()); ?>" alt="parceiro"/>
                 </div>
                 <?php
                 } ?>    
@@ -70,7 +70,7 @@
     </div>
                 </div>
                 <div class="txt-slider-parceiros">
-                    <h1>Nossos Parceiros</h1>
+                    <h2>Nossos Parceiros</h2>
                 </div>
                 
             </div>
@@ -84,12 +84,12 @@
            
                                     <div class="box-texto-imagem">
                                         <div class="img-parceiro">
-                                            <img src="<?php echo("/Mobshare/arquivos/".$parceiro->getLogo());?>" width="471" height="277"  alt="App da MobShare">
+                                            <img src="<?php echo("/Mobshare/arquivos/".$parceiro->getLogo());?>" alt="parceiro" width="471" height="277"  >
                                         </div>
                                     </div>
                                     <div class="box-texto-imagem">
                                         <div class="txt-parceiro">
-                                            <h1><?php echo($parceiro->getNome());?></h1>
+                                            <h2><?php echo($parceiro->getNome());?></h2>
                                             <p><?php echo($parceiro->getDescricao());?></p>
                                         </div>
                                     </div>
@@ -102,13 +102,13 @@
                                 <div class="box-parceiro">
                                     <div class="box-texto-imagem">
                                         <div class="txt-parceiro">
-                                            <h1><?php echo($parceiro->getNome());?></h1>
+                                            <h2><?php echo($parceiro->getNome());?></h2>
                                             <p><?php echo($parceiro->getDescricao());?></p>
                                         </div>
                                     </div>
                                     <div class="box-texto-imagem">
                                         <div class="img-parceiro">
-                                            <img src="<?php echo("/Mobshare/arquivos/".$parceiro->getLogo());?>" width="471" height="277"  alt="App da MobShare">
+                                            <img src="<?php echo("/Mobshare/arquivos/".$parceiro->getLogo());?> " alt="parceiro" width="471" height="277"  >
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
     </section>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>
-    
+                </div>
     </body>
     
     </html>

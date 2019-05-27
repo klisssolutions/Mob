@@ -47,7 +47,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -57,6 +57,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
 </head>
 
 <body>
+<div class="caixa-principal">
     <!-- HEADER DO MENU-->
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
@@ -72,7 +73,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
         <div class="caixa-veiculos-home">
             <div class="caixa-itens-home">
                 <nav class="menu-veiculos">
-                    <a class="clicado">Em Destaque</a>
+                    <a>Em destaque: </a>
                 </nav>
             </div>
             <div class="caixa-veiculos">
@@ -94,8 +95,6 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                     $avaliacaoVeiculo = $controllerAvaliacaoVeiculo->pegarAvaliacaoPorVeiculo($veiculos[$i]->getIdVeiculo());
                       
             ?>
-
-
                 <!-- caixa onde fica a informaçao do veiculo -->
                 <div class="box-veiculo">
                     <div class="img-veiculo">
@@ -121,36 +120,29 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                 </div>
 
                 <?php
-                
                     $i++;
-
-                }
-
+                    }
                 ?>
 
             </div>
-           
                 <?php
-            $i = 0;
-            while($i < count($banners)){
+                $i = 0;
+                while($i < count($banners)){
                 if($i%2){
 
         ?>
- <div class="caixa-como-funciona">
-
+            <div class="caixa-como-funciona">
                 <div class="texto-como-funciona">
-                    <h1><?php echo($banners[$i]->getTitulo())?></h1>
-                    <p><?php echo($banners[$i]->getTexto())?></p>
-                    <a href="<?php echo($banners[$i]->getHref())?>">
-                        <h2><?php echo($banners[$i]->getNomeBotao())?></h2>
-                    </a>
+                        <h1><?php echo($banners[$i]->getTitulo())?></h1>
+                        <p><?php echo($banners[$i]->getTexto())?></p>
+                        <a href="<?php echo($banners[$i]->getHref())?>">
+                            <h2><?php echo($banners[$i]->getNomeBotao())?></h2>
+                        </a>
                 </div>
                 <div class="img-como-funciona">
-
                     <img class="cm-segunda-imagem" src="<?php echo('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="590" alt="<?php echo($banners[$i]->getTitulo())?>">
-
                 </div>
-</div>
+            </div>
 
                 <?php
                 $i++;
@@ -158,9 +150,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
         ?>
       <div class="caixa-como-funciona">
                 <div class="img-como-funciona">
-
                     <img class="cm-primeira-imagem" src="<?php echo('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="480" alt="<?php echo($banners[$i]->getTitulo())?>">
-
                 </div>
                 <div class="texto-como-funciona">
                     <h1><?php echo($banners[$i]->getTitulo())?></h1>
@@ -170,20 +160,19 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                     </a>
                 </div>
                 
-</div>
-                
-                <?php
-                $i++;
-            }
-            }
-        ?>
+</div>    
+            <?php
+            $i++;
+                }
+                }
+            ?>
             
         </div>
     </div>
 
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>
-
+</div>
 </body>
 
 </html>

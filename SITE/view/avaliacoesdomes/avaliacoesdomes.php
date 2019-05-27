@@ -45,7 +45,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -53,6 +53,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
     <title>Avaliações | Mob'Share</title>
 </head>
 <body>
+    <div class="caixa-principal">
     <!-- HEADER DO MENU-->
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
@@ -60,7 +61,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
         <div class="box-avaliacoes">
             <div class="avaliacoes">
                 <div class="titulo-av">
-                    <h1>Melhores do mês!</h1>
+                    <h2>Avaliações do mês!</h2>
                 </div>
                 <div class="box-avaliacao">
                     <div class="caixa-avaliacao">
@@ -80,9 +81,6 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                                     $avaliacaoVeiculo = $controllerAvaliacaoVeiculo->pegarAvaliacaoPorVeiculo($avaliacaoVeiculos[$i]->getIdVeiculo());
 
                                     if($avaliacaoVeiculo->getNota()== 4 || $avaliacaoVeiculo->getNota()== 5){
-                            
-                                
-
                                                     
                         ?>
                         <div class="box-av">
@@ -102,31 +100,33 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                             <?php 
                                 if($avaliacaoVeiculo->getNota() == 1){
                             ?>
-                                <h2> <img src="../images/1estrela.png" width="160" height="30"  alt="MobShare"><h2>
+                                <h2> <img src="../images/1estrela.png" width="160" height="30"  alt="MobShare"></h2>
                             <?php 
                                 }
                                 else if($avaliacaoVeiculo->getNota() == 2){
                             ?>
-                                <h2> <img src="../images/2estrelas.png" width="160" height="30"  alt="MobShare"><h2>
+                                <h2> <img src="../images/2estrelas.png" width="160" height="30"  alt="MobShare"></h2>
                             <?php 
                                 }
                                 else if($avaliacaoVeiculo->getNota() == 3){
                             ?>
-                                <h2> <img src="../images/3estrelas.png" width="160" height="30"  alt="MobShare"><h2>
+                                <h2> <img src="../images/3estrelas.png" width="160" height="30"  alt="MobShare"></h2>
                             <?php 
                                 }
                                 else if($avaliacaoVeiculo->getNota() == 4){ 
                             ?>
-                                <h2> <img src="../images/4estrelas.png" width="160" height="30"  alt="MobShare"><h2>
+                                <h2> <img src="../images/4estrelas.png" width="160" height="30"  alt="MobShare"></h2>
                             <?php }
                                 else if($avaliacaoVeiculo->getNota() == 5){ 
                             ?>
-                                 <h2> <img src="../images/5estrelas.png" width="160" height="30"  alt="MobShare"><h2>
+                                 <h2> <img src="../images/5estrelas.png" width="160" height="30"  alt="MobShare"></h2>
                                 <?php } ?>
 
                             </div>
                             <div class="botao-avaliacao">
-                                <button class="btn-av"><a class="link-veic" href="../locacao/dadosVeiculo.php?id=<?php echo ($veiculos[$i]->getIdVeiculo()); ?>">Veja mais</a></button>
+                                <div class="btn-av">
+                                    <a class="link-veic" href="../locacao/dadosVeiculo.php?id=<?php echo ($veiculos[$i]->getIdVeiculo()); ?>">Veja mais</a>
+                                </div>
                             </div>
                         </div>
                         <!-- FINAL BOX-->
@@ -145,7 +145,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
     </section>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>
-
+                        </div>
 </body>
 
 </html>

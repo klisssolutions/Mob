@@ -27,7 +27,7 @@ class conexaoMySQL{
         }else{
             $this ->server = "localhost";
             $this ->user = "root";
-            $this ->password = "bcd127";
+            $this ->password = "@dba3636";
         }
         
         $this ->database = "mydb";

@@ -47,7 +47,7 @@
     </div>
     <!-- TEXTO SOBRE OS DIREITOS AUTORAIS, NÃO MEXER NO CSS-->
     <div class="texto-direitos">
-        <h1>© Todos os Direitos Resevados - 2019 | Desenvolvido por Kliss Solutions</h1>
+        <h1>© Todos os Direitos Reservados - 2019 | Desenvolvido por Kliss Solutions</h1>
     </div>
 
 </footer>

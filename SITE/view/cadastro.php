@@ -10,7 +10,7 @@ require_once($_SESSION["importInclude"]);
 
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -53,7 +53,7 @@ require_once($_SESSION["importInclude"]);
             </div>
             <div class="txt-div-cadastro">
                 <h1>Data de Nascimento:</h1>
-                <input type="date" name="txtdtnasc" class="ipt-cads" value="" required>
+                <input type="polyfill" name="txtdtnasc" class="ipt-cads" value="" required>
             </div>
             <div class="txt-div-cadastro">
                 <h1>Numero da CNH:</h1>

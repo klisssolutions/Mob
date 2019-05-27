@@ -41,7 +41,7 @@ if(isset($_GET["btnFiltro"])){
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -50,6 +50,7 @@ if(isset($_GET["btnFiltro"])){
 
 </head>
 <body>
+    <div class="caixa-principal">
     <!-- HEADER DO MENU-->
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
@@ -123,7 +124,7 @@ if(isset($_GET["btnFiltro"])){
                                 <option>Chevrolet</option>
                             </select>
                         </div>
-                        <div class="filtros" name="cbAvaliacao">
+                        <div class="filtros">
                             <h1>Avaliação:</h1>
                             <select class="select" name="cbAvaliacao">
                                 <option value="#">Selecione</option>
@@ -203,7 +204,7 @@ if(isset($_GET["btnFiltro"])){
     </div>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>
-
+    </div>
 </body>
 
 </html>

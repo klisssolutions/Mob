@@ -12,14 +12,15 @@ $termos[] = new Termos();
 $termos = $controllerTermos->listarTermos();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="../images/anuncios.png" />
-    <title>Home | Mob'Share</title>
+    <title>Termos de Uso | Mob'Share</title>
 </head>
 <body>
+    <div class="caixa-principal">
     <!-- HEADER DO MENU-->
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
@@ -47,8 +48,7 @@ $termos = $controllerTermos->listarTermos();
     </section>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>
-    
+                    </div>
     </body>
-    
-    </html>
+
 </html>

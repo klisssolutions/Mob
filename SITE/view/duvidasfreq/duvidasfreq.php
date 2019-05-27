@@ -13,14 +13,15 @@ require_once(IMPORT_DUVIDAS_FREQUENTES_CONTROLLER);
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="../images/anuncios.png" />
-    <title>Home | Mob'Share</title>
+    <title>Duvidas Frequentes | Mob'Share</title>
 </head>
 <body>
+    <div class="caixa-principal">
     <!-- HEADER DO MENU-->
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
@@ -28,7 +29,7 @@ require_once(IMPORT_DUVIDAS_FREQUENTES_CONTROLLER);
         <div class="box-duvidas">
             <div class="duvidas-titulo">
                 <div class="titulo-duvidas">
-                    <h1>FAQ <br> Duvidas Frequentes</h1>
+                    <h1>Duvidas Frequentes</h1>
                 </div>
                 <div class="image-duvidas">
                     <div class="image-faq">
@@ -60,6 +61,7 @@ require_once(IMPORT_DUVIDAS_FREQUENTES_CONTROLLER);
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>
     
+                </div>
     </body>
     
     </html>

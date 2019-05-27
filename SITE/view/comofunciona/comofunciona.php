@@ -7,21 +7,21 @@
     require_once(IMPORT_FUNCIONAMENTO_CONTROLLER);
 
     $controllerFuncionamento = new controllerFuncionamento();
-
     $funcionamentos[] = new Funcionamento();
     $funcionamentos = $controllerFuncionamento->listarFuncionamento();
 
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="../images/anuncios.png" />
-    <title>Home | Mob'Share</title>
+    <title>Como funciona | Mob'Share</title>
 </head>
 <body>
+    <div class="caixa-principal">
     <!-- HEADER DO MENU-->
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
@@ -38,7 +38,7 @@
                     <img src="<?php echo("/Mobshare/arquivos/".$funcionamento->getFoto());?>" width="700" height="400"  alt="App da MobShare">
             </div>
             <div class="texto-como-funciona2">
-                    <h1><?php echo($funcionamento->getTitulo());?></h1>
+                    <h2><?php echo($funcionamento->getTitulo());?></h2>
                     <p><?php echo($funcionamento->getDescricao());?></p>
                    
             </div>
@@ -47,9 +47,10 @@
         <div class="box-como-funciona-quarto">
             
             <div class="texto-como-funciona4">
-                    <h1><?php echo($funcionamento->getTitulo());?></h1>
+            
+                    <h2><?php echo($funcionamento->getTitulo());?></h2>
                     <p><?php echo($funcionamento->getDescricao());?></p>
-                
+            
                     
             </div>
             <div class="image-como-funciona4">
@@ -70,6 +71,7 @@
     </section>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>
+    </div>
     </body>
     
     </html>

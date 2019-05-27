@@ -9,14 +9,15 @@ if(isset($_SESSION['idCliente'])){
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="view/images/anuncios.png" />
-    <title>Parceiros | Mob'Share</title>
+    <title>Login</title>
 </head>
 <body>
+    <div class="caixa-principal">
     <div class="content-login">
         <form class="login" method="POST" action="../router.php?controller=clientes&modo=logar">
             <div class="img-login">
@@ -32,11 +33,12 @@ if(isset($_SESSION['idCliente'])){
             </div>
             <div class="btn-login">
                 <button class="btn-login-form">Entrar</button>
-                <label><p>Não é cadastrado?  <a href="<?php echo(LINK_SITE_CADASTRO); ?>"><span class="link">Cadastrar!</p></span></a></label>
+                <p>Não é cadastrado?  <a href="<?php echo(LINK_SITE_CADASTRO); ?>"><span class="link">Cadastrar!</span></a></p>
             </div>
         </form>
         <div class="rodape-login">
         </div>
     </div>
+</div>
 </body>
 </html>

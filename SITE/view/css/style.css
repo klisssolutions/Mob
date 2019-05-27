@@ -8,7 +8,7 @@ p {
 }
 
 body {
-    width: 100%;
+    /* width: 100%; */
     background-color: #102840;
 }
 
@@ -24,14 +24,26 @@ textarea:focus, input:focus, select:focus {
     outline: 0;
 }
 
+.caixa-principal{
+    width: 1400px;
+    /*Para estender as caixas automaticamente*/
+    min-height: 1000px;
+    height: auto;
+    /* overflow: hidden; */
+    margin-right: auto;
+    margin-left: auto;  
+    box-sizing: border-box;
+}
+
 /********** CABEÇALHO ***********/
 header {
-    width: 100%;
+    width: 1400px;
     height: 110px;
     background-color: #102840;
     position: fixed;
     box-shadow: 1px 4px 6px 4px rgba(0, 0, 0, 0.2);
     z-index: 999;
+    float: left;
 }
 
 .logotipo {
@@ -121,6 +133,7 @@ header {
     min-height: 500px;
     height: auto;
     background-color: #fff;
+    float: left;
 }
 
 /*********** RODAPÉ *******/
@@ -314,10 +327,11 @@ a:link {
 .caixa-inf{
     width: 780px;
     height: 200px;
-    margin-left: 555px;
-    margin-top: 310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 310px;
     background-color: rgba(7, 7, 7, 0.2);
-    float: left;
+
     
 }
 
@@ -367,23 +381,24 @@ a:link {
 }
 
 .menu-veiculos {
-    width: 100%;
+    width: 30%;
     height: 100%;
-    margin-left: 620px;
+    /* margin-left: 620px; */
     margin-top: 42px;
-    float: left;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
 
 }
 
 .menu-veiculos a {
-    width: 500px;
-    border-bottom: 1px solid #002171;
-    ;
+    text-align: center;
     margin-top: 40px;
     font-family: Mont;
-    color: #002171;
+    color: #102840;
     font-size: 28px;
-    background-color: #002171;
+    /* background-color: #002171; */
     align-content: center;
     text-align: center;
     padding: 5px 40px 0px 40px;
@@ -392,9 +407,6 @@ a:link {
     border-top-left-radius: 20px;*/
 }
 
-.menu-veiculos .clicado {
-    background-color: #fff;
-}
 
 .caixa-veiculos {
     width: 1300px;
@@ -475,18 +487,24 @@ a:link {
     min-height: 70px;
     height: auto;
     overflow: hidden;
-    margin-top: 100px;
-    padding-bottom: 150px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    /* background-color: springgreen; */
 }
 
 .img-como-funciona {
     width: 50%;
     height: 100%;
     float: left;
+    /* background-color: rosybrown; */
 }
 
 .img-como-funciona img {
-    text-align: center;
+    display: block;
+    position:relative;
+  /* left:50%; */
+  /* top:50%; */
+  /* transform: translate(-50%, -50%); */
 }
 
 .img-como-funciona img:hover {
@@ -495,118 +513,73 @@ a:link {
 
 .texto-como-funciona {
     width: 50%;
-    height: 100%;
+    margin-top: 120px;
+    height: 50%;
     float: left;
+    /* background-color: violet; */
+    
 }
 
 
 .texto-como-funciona h1 {
-    width: 100%;
-    margin-top: 150px;
     font-family: Mont;
     color: #102840;
-    align-items: center;
-    align-content: center;
     text-align: center;
    
 }
 
 .texto-como-funciona p {
     font-family: Mont;
-    width: 500px;
     text-align: center;
-    margin-left: 220px;
     color: #000;
+    width: 95%;
+    margin-left: 20px;
     word-break: break-all;
 }
 
 .cm-primeira-imagem{
-    margin-left: 250px;
+    /* margin-left: 250px; */
+    /* background-color: yellowgreen; */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.cm-primeira-imagem img{
+    display: block;
+    position:relative;
 }
 
 .cm-segunda-imagem{
-    margin-left: 100px;
+    /* margin-left: 100px;    */
+    /* background-color: yellowgreen; */
+    margin-left: auto;
+    margin-right: auto;
+
+
 }
 
 .texto-como-funciona h2 {
     width: 120px;
     height: 30px;
-    margin-left: 360px;
+    text-align: center;
     font-family: Mont;
     color: #fff;
-    margin-top: 35px;
+    line-height: 20px;
     border-radius: 35px;
     font-size: 16px;
+    margin-left: 250px;
     background-color: #102840;
-    align-content: center;
-    text-align: center;
     padding: 5px 40px 0px 40px;
 }
 
 .texto-como-funciona h2:hover {
-    background-color: #ecdd04;
-}
-
-/* CAIXA QUE TEM A FOTO DO APP*/
-.caixa-app {
-    width: 100%;
-    height: 750px;
-    background-color: #fff;
-}
-
-.imagem-app {
-    width: 50%;
-    height: 100%;
-    float: left;
-}
-
-.imagem-app img {
-    margin-left: 260px;
-    margin-top: 20px;
-}
-
-.texto-botao-app {
-    width: 50%;
-    height: 100%;
-    background-color: #fff;
-    float: left;
-}
-
-.texto-botao-app h1 {
-    margin-top: 150px;
-    font-family: Mont;
-    color: #04070e;
-    text-transform: uppercase;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.texto-botao-app p {
-    font-family: Mont;
-    width: 500px;
-    font-size: 19px;
-    text-align: center;
-}
-
-.texto-botao-app h2 {
-    width: 120px;
-    height: 40px;
-    margin-left: 180px;
-    font-family: Mont;
-    color: #fff;
-    margin-top: 45px;
-    font-size: 20px;
-    background-color: #102840;
-    align-content: center;
-    text-align: center;
-    padding: 5px 40px 10px 40px;
-    line-height: 40px;
-}
-
-.texto-botao-app h2:hover {
-    background-color: #5e85e1;
+    background-color: #ffd800;
+    color: #000;
     cursor: pointer;
 }
+
+
 
 /*************** PAGINA ANUNCIOS ************/
 /*box banner */
@@ -699,6 +672,7 @@ a:link {
     height: 100%;
     background-color: #fefefe;
     float: left;
+    margin-left: -40px;
     
 }
 
@@ -713,19 +687,20 @@ a:link {
     margin-top: 20px;
     float: left;
     font-size: 24px;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     width: 200px;
 }
 
 .filtros select {
     border: none;
-    width: 200px;
-    height: 40px;
+    width: 190px;
+    height: 35px;
     font-family: Mont;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 15px;
     margin-left: 90px;
-    background-color: #e9f0f6;
+    border: 1px solid #000;
+    /* background-color: #e9f0f6; */
 }
 
 .box-veiculos {
@@ -849,7 +824,7 @@ a:link {
     float: left;
 }
 
-.texto-como-funciona2 h1 {
+.texto-como-funciona2 h2 {
     width: 500px;
     font-family: Mont;
     font-size: 40px;
@@ -937,7 +912,7 @@ a:link {
     float: left;
 }
 
-.texto-como-funciona4 h1 {
+.texto-como-funciona4 h2{
 
     font-family: Mont;
     font-size: 32px;
@@ -1128,7 +1103,7 @@ a:link {
 
 }
 
-.titulo-fale-conosco h1 {
+.titulo-fale-conosco h2 {
     font-family: Mont;
     font-size: 30px;
     color: #ffd800;
@@ -1141,11 +1116,11 @@ a:link {
     margin-left: 100px;
 }
 
-.nome-fale-conosco h1,
-.email-fale-conosco h1,
-.assunto-fale-conosco h1,
-.botao-fale-conosco h1,
-.mensagem-fale-conosco h1 {
+.nome-fale-conosco h2,
+.email-fale-conosco h2,
+.assunto-fale-conosco h2,
+.botao-fale-conosco h2,
+.mensagem-fale-conosco h2 {
     font-family: Mont;
     margin-left: 100px;
     color: #ecebeb;
@@ -1222,9 +1197,9 @@ a:link {
     width: 100%;
 }
 
-.titulo-av h1 {
+.titulo-av h2 {
     width: 80%;
-    margin-top: -50px;
+    /* margin-top: -50px; */
     float: left;
     text-align: right;
     font-size: 38px;
@@ -1340,7 +1315,7 @@ a:link {
     margin-top: 120px;
 }
 
-.txt-parceiro h1 {
+.txt-parceiro h2 {
     font-family: Mont;
     font-size: 35px;
     border-bottom: 2px solid #000;
@@ -1382,7 +1357,7 @@ a:link {
     margin-left: auto;
 }
 
-.txt-slider-parceiros h1 {
+.txt-slider-parceiros h2 {
     font-family: Mont;
     text-align: center;
     padding-top: 5px;
