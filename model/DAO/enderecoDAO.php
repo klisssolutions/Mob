@@ -25,40 +25,110 @@ class enderecoDAO{
         $this->conex = new conexaoMySQL();
     }
 
-//Inserir um registro no banco de dados.
-public function insert(Endereco $endereco){
-    $sql = INSERT . TABELA_ENDERECO . " 
-    (rua, numero, cidade, UF, complemento)
+public function insertRelacionamento($idEndereco){
+    
+        $id = $_SESSION['idCliente']['idCliente'];
+
+ 
+        $sql = INSERT . " cliente_endereco
+    (idCliente, idEndereco)
     VALUES (
-        '".$endereco->getRua()."',
-        '".$endereco->getNumero()."',
-        '".$endereco->getCidade()."',
-        '".$endereco->getUf()."',
-        '".$endereco->setComplemento()."')";
+        '".$id."',
+        '".$idEndereco."')";
+
+    
 
     //Abrindo conexão com o BD
     $PDO_conex = $this->conex->connectDataBase();
 echo($sql);
     //Executa no BD o script Insert e retorna verdadeiro/falso
     if($PDO_conex->query($sql)){
+        
         $erro = false;
         echo('<script>alert("Endereço cadastrado com sucesso");</script>');
     }else{
+        echo($sql);
         $erro = true;
+        echo('<script>alert("Erro no cadastro");</script>');
     }
     //Fecha a conexão com o BD
     $this->conex->closeDataBase();
     return $erro;
 }
 
+public function selecionarUltimoInserido(){
+        $sql = "select max(idEndereco) as idEndereco from endereco";
+
+        //Abrindo conexão com o BD
+        $PDO_conex = $this->conex->connectDataBase();
+
+        //executa o script de select no bd
+        $select = $PDO_conex->query($sql);
+        
+        echo($sql);
+
+        /* $select->fetch no formado pdo retorna os dados do BD
+        também retorna com característica do PDO como o fetch
+        é necessário especificar o modelo de conversão.
+        EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        if($rsEndereco = $select->fetch(PDO::FETCH_ASSOC)){
+            $idEndereco = $rsEndereco['idEndereco'];
+        }
+
+        $this->conex->closeDataBase();
+        return($idEndereco);
+    }
+
+
+//Inserir um registro no banco de dados.
+public function insert(Endereco $endereco){
+    if($endereco->getComplemento()){
+        $sql = INSERT . TABELA_ENDERECO . " 
+    (rua, numero, cidade, UF, complemento)
+    VALUES (
+        '".$endereco->getRua()."',
+        '".$endereco->getNumero()."',
+        '".$endereco->getCidade()."',
+        '".$endereco->getUf()."',
+        '".$endereco->getComplemento()."')";
+    }else{
+        $sql = INSERT . TABELA_ENDERECO . " 
+    (rua, numero, cidade, UF)
+    VALUES (
+        '".$endereco->getRua()."',
+        '".$endereco->getNumero()."',
+        '".$endereco->getCidade()."',
+        '".$endereco->getUf()."')";
+    }
+
+    
+
+    //Abrindo conexão com o BD
+    $PDO_conex = $this->conex->connectDataBase();
+    //Executa no BD o script Insert e retorna verdadeiro/falso
+    if($PDO_conex->query($sql)){
+    
+            $idEndereco = $this->selecionarUltimoInserido();
+            //Fecha a conexão com o BD
+            $this->conex->closeDataBase();
+            return $idEndereco;            
+            //echo($sql);
+        }else{
+            $erro = true;
+            $this->conex->closeDataBase();
+            return $erro;  
+            echo($sql);
+        }
+    
+}
 //Deletar um registro no banco de dados.
 public function delete($id){
-    $sql = DELETE . TABELA_MODELO . " WHERE idModelo = ".$id;
+    $sql = DELETE . TABELA_ENDERECO . " WHERE idEndereco = ".$id;
 
     
     //Abrindo conexão com o BD
     $PDO_conex = $this->conex->connectDataBase();
-
+    echo($sql);
     //Executa no BD o script Insert e retorna verdadeiro/falso
     if($PDO_conex->query($sql)){
         $erro = false;
@@ -71,15 +141,18 @@ public function delete($id){
 }
 
 //Atualiza um registro no banco de dados.
-public function update(Modelo $modelo){
-    $sql = UPDATE . TABELA_MODELO . "
-    SET idMarca = '".$modelo->getIdMarca()."', 
-    nomeModelo = '".$modelo->getNomeModelo()."'
-    WHERE idModelo = '".$modelo->getIdModelo()."';";
+public function update(Endereco $endereco){
+    $sql = UPDATE . TABELA_ENDERECO . "
+    SET rua = '".$endereco->getRua()."', 
+    numero = '".$endereco->getNumero()."',
+    complemento = '".$endereco->getComplemento()."',
+    cidade = '".$endereco->getCidade()."',
+    UF = '".$endereco->getUf()."'
+    WHERE idEndereco = '".$endereco->getIdEndereco()."';";
     
     //Abrindo conexão com o BD
     $PDO_conex = $this->conex->connectDataBase();
-    
+    echo($sql);
     //Executa no BD o script Insert e retorna verdadeiro/falso
     if($PDO_conex->query($sql)){
         $erro = false;
@@ -127,7 +200,7 @@ public function update(Modelo $modelo){
 
     //Seleciona um registro pelo ID.
     public function selectById($id){
-        $sql = SELECT. TABELA_MODELO. " where idModelo=".$id;
+        $sql = SELECT. TABELA_ENDERECO. " where idEndereco=".$id;
 
         
 
@@ -141,17 +214,19 @@ public function update(Modelo $modelo){
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
-        $rsModelo=$select->fetch(PDO::FETCH_ASSOC);
-        $modelo = new Modelo();
-        $modelo->setIdModelo($rsModelo["idModelo"]);
-        $modelo->setIdMarca($rsModelo["idMarca"]);
-        $modelo->setNomeModelo($rsModelo["nomeModelo"]);
+        $rsEndereco=$select->fetch(PDO::FETCH_ASSOC);
+        $endereco = new Endereco();
+        $endereco->setIdEndereco($rsEndereco["idEndereco"]);
+        $endereco->setRua($rsEndereco["rua"]);
+        $endereco->setCidade($rsEndereco["cidade"]);
+        $endereco->setUf($rsEndereco["UF"]);
+        $endereco->setNumero($rsEndereco["numero"]);
+        $endereco->setComplemento($rsEndereco["complemento"]);
 
-       
 
         $this->conex->closeDataBase();
 
-        return($modelo);
+        return($endereco);
     }
 }
 ?>
