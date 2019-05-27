@@ -45,7 +45,7 @@
                 </div>
             </a>
             <div class="texto-cadastrar">
-                <a href="usuario-perfil/visualizarUsuario.php"><h1><?php echo($cliente->getNome()); ?></h1></a>
+                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>"><h1><?php echo($cliente->getNome()); ?></h1></a>
             </div>
         <?php } ?>
     </div>    

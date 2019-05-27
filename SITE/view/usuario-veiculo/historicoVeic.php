@@ -11,14 +11,15 @@ require_once(IMPORT_CLIENTE_CONTROLLER);
 
 $idCliente = $_SESSION['idCliente']['idCliente'];
 $clientes[] = new Cliente();
-$clientes = $controllerCliente->buscarCliente();
-
 $controllerCliente = new controllerCliente();
 $controllerLocacao = new controllerLocacao();
+$clientes = $controllerCliente->buscarCliente();
 
 $_GET["id"] = $_SESSION['idCliente']['idCliente'];
 
 $locacoes = $controllerLocacao->listarHistoricoLocacaoPorLocador();
+
+$usuario = $controllerCliente->buscarCliente();
 
 ?>
 <!DOCTYPE html>
@@ -103,26 +104,85 @@ $locacoes = $controllerLocacao->listarHistoricoLocacaoPorLocador();
             </div>
             <div class="conteudo-usuario">
                 <div class="titulo-lista">VEICULOS</div>
-            <?php
-                foreach($locacoes as $locacao):    
+                <?php
+                foreach($locacoes as $locacao):
+                    $data = new DateTime($locacao->getHorarioInicio());
+                    $dataInicio = date_format($data, "d/m/Y H:i");
+                    $data = new DateTime($locacao->getHorarioFim());
+                    $dataFim = date_format($data, "d/m/Y H:i");
+                    if($locacao->getIdCliente() == $usuario->getIdCliente()):
+                        $_GET["id"] = $locacao->getIdDono();
+                        $locador = $controllerCliente->buscarCliente();
             ?>
 
                 <div class="box-veiculo">
                     <div class="texto-modelo">
-                        <label class="negrito">Veiculo: </label><?php echo($modelo->getNomeModelo() . " " . $marca->getNomeMarca())?>
+                        <label class="negrito">Dono: </label> <?php echo($locador->getNome());?>
                     </div>
 
-                    <div class="texto-ano">
-                        <input type="button" value="Recebido">
+                    <div class="texto-modelo">
+                        <label class="negrito">Veiculo: </label> <?php echo($locacao->getVeiculo());?>
                     </div>
+
+                    <div class="texto-modelo">
+                        <label class="negrito">Data Locação: </label> <?php echo($dataInicio);?>
+                    </div>
+
+                    <div class="texto-modelo">
+                        <label class="negrito">Data Devolução: </label> <?php echo($dataFim);?>
+                    </div>
+                    <?php if(!$locacao->getDevolvido()): ?>
+                    <div class="texto-ano">
+                        <a href="devolucao.php?modo=devolver&id=<?php echo($locacao->getIdLocacao()); ?>">
+                            <input type="button" value="Devolver">
+                        </a>
+                    </div>
+                    <?php endif; ?>
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+                <?php
+                    else: 
+                        $_GET["id"] = $locacao->getIdCliente();
+                        $cliente = $controllerCliente->buscarCliente();
+                ?>
+
+                <div class="box-veiculo">
+                    <div class="texto-modelo">
+                        <label class="negrito">Cliente: </label> <?php echo($cliente->getNome());?>
+                    </div>
+
+                    <div class="texto-modelo">
+                        <label class="negrito">Veiculo: </label> <?php echo($locacao->getVeiculo());?>
+                    </div>
+
+                    <div class="texto-modelo">
+                        <label class="negrito">Data Locação: </label> <?php echo($dataInicio);?>
+                    </div>
+
+                    <div class="texto-modelo">
+                        <label class="negrito">Data Devolução: </label> <?php echo($dataFim);?>
+                    </div>
+                    
+                    <?php if(!$locacao->getRecebido()): ?>
+                    <div class="texto-ano">
+                        <a href="devolucao.php?modo=receber&id=<?php echo($locacao->getIdLocacao()); ?>">
+                            <input type="button" value="Receber">
+                        </a>
+                    </div>
+                    <?php endif; ?>
+                    <br>
+                    <br>
+                    <br>
 
                 </div>
 
                  <?php 
+                        endif;
                     endforeach;
                  ?>
-
-
             </div>
         </div>
     </div>

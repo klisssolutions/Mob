@@ -22,6 +22,8 @@ require_once(IMPORT_SOLICITACAO_LOCACAO);
 if(isset($_GET["alugar"])){
     $_GET["id"] = $_SESSION['idVeiculo'];
 
+    echo("<script>alert('Locação solicitada.')</script>");
+
     $controllerSolicitacao = new controllerSolicitacao_Locacao();
     $_GET["idCliente"] = $_SESSION['idCliente']['idCliente'];
     $_GET["idVeiculo"] = $_SESSION['idVeiculo'];
@@ -80,6 +82,7 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
                     <h1>R$ <?php echo($veiculo->getValorHora()); ?>/h</h1>
                     <h2>Acessórios:</h2>
                 </div>
+                <?php if(isset($_SESSION['idCliente']['idCliente'])):?>
                 <div class="box-locar">
                 <p>
                 Inicio:  <input class="inpt-data" type="date" name="diaInicio" id="diaComeco" required>
@@ -89,8 +92,9 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
                 <input class="inpt-data" type="date" name="diaTermino" id="diaTermino" required>
                 <input class="inpt-hora" type="time" name="horaTermino" id="horaTermino" required>
                 </p>
-                <input type="submit" value="Quero alugar este!" class="inpt-dados">
+                <input type="submit" value="Quero alugar este!" class="inpt-dados" name="alugar">
                 </div>
+                <?php endif; ?>
                 
                 </form>
                 <div class="dados-usuario-veiculo">
@@ -112,89 +116,6 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
                 
             </div>
         </div>
-    <!--
-        <div class="caixa-pesquisa-imagem">
-            <input type="text" class="caixa-pesquisa-home">
-        </div>
-        <div class="caixa-veiculos-home">
-            <div class="caixa-itens-home">
-                <nav class="menu-veiculos">
-                    <a class="clicado"><?php //echo($marca->getNomeMarca() . " " . $modelo->getNomeModelo());?></a>
-                </nav>
-            </div>
-            <div class="caixa-veiculos">
-                
-                <div class="dadosVeiculo">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="<?php //echo('/Mobshare/arquivos/'.$foto_veiculo->getFotoVeiculo()) ?>" width="320" height="225" alt="veiculo">
-                            </td>
-                        </tr>   
-                        <tr>
-                            <td>
-                                Marca
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <?php //echo($marca->getNomeMarca()); ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Modelo
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <?php //echo($modelo->getNomeModelo()); ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Valor da hora:
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                R$<input type="text" size="3" value="<?php //echo($veiculo->getValorHora()); ?>" readonly>
-                            </td>
-                        </tr>
-                        <?php// if(isset($_SESSION['idCliente']['idCliente'])):?>
-                        <tr>
-                            <td>
-                                Início locação:
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="date" name="diaInicio" id="diaComeco" required><input type="time" name="horaInicio" id="horaComeco" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Término locação:
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="date" name="diaTermino" id="diaTermino" required><input type="time" name="horaTermino" id="horaTermino" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="Alugar" name="alugar">
-                                <input type="button" onclick="horas()" id="botao">
-                            </td>
-                        </tr>
-                    <?php //endif;?>
-                    </table>
-                </div>
-                
-            </div>
-        </div>
-        -->
     </div>
 
     <!-- RODAPÉ-->

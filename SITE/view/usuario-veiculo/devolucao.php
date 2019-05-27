@@ -24,6 +24,4 @@ if($modo == "devolver"){
 }
 
 echo("<script>window.location.replace('" . LINK_SITE_HISTORICO . "');</script>");
-
-
 ?>
