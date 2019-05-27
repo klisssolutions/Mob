@@ -12,7 +12,23 @@ require_once(IMPORT_CLIENTE_CONTROLLER);
     $clientes[] = new Cliente();
     $clientes = $controllerCliente->buscarCliente();
 
+    $rua = '';
+    $complemento = '';
+    $numero = '';
+    $uf = '';
+    $cidade = '';
+
 $router = "router('ENDERECO', 'inserir', '0')";
+
+if(isset($_GET['id'])){
+    $rua = $endereco->getRua();
+    $complemento = $endereco->getComplemento();
+    $numero = $endereco->getNumero();
+    $uf = $endereco->getUf();
+    $cidade = $endereco->getCidade();
+
+    $router = "router('endereco', 'atualizar', '".$endereco->getIdEndereco()."')";
+}
 
 ?>
 <!DOCTYPE html>
@@ -109,7 +125,7 @@ $router = "router('ENDERECO', 'inserir', '0')";
                                 Rua:
                             </td>
                             <td class="txt-dash">
-                                <input type="text" class="input-dash" name="txtRua" required>
+                                <input type="text" class="input-dash" name="txtRua" value="<?php echo($rua)?>" required>
                             </td>
                         </tr>
                         <tr>
@@ -117,7 +133,7 @@ $router = "router('ENDERECO', 'inserir', '0')";
                                 Numero:
                             </td>
                             <td class="txt-dash">
-                                <input type="number" class="input-dash" name="txtNumber" required>
+                                <input type="number" class="input-dash" name="txtNumber" value="<?php echo($numero)?>" required>
                             </td>
                         </tr>
                         <tr>
@@ -125,7 +141,7 @@ $router = "router('ENDERECO', 'inserir', '0')";
                                 Complemento:
                             </td>
                             <td class="txt-dash">
-                                <input type="text" class="input-dash" name="txtComplemento">
+                                <input type="text" class="input-dash" name="txtComplemento" value="<?php echo($complemento)?>">
                             </td>
                         </tr>
                         <tr>
@@ -133,7 +149,7 @@ $router = "router('ENDERECO', 'inserir', '0')";
                                 Cidade:
                             </td>
                             <td class="txt-dash">
-                                <input type="text" class="input-dash" name="txtCidade" required>
+                                <input type="text" class="input-dash" name="txtCidade" value="<?php echo($cidade)?>" required>
                             </td>
                         </tr>
                         <tr>
@@ -141,7 +157,7 @@ $router = "router('ENDERECO', 'inserir', '0')";
                                 UF:
                             </td>
                             <td class="txt-dash">
-                                <input type="text" class="input-dash" name="txtUf" maxlength="2" size="6" required>
+                                <input type="text" class="input-dash" name="txtUf" maxlength="2" size="6" value="<?php echo($uf)?>" required>
                             </td>
                         </tr>
                         

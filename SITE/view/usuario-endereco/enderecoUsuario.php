@@ -31,14 +31,15 @@ require_once($_SESSION["importInclude"]);
     <title>Painel do Usuário </title>
 </head>
 <body>
-    <!-- HEADER DO MENU-->
-    <?php require_once(HEADER);?>
+    
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <div class="content" id="informacao">
+        <!-- HEADER DO MENU-->
+        <?php require_once(HEADER);?>
         <div class="box-painel-usuario">
             <div class="menu-lateral-usuario">
                 <div class="img-usuario-menu">
-                <div class="imagem-usuario">
+                    <div class="imagem-usuario">
                         <img src="../../../arquivos/<?php echo ($clientes->getFotoPerfil());?>" width="180" height="180"  alt="Usuário">
                     </div>
 
@@ -48,51 +49,51 @@ require_once($_SESSION["importInclude"]);
                 </div>
                 <!-- ITEM - MENU -->
                 <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
-                <div class="nav-menu-usuario">
-                    <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
-                </div>
+                    <div class="nav-menu-usuario">
+                        <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
+                    </div>
                 </a>
 
                 <!-- ITEM - MENU -->
                 <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
-                <div class="nav-menu-usuario">
-                    <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
-                </div>
+                    <div class="nav-menu-usuario">
+                        <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
+                    </div>
                 </a>
 
                 <!-- ITEM - MENU -->
                 <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
-                <div class="nav-menu-usuario-clicado">
-                    <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
-                </div>
+                    <div class="nav-menu-usuario-clicado">
+                        <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
+                    </div>
                 </a>
 
                 <!-- ITEM - MENU -->
                 <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
-                <div class="nav-menu-usuario">
-                    <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
-                </div>
+                    <div class="nav-menu-usuario">
+                        <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
+                    </div>
                 </a>
 
                 <!-- ITEM - MENU -->
                 <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
-                <div class="nav-menu-usuario">
-                    <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
-                </div>
+                    <div class="nav-menu-usuario">
+                        <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
+                    </div>
                 </a>
 
                 <!-- ITEM - MENU -->
                 <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
-                <div class="nav-menu-usuario">
-                    <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
-                </div>
+                    <div class="nav-menu-usuario">
+                        <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
+                    </div>
                 </a>
 
                 <!-- ITEM - MENU -->
                 <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
-                <div class="nav-menu-usuario">
-                    <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
-                </div>
+                    <div class="nav-menu-usuario">
+                        <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
+                    </div>
                 </a>
 
                 <div class="nav-menu-usuario-button">
@@ -101,92 +102,52 @@ require_once($_SESSION["importInclude"]);
             </div>
             <div class="conteudo-usuario">
                 <div class="conteudo-endereco">
-                <div class="titulo-lista">GERENCIAR ENDEREÇOS</div>
-                <div class="botoes-dash">
+                    <div class="titulo-lista">GERENCIAR ENDEREÇOS</div>
+                    <div class="botoes-dash">
 
-    <input type="button" value="Novo" class="btn-dash" onclick="endereco()">
-    <input type="button" value="Voltar" class="btn-dash" onclick="paginaInicial();">
+                        <input type="button" value="Novo" class="btn-dash" onclick="endereco()">
+                        <input type="button" value="Voltar" class="btn-dash" onclick="paginaInicial();">
 
-</div>
+                        <?php
+                            foreach($enderecos as $endereco){
+                        ?>
 
-<?php
-    foreach($enderecos as $endereco){
-?>
+                        <div class="listaDadosDash">
 
-<div class="listaDadosDash">
+                            <div class="dados-dash">
+                            
+                                Endereço:
+                                
+                            </div>
+                            <div class="dados-resp-dash">
+                            
+                                <?php echo($endereco->getRua());?>, <?php echo($endereco->getNumero());?>  - <?php echo($endereco->getCidade());?> - <?php echo($endereco->getUf());?> <?php echo($endereco->getComplemento());?>
+                            
+                            </div>
+                            <div class="opcao">
+                                
+                                <a href="#" onclick="selectRouter('endereco', 'buscar', <?php echo($endereco->getIdEndereco());?>)">
+                                    <img src="../images/pencil.png" width="25" heigth="28">
+                                </a>
+                            
+                                <a href="#" onclick="selectRouter('endereco', 'excluir', <?php echo($endereco->getIdEndereco());?>)">
+                                    <img src="../images/trash.png" width="25" heigth="28">
+                                </a>
 
-    <div class="dados-dash">
-    
-        Rua:
-        
-    </div>
-    <div class="dados-resp-dash">
-    
-        <?php echo($endereco->getRua());?>
-    
-    </div>
-    <div class="dados-dash">
-    
-        Cidade:
-        
-    </div>
-    <div class="dados-resp-dash">
-    
-    <?php echo($endereco->getCidade());?>
-    
-    </div>
-    <div class="dados-dash">
-    
-        Estado:
-        
-    </div>
-    <div class="dados-resp-dash">
-    
-    <?php echo($endereco->getUf());?>
-    
-    </div>
-    <div class="dados-dash">
-    
-        Numero:
-        
-    </div>
-    <div class="dados-resp-dash">
-    
-    <?php echo($endereco->getNumero());?>
-    
-    </div>
-    <div class="dados-dash">
-    
-        Complemento:
-        
-    </div>
-    <div class="dados-resp-dash">
-    
-    <?php echo($endereco->getComplemento());?>
-    
-    </div>
-    <div class="opcao">
-        
-        <a href="#" onclick="selectRouter('endereco', 'buscar', <?php echo($endereco->getIdEndereco());?>)">
-            <img src="view/imagens/pencil.png" width="25" heigth="28">
-        </a>
-    
-        <a href="#" onclick="selectRouter('endereco', 'excluir', <?php echo($endereco->getIdEndereco());?>)">
-            <img src="view/imagens/trash.png" width="25" heigth="28">
-        </a>
-
-    
-    </div>
-    
-</div>
-    <?php }?>
+                            
+                            </div>
+                            
+                        </div>
+                        <?php 
+                            }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- RODAPÉ-->
+        <?php require_once(FOOTER);?>
     </div>
-    <!-- RODAPÉ-->
-    <?php require_once(FOOTER);?>
-
 </body>
 
 </html>
