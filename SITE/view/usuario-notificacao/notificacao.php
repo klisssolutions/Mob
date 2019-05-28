@@ -14,6 +14,8 @@ require_once(IMPORT_CLIENTE_CONTROLLER);
 
 $idCliente = $_SESSION['idCliente']['idCliente'];
 
+$_GET['id'] = $idCliente;
+
 $controllerCliente = new controllerCliente();
 $clientes[] = new Cliente();
 $clientes = $controllerCliente->buscarCliente();
@@ -21,19 +23,24 @@ $clientes = $controllerCliente->buscarCliente();
 
 $controllerSolicitacao_Locacao = new controllerSolicitacao_Locacao();
 
-$solicitacao_locacoes[] = new Solicitacao_Locacao();
+$solicitacao_locacoes = new Solicitacao_Locacao();
 
-//$cliente = new Cliente();
-//$_GET["id"] = $Solicitacao_Locacao[$i]->getIdCliente();
-//$cliente = $controllerCliente->buscarCliente();
+$vSolicitacoes_Locacao = $controllerSolicitacao_Locacao->listarSolicitacaoLocacaoPorLocador();
 
-// $_GET["id"] = $solicitacao_locacao->getIdCliente();
-// $solicitacao_locacoes = $controllerSolicitacao_Locacao->listarSolicitacaoLocacaoPorLocador();
+//var_dump($vSolicitacoes_Locacao);
+$aceitar = "router('SOLICITACAO', 'ACEITAR', '".$solicitacao_locacoes->getIdSolicitacao_Locacao()."')";
+
+$recusar = "router('SOLICITACAO', 'RECUSAR', '".$solicitacao_locacoes->getIdSolicitacao_Locacao()."')";
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <script type="text/javascript" src="../js/link.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
     <meta http-equiv="Content-Type" content="view/text/html; charset=utf-8" />
     <link rel="shortcut icon" href="images/user.png" />
     <title>Painel do Usuário </title>
@@ -108,38 +115,30 @@ $solicitacao_locacoes[] = new Solicitacao_Locacao();
                 </div>
             </div>
             <div class="conteudo-usuario">
-                <div class="box-notificacao">
+                <div class="titulo-lista">
                     <h1>Minhas Notificações:</h1>
                     <?php
                     
-                    foreach($solicitacao_locacoes as $solicitacao_locacao){
+                        foreach($vSolicitacoes_Locacao as $vsolicitacao_locacao){
 
-                        //$Solicitacao_Locacao = Solicitacao_Locacao();
+                        $data = new DateTime($vsolicitacao_locacao->getHorarioInicio());
+                        $dataInicio = date_format($data, "d/m/Y H:i");
+                        $data = new DateTime($vsolicitacao_locacao->getHorarioFim());
+                        $dataFim = date_format($data, "d/m/Y H:i");
 
-                        //$cliente = new Cliente();
-                        //$_GET["id"] = $Solicitacao_Locacao[$i]->getIdCliente();
-                        //$cliente = $controllerCliente->buscarCliente();
-
-                        // $foto_veiculo = new Foto_Veiculo();
-                        // $marca = new Marca();
-                        // $modelo = new Modelo();
-
-                        // $_GET["id"] = $veiculos[$i]->getIdModelo();
-                        // $modelo = $controllerModelo->buscarModelos();
-
-                        // $_GET["id"] = $modelo->getIdMarca();
-                        // $marca = $controllerMarca->buscarMarcas();
-
-                        // $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculos[$i]->getIdVeiculo());
-                      
                     ?>
-                    <div class="notificacao">
-                        <p> <?php echo($solicitacao_locacao->getNomeCliente());?> deseja alugar Honda KM 345 no dia 11/09/2015 as 11h30 com fim no 
-                            16/09/2015.
-                        </p>
-                        <input type="button" value="aceitar" class="ipt-aceitar">
-                        <input type="button" value="recusar" class="ipt-recusar">
-                    </div>
+                    <form id="form" method="post" enctype="multipart/form-data">
+                        <div class="notificacao">
+                            <p> <?php echo($vsolicitacao_locacao->getNomeCliente());?> 
+                            deseja alugar o seu <?php echo($vsolicitacao_locacao->getVeiculo());?>
+                             no dia <?php echo($dataInicio);?> 
+                             com fim no <?php echo($dataFim);?>.
+                            </p>
+                            <input type="submit" value="aceitar" class="ipt-aceitar" onclick="router('SOLICITACAO', 'ACEITAR', <?php echo($vsolicitacao_locacao->getIdSolicitacao_Locacao());?>);">
+                           
+                            <input type="submit" value="recusar" class="ipt-recusar" onclick="router('SOLICITACAO', 'RECUSAR', <?php echo($vsolicitacao_locacao->getIdSolicitacao_Locacao());?>);">
+                        </div>
+                    </form>
                     <?php
                     }
                     ?>
