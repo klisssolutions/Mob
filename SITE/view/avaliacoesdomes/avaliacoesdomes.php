@@ -58,6 +58,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <section class="content">
+        <div class="caixa-padrao">
         <div class="box-avaliacoes">
             <div class="avaliacoes">
                 <div class="titulo-av">
@@ -92,9 +93,6 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                             </div>
                             <div class="texto-av">
                               <h2>Marca: <?php echo($avaliacaoVeiculo->getNomeMarca()) ?> </h2>
-                            </div>
-                            <div class="texto-av">
-                                <h2>Região: Capital</h2>
                             </div>
                             <div class="texto-av">
                             <?php 
@@ -141,7 +139,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
             </div>
 
         </div>
-
+                        </div>
     </section>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>

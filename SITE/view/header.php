@@ -1,4 +1,5 @@
 <header>
+<div class="caixa-padrao">
     <!-- onde fica o login-->
     <div class="logotipo">
         <div class="img-logotipo">
@@ -49,4 +50,5 @@
             </div>
         <?php } ?>
     </div>    
+    </div>
 </header>

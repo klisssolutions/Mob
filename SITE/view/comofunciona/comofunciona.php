@@ -26,6 +26,7 @@
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <section class="content">
+        <div class="caixa-padrao">
         <?php
             $cont = 0;
                 foreach($funcionamentos as $funcionamento){
@@ -44,7 +45,7 @@
             </div>
         </div>
                         <?php $cont++; }else{?>
-        <div class="box-como-funciona-quarto">
+        <div class="box-como-funciona-quarto" >
             
             <div class="texto-como-funciona4">
             
@@ -67,7 +68,7 @@
         
         
         
-        
+            </div>
     </section>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>

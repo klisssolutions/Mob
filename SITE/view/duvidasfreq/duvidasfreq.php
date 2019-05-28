@@ -26,6 +26,7 @@ require_once(IMPORT_DUVIDAS_FREQUENTES_CONTROLLER);
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <section class="content">
+        <div class="caixa-padrao">
         <div class="box-duvidas">
             <div class="duvidas-titulo">
                 <div class="titulo-duvidas">
@@ -56,7 +57,7 @@ require_once(IMPORT_DUVIDAS_FREQUENTES_CONTROLLER);
          
              
         </div>
-
+                </div>
     </section>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>

@@ -1,4 +1,5 @@
 <footer>
+    <div class="caixa-padrao">
     <div class="rodape">
         <div class="menu-rodape">
             <!--PAGINAS DO RODAPÉ-->
@@ -49,5 +50,5 @@
     <div class="texto-direitos">
         <h1>© Todos os Direitos Reservados - 2019 | Desenvolvido por Kliss Solutions</h1>
     </div>
-
+</div>
 </footer>

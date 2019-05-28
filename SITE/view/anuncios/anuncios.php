@@ -55,7 +55,7 @@ if(isset($_GET["btnFiltro"])){
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <div class="content">
-        
+        <div class="caixa-padrao">
         <div class="box-anuncios">
             <div class="box-pesquisa-anucios">
             </div>
@@ -200,7 +200,7 @@ if(isset($_GET["btnFiltro"])){
             </div>
 
         </div>
-
+        </div>
     </div>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>

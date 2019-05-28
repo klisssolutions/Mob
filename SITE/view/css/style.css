@@ -24,20 +24,18 @@ textarea:focus, input:focus, select:focus {
     outline: 0;
 }
 
-.caixa-principal{
+.caixa-padrao{
     width: 1400px;
     /*Para estender as caixas automaticamente*/
-    min-height: 1000px;
     height: auto;
     /* overflow: hidden; */
     margin-right: auto;
     margin-left: auto;  
-    box-sizing: border-box;
 }
 
 /********** CABEÇALHO ***********/
 header {
-    width: 1400px;
+    width: 100%;
     height: 110px;
     background-color: #102840;
     position: fixed;
@@ -139,7 +137,7 @@ header {
 /*********** RODAPÉ *******/
 footer {
     width: 100%;
-    height: 200px;
+    height: 250px;
     float: left;
     background-color: #102840;
 }
@@ -298,9 +296,9 @@ a:link {
 
 .texto-direitos {
     width: 100%;
-    padding-top: 80px;
+    clear: both;
     height: 25px;
-    background-color: #102840;
+    padding-top: 10px;
 }
 
 .texto-direitos h1 {
@@ -308,7 +306,6 @@ a:link {
     font-family: Mont;
     font-size: 12px;
     color: #fff;
-    margin-left: -70px;
     font-weight: normal;
     text-align: center;
     align-content: center;
@@ -330,18 +327,22 @@ a:link {
     margin-left: auto;
     margin-right: auto;
     padding-top: 310px;
-    background-color: rgba(7, 7, 7, 0.2);
 
     
 }
-
+.cor-div{
+    height: 100px;
+    /* padding-top: 50px; */
+    background-color: rgba(7, 7, 7, 0.2);
+}
 
 .caixa-inf h1{
     text-transform: uppercase;
     font-family: Mont;
     color: #ffff00;
     text-align: center;
-    margin-top: 75px;
+    padding-top: 10px;
+    /* margin-top: 75px; */
 }
 
 .caixa-inf p{
@@ -369,7 +370,7 @@ a:link {
 /*********************** CAIXA QUE SEGURA OS VEICULOS ***************************/
 .caixa-veiculos-home {
     width: 100%;
-    min-height: 1200px;
+    min-height: 900px;
     height: auto;
     background-color: #fff;
 }
@@ -410,7 +411,8 @@ a:link {
 
 .caixa-veiculos {
     width: 1300px;
-    height: 1200px;
+    min-height: 600px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -532,8 +534,10 @@ a:link {
     font-family: Mont;
     text-align: center;
     color: #000;
-    width: 95%;
-    margin-left: 20px;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
     word-break: break-all;
 }
 
@@ -560,12 +564,12 @@ a:link {
 }
 
 .texto-como-funciona h2 {
-    width: 120px;
+    width: 150px;
     height: 30px;
     text-align: center;
     font-family: Mont;
     color: #fff;
-    line-height: 20px;
+    line-height: 30px;
     border-radius: 35px;
     font-size: 16px;
     margin-left: 250px;
@@ -813,14 +817,16 @@ a:link {
 }
 
 .box-como-funciona-segundo {
-    height: 700px;
+    min-height: 450px;
+    height: auto;
     width: 100%;
-    background-color: #fff;
+    /* background-color: aqua; */
 }
 
 .texto-como-funciona2 {
     width: 50%;
     height: 100%;
+    /* background-color: violet; */
     float: left;
 }
 
@@ -828,13 +834,11 @@ a:link {
     width: 500px;
     font-family: Mont;
     font-size: 40px;
-    margin-left: 0px;
-    margin-top: 200px;
+    margin-left: 0px;   
     color: #002171;
 }
 
 .texto-como-funciona2 p {
-
     width: 500px;
     font-family: Mont;
     font-size: 20px;
@@ -844,11 +848,15 @@ a:link {
     width: 50%;
     height: 100%;
     float: left;
+    /* background-color: springgreen; */
 }
 
-.image-como-funciona2 img {
-    margin-top: 100px;
-    margin-left: 100px;
+.image-como-funciona2 img, .image-como-funciona4 img {
+    /* margin-top: 100px;
+    margin-left: 100px; */
+    display: block;
+    position:relative;
+    /* background-color: slategrey; */
 }
 
 .box-como-funciona-terceiro {
@@ -893,9 +901,10 @@ a:link {
 }
 
 .box-como-funciona-quarto {
-    height: 500px;
+    min-height: 400px;
+    height: 100%;
     width: 100%;
-    background-color: #fff;
+    /* background-color: yellow; */
     padding-top: 120px;
 }
 
@@ -903,32 +912,36 @@ a:link {
     width: 50%;
     height: 100%;
     float: left;
+    /* background-color: peru; */
 }
 
 
 .texto-como-funciona4 {
     width: 50%;
     height: 100%;
+    /* background-color: tomato; */
     float: left;
+    
 }
 
-.texto-como-funciona4 h2{
-
+.texto-como-funciona4 h2, .texto-como-funciona2 h2{
     font-family: Mont;
     font-size: 32px;
-    margin-right: auto;
+    text-align: center;
     margin-left: auto;
-    padding-top: 150px;
-    margin-left: 300px;
+    margin-right: auto;
     color: #102840;
+    margin-top: 150px; 
+
 }
 
-.texto-como-funciona4 p {
-    width: 500px;
+.texto-como-funciona4 p, .texto-como-funciona2 p {
+    width: 95%;
     font-family: Mont;
     font-size: 20px;
-    margin-top: 10px;
-    margin-left: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -1203,7 +1216,7 @@ a:link {
     float: left;
     text-align: right;
     font-size: 38px;
-    color: #002171;
+    color: #000;
 }
 
 .box-avaliacao {
@@ -1221,7 +1234,7 @@ a:link {
 }
 
 .box-av {
-    width: 400px;
+    width: 380px;
     height: 460px;
     background-color: #e9f0f6;
     margin-left: 35px;
@@ -1234,6 +1247,10 @@ a:link {
     height: 50%;
     width: 100%;
     background-color: aliceblue;
+}
+
+.img-avaliacao img{
+    width: 380px;
 }
 
 .titulo-veiculo,
@@ -1250,21 +1267,25 @@ a:link {
     width: 400px;
     font-size: 22px;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 30px;
 }
 
 .texto-av h2 {
     font-family: Mont;
     text-align: left;
-    width: 400px;
-    margin-left: 5px;
+    margin-left: 10px;
+    color: #000;
+    font-size: 18px;
+    font-weight: none;
 }
 
 .btn-av {
     border: none;
-    width: 160px;
-    height: 45px;
-    padding: 10px 20px 10px 20px;
+    width: 100px;
+    height: 25px;
+    padding: 10px 10px 10px 20px;
     background-color: #002171;
     float: left;
     color: #ecebeb;
@@ -1272,7 +1293,8 @@ a:link {
     font-family: Mont;
     border-radius: 25px;
     text-transform: uppercase;
-    margin-left: 120px;
+    margin-left: 140px;
+    margin-top: 40px;
 }
 
 
@@ -1461,8 +1483,8 @@ a:link {
 
 /*********** PAGINA CADASTRO **************/
 .content-cadastro {
-    width: 1920px;
-    height: 936px;
+    width: 100%;
+    height: 100%;
     background-size: 100%;
     float: left;
     background-image: url(../images/the-ride-academy-1145448-unsplash.jpg);
@@ -1475,7 +1497,8 @@ a:link {
     background-color: #102840;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 60px;
+    margin-top: 80px;
+    margin-bottom: 70px;
     box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
 
 }
@@ -1528,7 +1551,10 @@ a:link {
 }
 
 .inpt-foto{
-    margin-left: 100px;
+    margin-left: 130px;
+    font-family: Mont;
+    font-size: 12px;
+    color: #ecebeb;
 }
 .input-cadastro {
     border: none;
@@ -1570,8 +1596,8 @@ a:link {
 }
 
 .btn-cad:hover{
-    background-color: #ffff00;
-    color: #fff;
+    background-color: #ffd800;
+    color: #000000;
     cursor: pointer;
 }
 

@@ -30,6 +30,7 @@
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <section class="content">
+        <div class="caixa-padrao">
        <div class="box-parceiros">
             <div class="box-parceiro">
                 <div class="slider-parceiros">
@@ -120,6 +121,7 @@
                 ?>
             </div>
        </div>
+                </div>
     </section>
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>

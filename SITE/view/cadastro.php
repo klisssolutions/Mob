@@ -15,12 +15,13 @@ require_once($_SESSION["importInclude"]);
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="images/anuncios.png"/>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/link.js"></script>
+    <script  src="js/jquery.js"></script>
+    <script  src="js/link.js"></script>
     <title>Cadastro | Mob'Share</title>
 </head>
 <body>
     <div class="content-cadastro">
+        <div class="caixa-padrao">
         <div class="cadastro">
         <form class="s" method="POST" action="cadastro.php" id="form">
 
@@ -32,7 +33,7 @@ require_once($_SESSION["importInclude"]);
             </div>
 
             <div class="txt-div-cadastro">
-                <h1> <input class="inpt-foto" type="file" name="imgPerfil" onchange="preview(this)" value="<?php echo($logo)?>"></h1>
+                <input class="inpt-foto" type="file" name="imgPerfil" onchange="preview(this)">
                
             </div>
             <div class="txt-cadastro">
@@ -53,7 +54,7 @@ require_once($_SESSION["importInclude"]);
             </div>
             <div class="txt-div-cadastro">
                 <h1>Data de Nascimento:</h1>
-                <input type="polyfill" name="txtdtnasc" class="ipt-cads" value="" required>
+                <input type="" name="txtdtnasc" class="ipt-cads" value="" required>
             </div>
             <div class="txt-div-cadastro">
                 <h1>Numero da CNH:</h1>
@@ -78,6 +79,7 @@ require_once($_SESSION["importInclude"]);
             </div>
             
         </form>
+</div>
         </div>
         <div class="rodape-login">
         </div>

@@ -18,6 +18,7 @@ if(isset($_SESSION['idCliente'])){
 </head>
 <body>
     <div class="caixa-principal">
+    <div class="caixa-padrao">
     <div class="content-login">
         <form class="login" method="POST" action="../router.php?controller=clientes&modo=logar">
             <div class="img-login">
@@ -38,6 +39,7 @@ if(isset($_SESSION['idCliente'])){
         </form>
         <div class="rodape-login">
         </div>
+    </div>
     </div>
 </div>
 </body>

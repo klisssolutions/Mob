@@ -27,10 +27,13 @@ $termos = $controllerTermos->listarTermos();
     <section class="content">
         <div class="box-termos">
             <div class="image-termos">
+                <div class="caixa-padrao">
                 <div class="texto-sob-imagem">
                     <h1>Termos de Uso</h1>
                 </div>
+            </div>              
             </div>
+            <div class="caixa-padrao">
             <div class="texto-termos">
             <?php
                 foreach($termos as $termo){
@@ -43,6 +46,7 @@ $termos = $controllerTermos->listarTermos();
                 </div>
             <?php }} ?> 
             </div>
+                    </div>
         </div>
 
     </section>

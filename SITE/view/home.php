@@ -57,25 +57,32 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
 </head>
 
 <body>
-<div class="caixa-principal">
     <!-- HEADER DO MENU-->
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <div class="content">
+    <!-- caixa da imagem -->
         <div class="caixa-pesquisa-imagem">
+            <div class="caixa-padrao">
             <div class="caixa-inf">
-                <h1>Tenha praticidade nas suas viagens!</h1>
-                <p>Faça locações com a Mobshare e aproveite
-                    o que temos a oferecer!
-                </p>
+                <div class="cor-div">
+                    <h1>Tenha praticidade nas suas viagens!</h1>
+                    <p>Faça locações com a Mobshare e aproveite
+                        o que temos a oferecer!
+                    </p>
+                </div>
             </div>
+</div>
         </div>
+        <!-- caixa dos veículos -->
+        <div class="caixa-padrao">
         <div class="caixa-veiculos-home">
             <div class="caixa-itens-home">
                 <nav class="menu-veiculos">
                     <a>Em destaque: </a>
                 </nav>
             </div>
+            <!-- caixa dos veiculos -->
             <div class="caixa-veiculos">
                 <?php
                 $i= 0;
@@ -125,12 +132,15 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                 ?>
 
             </div>
+                </div>
                 <?php
                 $i = 0;
                 while($i < count($banners)){
                 if($i%2){
 
         ?>
+        
+        <div class="caixa-padrao">
             <div class="caixa-como-funciona">
                 <div class="texto-como-funciona">
                         <h1><?php echo($banners[$i]->getTitulo())?></h1>
@@ -142,6 +152,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                 <div class="img-como-funciona">
                     <img class="cm-segunda-imagem" src="<?php echo('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="590" alt="<?php echo($banners[$i]->getTitulo())?>">
                 </div>
+            
             </div>
 
                 <?php
@@ -160,7 +171,8 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                     </a>
                 </div>
                 
-</div>    
+        </div>   
+            </div> 
             <?php
             $i++;
                 }
@@ -172,7 +184,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
 
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>
-</div>
+
 </body>
 
 </html>
