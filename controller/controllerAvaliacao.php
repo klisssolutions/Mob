@@ -33,7 +33,7 @@ class controllerAvaliacao{
         $idLocacao = $_GET["idLocacao"];
 
         $tipoAvaliacao = $_GET["tipoAvaliacao"];
-        $idAvaliado = $_GET["idAvaliado"];
+        //$idAvaliado = $_GET["idAvaliado"];
 
 
         //Instancia da classe
@@ -46,7 +46,7 @@ class controllerAvaliacao{
 
         /* Chamada para o metodo de inserir no BD, passando como parâmetro o objeto
         contatoClass que tem todos os dados que serão inseridos no banco de dados */
-        return $avaliacaoDAO->insert($avaliacao, $tipoAvaliacao, $idAvaliado);
+        return $avaliacaoDAO->insert($avaliacao, $tipoAvaliacao);
         
     }
 

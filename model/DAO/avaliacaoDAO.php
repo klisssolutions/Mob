@@ -50,7 +50,10 @@ class avaliacaoDAO{
 
 
     //idAvaliado é o id de quem estará sendo avaliado (veiculo ou cliente), o tipo de avaliacao será se é veiculo ou cliente
-    public function insert(Avaliacao $avaliacao, $tipoAvaliacao, $idAvaliado){
+    public function insert(Avaliacao $avaliacao, $tipoAvaliacao){
+
+
+        
 
         $sql = INSERT . TABELA_AVALIACAO . " 
         (nota, depoimento, idLocacao)
@@ -71,7 +74,7 @@ class avaliacaoDAO{
         if($PDO_conex->query($sql)){
             $idAvaliacao = $this->selecionarUltimoIdAvaliacao();
             
-            $erro = $this->amarrarAvaliacao($tipoAvaliacao, $idAvaliado, $idAvaliacao);
+            $erro = $this->amarrarAvaliacao($tipoAvaliacao, $idAvaliacao, $avaliacao->getIdLocacao());
         }else{
             $erro = true;
         }
@@ -82,22 +85,26 @@ class avaliacaoDAO{
 
 
     
-    public function amarrarAvaliacao($tipoAvaliacao, $idAvaliado, $idAvaliacao){
+    public function amarrarAvaliacao($tipoAvaliacao, $idAvaliacao, $idLocacao){
 
         
         if(strtoupper($tipoAvaliacao) == "VEICULO"){
             $sql = INSERT . TABELA_AVALIACAO_VEICULO . " 
             (idVeiculo, idAvaliacao)
             VALUES (
-            '".$idAvaliado."',    
-            '".$idAvaliacao."')";
+            (select idVeiculo from solicitacao_locacao as sl join locacao as l 
+            on sl.idSolicitacao_Locacao = l.idSolicitacao_Locacao where 
+            l.idLocacao = ".$idLocacao."),    
+            ".$idAvaliacao.")";
             
         }else if(strtoupper($tipoAvaliacao) == "CLIENTE"){
             $sql = INSERT . TABELA_AVALIACAO_CLIENTE . " 
             (idCliente, idAvaliacao)
             VALUES (
-            '".$idAvaliado."',    
-            '".$idAvaliacao."')";
+            (select idCliente from solicitacao_locacao as sl join locacao as l 
+            on sl.idSolicitacao_Locacao = l.idSolicitacao_Locacao where 
+            l.idLocacao = ".$idLocacao."),    
+            ".$idAvaliacao.")";
         }
 
         //Abrindo conexão com o BD
