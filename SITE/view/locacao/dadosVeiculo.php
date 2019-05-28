@@ -55,7 +55,7 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -70,6 +70,8 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <div class="content">
         <div class="caixa-dados-veiculo">
+            
+        <div class="caixa-padrao">
             <div class="dados-veiculo">
                 <div class="foto-dados-veiculo">
                         <img src="<?php echo('/Mobshare/arquivos/'.$foto_veiculo->getFotoVeiculo()) ?>" width="610" height="400" alt="veiculo">
@@ -79,7 +81,7 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
                     <h2>Marca: <?php echo($marca->getNomeMarca());?></h2>
                     <h1><?php echo($modelo->getNomeModelo());?></h1>
                     <h2>Ano: 2016</h2>
-                    <h1>R$ <?php echo($veiculo->getValorHora()); ?>/h</h1>
+                    <h1>R$ <?php echo($veiculo->getValorHora()); ?>/H</h1>
                     <h2>Acessórios:</h2>
                 </div>
                 <?php if(isset($_SESSION['idCliente']['idCliente'])):?>
@@ -94,10 +96,12 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
                 </p>
                 <input type="submit" value="Quero alugar este!" class="inpt-dados" name="alugar">
                 </div>
+</div>
                 <?php endif; ?>
                 
                 </form>
                 <div class="dados-usuario-veiculo">
+                    <div class="caixa-padrao">
                     <div class="caixa-dados-usuario">
                         <div class="foto-dados-usuario">
                             <img src="../images/jon.jpg" width="200" height="200" alt="veiculo">
@@ -112,6 +116,7 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
                              <img src="../images/5estrelas.png" width="250" height="45" alt="veiculo">
                         </div>
                     </div>
+</div>
                 </div>
                 
             </div>

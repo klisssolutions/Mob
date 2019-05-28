@@ -494,7 +494,7 @@ if(!isset($incluso)){
     define("LINK_DASHBOARD_VEICULO_DEVOLUCAO", RAIZ_LINK . "/SITE/view/usuario-veiculo/devolucao.php");
     define("LINK_DASHBOARD_HISTORICO_VEICULO", RAIZ_LINK . "/SITE/view/usuario-veiculo/historicoVeic.php");
     define("LINK_DASHBOARD_LISTA_VEICULO_ALUGUEL", RAIZ_LINK . "/SITE/view/usuario-veiculo/listaVeicAluguel.php");
-    //define("LINK_DASHBOARD_LISTA_VEICULO_ALUGUEL", RAIZ_LINK . "/SITE/view/usuario-veiculo/listaVeicVenda.php");
+    define("LINK_DASHBOARD_LISTA_VEICULO_VENDA", RAIZ_LINK . "/SITE/view/usuario-veiculo/listaVeicVenda.php");
     define("LINK_DASHBOARD_OPCAO_VEICULO", RAIZ_LINK . "/SITE/view/usuario-veiculo/usuarioVeiculo.php");
     define("LINK_DASHBOARD_NOTIFICACAO", RAIZ_LINK . "/SITE/view/usuario-notificacao/notificacao.php");
     define("LINK_DASHBOARD_CUPONS", RAIZ_LINK . "/SITE/view/usuario-cupons/visualizarCupons.php");

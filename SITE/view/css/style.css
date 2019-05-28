@@ -973,7 +973,7 @@ a:link {
     background-color: #102840;
 }
 
-.texto-sob-imagem h1 {
+.texto-sob-imagem h2 {
     font-family: Mont;
     color: #fff;
     text-align: center;
@@ -1036,7 +1036,7 @@ a:link {
     float: left;
 }
 
-.titulo-duvidas h1 {
+.titulo-duvidas h2 {
     font-family: Mont;
     font-size: 38px;
     color: #002171;
@@ -1390,19 +1390,21 @@ a:link {
 
 /******** PAG: LOGIN *************/
 .content-login {
-    width: 1920px;
-    height: 936px;
-    background-image: url(../images/the-ride-academy-1145448-unsplash.jpg);
+    width: 100%;
+    height: 935px;
+    background-image: url(../images/fundo2.jpg);
+    background-repeat: no-repeat;
     background-size: 100%;
     float: left;
 }
 
 .login {
-    width: 580px;
+    width: 530px;
     height: 60%;
     background-color: #102840;
     margin-right: auto;
     margin-left: auto;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
     margin-top: 190px;
 
 }
@@ -1412,6 +1414,8 @@ a:link {
     height: 25%;
     margin-right: auto;
     margin-left: auto;
+    
+    margin-bottom: 10px;
 }
 
 .img-login img {
@@ -1424,19 +1428,20 @@ a:link {
     height: 20%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .txt-login h1 {
     font-family: Mont;
-    font-size: 22px;
+    font-size: 20px;
+    margin-top: 20px;
     color: #ecebeb;
 }
 
 .input-login {
     border: none;
     margin-top: 10px;
-    width: 520px;
+    width: 480px;
     height: 40px;
     border-radius: 20px;
     font-size: 20px;
@@ -1457,9 +1462,9 @@ a:link {
     width: 190px;
     height: 42px;
     padding: 10px 20px 10px 20px;
-    background-color: #ffd800;
-    margin-left: 160px;
-    color: #000;
+    background-color: #5e85e1;
+    margin-left: 140px;
+    color: #fff;
     border-radius: 20px;
     font-size: 18px;
     font-family: Mont;
@@ -1469,9 +1474,9 @@ a:link {
 }
 
 .btn-login-form:hover{
-    background-color: #5e85e1;
+    background-color: #ffd800;
     cursor: pointer;
-    color: #fff;
+    color: #000;
 }
 
 .btn-login p {
@@ -1484,10 +1489,11 @@ a:link {
 /*********** PAGINA CADASTRO **************/
 .content-cadastro {
     width: 100%;
-    height: 100%;
+    height: 935px;
+    background-image: url(../images/fundo2.jpg);
+    background-repeat: no-repeat;
     background-size: 100%;
     float: left;
-    background-image: url(../images/the-ride-academy-1145448-unsplash.jpg);
 }
 
 

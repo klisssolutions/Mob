@@ -54,7 +54,7 @@ require_once($_SESSION["importInclude"]);
             </div>
             <div class="txt-div-cadastro">
                 <h1>Data de Nascimento:</h1>
-                <input type="" name="txtdtnasc" class="ipt-cads" value="" required>
+                <input type="date" name="txtdtnasc" class="ipt-cads" value="" required>
             </div>
             <div class="txt-div-cadastro">
                 <h1>Numero da CNH:</h1>

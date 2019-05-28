@@ -29,7 +29,7 @@ $termos = $controllerTermos->listarTermos();
             <div class="image-termos">
                 <div class="caixa-padrao">
                 <div class="texto-sob-imagem">
-                    <h1>Termos de Uso</h1>
+                    <h2>Termos de Uso</h2>
                 </div>
             </div>              
             </div>

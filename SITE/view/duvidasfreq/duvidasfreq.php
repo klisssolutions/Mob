@@ -30,7 +30,7 @@ require_once(IMPORT_DUVIDAS_FREQUENTES_CONTROLLER);
         <div class="box-duvidas">
             <div class="duvidas-titulo">
                 <div class="titulo-duvidas">
-                    <h1>Duvidas Frequentes</h1>
+                    <h2>Duvidas Frequentes</h2>
                 </div>
                 <div class="image-duvidas">
                     <div class="image-faq">
