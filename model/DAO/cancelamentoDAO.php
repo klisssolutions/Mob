@@ -130,7 +130,7 @@ class cancelamentoDAO{
 
     //Seleciona um registro pelo ID.
     public function selectById($id){
-        $sql = SELECT.' Marca where idMarca = '.$id;
+        $sql = SELECT.' marca where idMarca = '.$id;
 
         //Abrindo conexão com o BD
         $PDO_conex = $this->conex->connectDataBase();

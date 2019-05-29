@@ -44,7 +44,7 @@ class clienteDAO{
             '".$cliente->getDataCadastro()."')";
         }else{   
             
-            $sql = " insert into Cliente
+            $sql = " insert into cliente
             (nome, cpf, cnh, categoriaCnh, email, senha, dataCadastro)
             VALUES (
             '".$cliente->getNome()."',

@@ -24,12 +24,10 @@ class acessorioDAO{
         $this->conex = new conexaoMySQL();
     }
 
-
-
     public function selectByVeiculo($idVeiculo
     ){
-        $sql = "select a.idAcessorio, a.idTipo_Veiculo, a.nomeAcessorio, av.qtdAcessorio from Acessorio as a join Acessorio_Veiculo as av 
-        on av.idAcessorio = a.idAcessorio join Veiculo as v on 
+        $sql = "select a.idAcessorio, a.idTipo_Veiculo, a.nomeAcessorio, av.qtdAcessorio from acessorio as a join acessorio_veiculo as av 
+        on av.idAcessorio = a.idAcessorio join veiculo as v on 
         av.idVeiculo = v.idVeiculo where v.idVeiculo = ".$idVeiculo;
 
         //Abrindo conexão com o BD

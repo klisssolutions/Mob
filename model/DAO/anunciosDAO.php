@@ -26,7 +26,7 @@ class anunciosDAO{
 
     public function filtrarAnuncios($marca, $modelo, $KM, $avaliacao, $tipoVeiculo){
         $sql = "SELECT v.idVeiculo, mo.nomeModelo, ma.nomeMarca, ft.fotoVeiculo FROM veiculo as v
-        join modelo as mo on v.idModelo = mo.idModelo join Marca as ma on ma.idMarca = mo.idMarca join 
+        join modelo as mo on v.idModelo = mo.idModelo join marca as ma on ma.idMarca = mo.idMarca join 
         foto_veiculo as ft on ft.idVeiculo = v.idVeiculo join categoria_veiculo as cv on cv.idCategoria_Veiculo = 
         v.idCategoria_Veiculo join tipo_veiculo as tv on tv.idTipo_Veiculo = cv.idTipo_Veiculo ";
 

@@ -27,7 +27,7 @@ class v_detalhes_locacaoDAO{
 
     //Inserir um registro no banco de dados.
     public function insert(Banner $banner){
-        $sql = INSERT . " Banner " . " 
+        $sql = INSERT . " banner " . " 
         (titulo, imagem, texto, href, nomeBotao)
         VALUES (
         '".$banner->getTitulo()."',
@@ -52,7 +52,7 @@ class v_detalhes_locacaoDAO{
 
     //Deletar um registro no banco de dados.
     public function delete($id){
-        $sql = DELETE . " Banner" . " where idBanner =".$id;
+        $sql = DELETE . " banner" . " where idBanner =".$id;
 
         //Abrindo conexão com o BD
         $PDO_conex = $this->conex->connectDataBase();
@@ -72,7 +72,7 @@ class v_detalhes_locacaoDAO{
     public function update(Banner $banner){
 
         if($banner->getImagem()){
-            $sql = UPDATE . " Banner" . " 
+            $sql = UPDATE . " banner" . " 
             SET titulo = '".$banner->getTitulo()."',
                 texto = '".$banner->getTexto()."',
                 href = '".$banner->getHref()."',
@@ -81,7 +81,7 @@ class v_detalhes_locacaoDAO{
                 imagem = '".$banner->getImagem()."'
             WHERE idBanner = '".$banner->getIdBanner()."';";
         }else{
-            $sql = UPDATE . " Banner" . " 
+            $sql = UPDATE . " banner" . " 
             SET titulo = '".$banner->getTitulo()."',
                 texto = '".$banner->getTexto()."',
                 href = '".$banner->getHref()."',
@@ -147,7 +147,7 @@ class v_detalhes_locacaoDAO{
 
     //Seleciona um registro pelo ID.
     public function selectById($id){
-        $sql = SELECT.' Banner where idBanner = '.$id;
+        $sql = SELECT.' banner where idBanner = '.$id;
 
         //Abrindo conexão com o BD
         $PDO_conex = $this->conex->connectDataBase();
