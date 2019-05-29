@@ -105,6 +105,8 @@ class funcionarioDAO{
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listFuncionarios[] = new Funcionario();
+        $listFuncionario = null;
         while($rsFuncionarios=$select->fetch(PDO::FETCH_ASSOC)){
             $listFuncionarios[] = new Funcionario();
             $listFuncionarios[$cont]->setIdUsuarioWeb($rsFuncionarios["idUsuario_Web"]);

@@ -32,7 +32,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($funcionario->getIdUsuarioWeb());?>
+        <?php echo utf8_encode($funcionario->getIdUsuarioWeb());?>
     
     </div>
     <div class="dados-func">
@@ -42,19 +42,19 @@
     </div>
     <div class="dados-resp-func">
     
-    <?php echo($funcionario->getEmail());?>
+    <?php echo utf8_encode($funcionario->getEmail());?>
     
     </div>
     <div class="opcao">
     
-    <a href="#" onclick="selectRouter('funcionarios', 'excluir', <?php echo($funcionario->getIdUsuarioWeb());?>)">
+    <a href="#" onclick="selectRouter('funcionarios', 'excluir', <?php echo utf8_encode($funcionario->getIdUsuarioWeb());?>)">
         <img src="view/imagens/delete.png" width="28" heigth="28">
     </a>
     
     </div>
     <div class="opcao">
     
-        <a href="#" onclick="selectRouter('funcionarios', 'buscar', <?php echo($funcionario->getIdUsuarioWeb());?>)">
+        <a href="#" onclick="selectRouter('funcionarios', 'buscar', <?php echo utf8_encode($funcionario->getIdUsuarioWeb());?>)">
          <img src="view/imagens/pencil.png" width="25" heigth="28">
         </a>
     

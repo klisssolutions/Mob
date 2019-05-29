@@ -33,7 +33,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($cancelamento->getIdCancelamento());?>
+        <?php echo utf8_encode($cancelamento->getIdCancelamento());?>
     
     </div>
 
@@ -44,7 +44,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($cancelamento->getNome());?>
+        <?php echo utf8_encode($cancelamento->getNome());?>
     
     </div>
 
@@ -55,7 +55,7 @@
     </div>    
     
     <div class="dados-resp-func">
-        <?php echo($cancelamento->getIdCliente());?>
+        <?php echo utf8_encode($cancelamento->getIdCliente());?>
     </div>    
     
     
@@ -65,7 +65,7 @@
         
     </div>
     <div class="dados-resp-func">
-        <?php echo($cancelamento->getMotivo());?>
+        <?php echo utf8_encode($cancelamento->getMotivo());?>
     </div>
 
 
@@ -74,13 +74,13 @@
     <div class="segOpcao">
         <div class="opcaoConfirm">
         
-            <a href="#" onclick="selectRouter('cancelamento', 'aceitar', <?php echo($cancelamento->getIdCancelamento());?>)">
+            <a href="#" onclick="selectRouter('cancelamento', 'aceitar', <?php echo utf8_encode($cancelamento->getIdCancelamento());?>)">
             <img src="view/imagens/check.png" width="25" heigth="28"></a>
         
         </div>
         <div class="opcaoConfirm">
         
-            <a href="#" onclick="selectRouter('cancelamento', 'recusar', <?php echo($cancelamento->getIdCancelamento());?>)">
+            <a href="#" onclick="selectRouter('cancelamento', 'recusar', <?php echo utf8_encode($cancelamento->getIdCancelamento());?>)">
             <img src="view/imagens/delete.png" width="25" heigth="28">
             </a>
 

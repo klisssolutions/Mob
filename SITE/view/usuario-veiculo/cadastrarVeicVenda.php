@@ -40,49 +40,49 @@ $clientes = $controllerCliente->buscarCliente();
                     </div>
                 </div>
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
                 <div class="nav-menu-usuario-clicado">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_CUPONS); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
                 </div>
@@ -193,7 +193,7 @@ $clientes = $controllerCliente->buscarCliente();
                                 <input type="button" value="Voltar" class="btn-dash" onclick="veiculo();">
                             </td>
                             <td class="titulo-dash-cad">
-                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo($router); ?>">
+                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo utf8_encode($router); ?>">
                             </td>
                         </tr>
                     </table>
@@ -208,7 +208,7 @@ $clientes = $controllerCliente->buscarCliente();
                                 Titulo:
                             </td>
                             <td class="txt-dash">
-                                <input type="text" size="25" class="input-dash" name="txtTitulo" required value="<?php echo($titulo)?>">
+                                <input type="text" size="25" class="input-dash" name="txtTitulo" required value="<?php echo utf8_encode($titulo)?>">
                             </td>
                         </tr>
                         <tr>
@@ -216,12 +216,12 @@ $clientes = $controllerCliente->buscarCliente();
                                 Cor:
                             </td>
                             <td class="txt-dash">
-                                <input type="file" name="imgFoto" id="foto" accept="image/*" onchange="preview(this)" value="<?php echo($foto)?>">
+                                <input type="file" name="imgFoto" id="foto" accept="image/*" onchange="preview(this)" value="<?php echo utf8_encode($foto)?>">
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" align="center">
-                                <img src="<?php echo($foto); ?>" id="prev">
+                                <img src="<?php echo utf8_encode($foto); ?>" id="prev">
                             </td>
                         </tr>
                         <tr>
@@ -229,7 +229,7 @@ $clientes = $controllerCliente->buscarCliente();
                                 Descrição:
                             </td>
                             <td class="txt-dash">
-                                <textarea name="txtDescricao" class="input-dash" required><?php echo($descricao)?></textarea>
+                                <textarea name="txtDescricao" class="input-dash" required><?php echo utf8_encode($descricao)?></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -237,7 +237,7 @@ $clientes = $controllerCliente->buscarCliente();
                                 <input type="button" value="Voltar" class="btn-dash" onclick="veiculo();">
                             </td>
                             <td class="titulo-dash-cad">
-                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo($router); ?>">
+                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo utf8_encode($router); ?>">
                             </td>
                         </tr>
                     </table>

@@ -27,7 +27,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($pendencia->getNome()); ?>
+        <?php echo utf8_encode($pendencia->getNome()); ?>
     
     </div>
     <div class="dados-func">
@@ -37,13 +37,13 @@
     </div>
     <div class="dados-resp-func">
     
-    <?php echo($pendencia->getId()); ?>
+    <?php echo utf8_encode($pendencia->getId()); ?>
     
     </div>
 
     <div class="opcao">
     
-        <a href="#" onclick="selectRouter('pendenciausuario', 'buscar', <?php echo($pendencia->getIdPendencia());?>);">
+        <a href="#" onclick="selectRouter('pendenciausuario', 'buscar', <?php echo utf8_encode($pendencia->getIdPendencia());?>);">
     <img src="view/imagens/pencil.png" width="28" heigth="28"></a>
     
     </div>

@@ -26,7 +26,7 @@
                   Titulo:
               </td>
               <td class="txt-func">
-                <input type="text" size="25" class="input-func" name="txtTitulo" required value="<?php echo($titulo)?>">
+                <input type="text" size="25" class="input-func" name="txtTitulo" required value="<?php echo utf8_encode($titulo)?>">
               </td>
           </tr>
           <tr>
@@ -34,12 +34,12 @@
                   Foto:
               </td>
               <td class="txt-func">
-                <input type="file" name="imgFoto" id="foto" accept="image/*" onchange="preview(this)" value="<?php echo($foto)?>">
+                <input type="file" name="imgFoto" id="foto" accept="image/*" onchange="preview(this)" value="<?php echo utf8_encode($foto)?>">
               </td>
           </tr>
           <tr>
             <td colspan="2" align="center">
-              <img src="<?php echo($foto); ?>" id="prev">
+              <img src="<?php echo utf8_encode($foto); ?>" id="prev">
             </td>
           </tr>
           <tr>
@@ -47,7 +47,7 @@
                   Descrição:
               </td>
               <td class="txt-func">
-                <textarea name="txtDescricao" class="input-func2" required><?php echo($descricao)?></textarea>
+                <textarea name="txtDescricao" class="input-func2" required><?php echo utf8_encode($descricao)?></textarea>
               </td>
           </tr>
           <tr>
@@ -66,7 +66,7 @@
                 <input type="button" value="Voltar" class="btn-fun" onclick="comoFunciona();">
               </td>
               <td class="titulo-func-cad">
-                <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo($router); ?>">
+                <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo utf8_encode($router); ?>">
               </td>
           </tr>
   </table>

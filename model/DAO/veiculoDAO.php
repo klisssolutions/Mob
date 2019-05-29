@@ -76,12 +76,12 @@ class veiculoDAO{
             //Fecha a conexão com o BD
             $this->conex->closeDataBase();
             return $idVeiculo;            
-            //echo($sql);
+            //echo utf8_encode($sql);
         }else{
             $erro = true;
             $this->conex->closeDataBase();
             return $erro;  
-            echo($sql);
+            echo utf8_encode($sql);
         }
 
         
@@ -123,11 +123,11 @@ class veiculoDAO{
 
         //Abrindo conexão com o BD
         $PDO_conex = $this->conex->connectDataBase();
-        echo($sql);
+        echo utf8_encode($sql);
         //Executa no BD o script Insert e retorna verdadeiro/falso
         if($PDO_conex->query($sql)){
             $idVeiculo = $this->selecionarUltimoInserido();
-            echo('<script>alert("Veiculo Atualizado com sucesso")</script>');
+            echo utf8_encode('<script>alert("Veiculo Atualizado com sucesso")</script>');
             $erro = false;
         }else{
             $erro = true;
@@ -192,6 +192,8 @@ class veiculoDAO{
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listVeiculos[] = new veiculo;
+        $listVeiculos = null;
         while($rsVeiculos=$select->fetch(PDO::FETCH_ASSOC)){
             $listVeiculos[] = new Veiculo();
             $listVeiculos[$cont]->setIdVeiculo($rsVeiculos["idVeiculo"]);
@@ -269,7 +271,7 @@ class veiculoDAO{
             }else{
                 $sql = $sql . " and quilometragem < ".$KM  ;
             }
-            echo($KM);
+            echo utf8_encode($KM);
         }
 
         //Abrindo conexão com o BD

@@ -65,12 +65,12 @@ try {
 
     $mail->send();
 
-    echo('<script>alert("Mensagem enviada");</script>');
-    echo("<script>emailMarketing();</script>");
+    echo utf8_encode('<script>alert("Mensagem enviada");</script>');
+    echo utf8_encode("<script>emailMarketing();</script>");
 } catch (Exception $e) {
-    echo($mail->ErrorInfo);
-    echo('<script>alert("Mensagem não enviada");</script>');
+    echo utf8_encode($mail->ErrorInfo);
+    echo utf8_encode('<script>alert("Mensagem não enviada");</script>');
     // echo 'Mensagem não enviada, verifique o erro: ', $mail->ErrorInfo;
-    echo("<script>emailMarketing();</script>");
+    echo utf8_encode("<script>emailMarketing();</script>");
 }
 ?>

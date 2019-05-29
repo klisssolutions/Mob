@@ -32,7 +32,7 @@ if (is_array($termos) || is_object($termos))
     <div>
     <div class="info-termo">
         <h1>Titulo:</h1>
-        <p><?php echo($termo->getTitulo());?></p>
+        <p><?php echo utf8_encode($termo->getTitulo());?></p>
     </div>
     <div class="opcoes-termo">
     <a href="#" onclick="">
@@ -48,11 +48,11 @@ if (is_array($termos) || is_object($termos))
         <?php } ?> 
     </a>
     <!-- icone de edição -->
-    <a href="#" onclick="selectRouter('termos', 'buscar', <?php echo($termo->getIdTermo());?>)">
+    <a href="#" onclick="selectRouter('termos', 'buscar', <?php echo utf8_encode($termo->getIdTermo());?>)">
          <img src="view/imagens/pencil.png" width="25" heigth="28">
     </a>
     <!-- ícone de deletar -->
-    <a href="#" onclick="selectRouter('termos', 'excluir', <?php echo($termo->getIdTermo());?>)">
+    <a href="#" onclick="selectRouter('termos', 'excluir', <?php echo utf8_encode($termo->getIdTermo());?>)">
          <img src="view/imagens/trash.png" width="25" heigth="28" alt="apagar">
     </a>
     </div>

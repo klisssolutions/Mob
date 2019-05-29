@@ -34,7 +34,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($Fale_Conosco->getNome());?>
+        <?php echo utf8_encode($Fale_Conosco->getNome());?>
     </div>
     <div class="dados-func">
     
@@ -44,7 +44,7 @@
     
     <div class="dados-resp-func">
     
-        <?php echo($Fale_Conosco->getEmail());?>
+        <?php echo utf8_encode($Fale_Conosco->getEmail());?>
     
     </div>
         <div class="dados-func">
@@ -54,7 +54,7 @@
     </div>
         <div class="dados-resp-func">
     
-        <?php echo($Fale_Conosco->getAssunto());?>
+        <?php echo utf8_encode($Fale_Conosco->getAssunto());?>
     
     </div>
         <div class="dados-func">
@@ -64,14 +64,14 @@
     </div>
         <div class="dados-resp-func">
     
-        <?php echo($Fale_Conosco->getMensagem());?>
+        <?php echo utf8_encode($Fale_Conosco->getMensagem());?>
     
     </div>
     <div class="opcao">
         
     
         <a href="#" onclick="selectRouter('Fale_Conosco','excluir',<?php
-        echo($Fale_Conosco->getIdFale_Conosco());?>)"><img src="view/imagens/trash.png" width="25" heigth="28"></a>
+        echo utf8_encode($Fale_Conosco->getIdFale_Conosco());?>)"><img src="view/imagens/trash.png" width="25" heigth="28"></a>
 
     
     </div>

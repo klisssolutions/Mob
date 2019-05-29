@@ -122,7 +122,7 @@ class v_detalhes_locacaoDAO{
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
         $listLocacoes[] = new V_detalhes_locacao();
 
-        $listBanners = null;
+        $listLocacoes = null;
         while($rsLocacoes=$select->fetch(PDO::FETCH_ASSOC)){
             $locacao = new V_detalhes_locacao();
             $locacao->setIdLocacao($rsLocacoes["Idlocacao"]);

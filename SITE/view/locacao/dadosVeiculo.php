@@ -22,7 +22,7 @@ require_once(IMPORT_SOLICITACAO_LOCACAO);
 if(isset($_GET["alugar"])){
     $_GET["id"] = $_SESSION['idVeiculo'];
 
-    echo("<script>alert('Locação solicitada.')</script>");
+    echo utf8_encode("<script>alert('Locação solicitada.')</script>");
 
     $controllerSolicitacao = new controllerSolicitacao_Locacao();
     $_GET["idCliente"] = $_SESSION['idCliente']['idCliente'];
@@ -61,7 +61,7 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="images/anuncios.png" />
-    <title><?php echo($marca->getNomeMarca() . " " . $modelo->getNomeModelo());?> | Mob'Share</title>
+    <title><?php echo utf8_encode($marca->getNomeMarca() . " " . $modelo->getNomeModelo());?> | Mob'Share</title>
 </head>
 
 <body>
@@ -74,14 +74,14 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
         <div class="caixa-padrao">
             <div class="dados-veiculo">
                 <div class="foto-dados-veiculo">
-                        <img src="<?php echo('/Mobshare/arquivos/'.$foto_veiculo->getFotoVeiculo()) ?>" width="610" height="400" alt="veiculo">
+                        <img src="<?php echo utf8_encode('/Mobshare/arquivos/'.$foto_veiculo->getFotoVeiculo()) ?>" width="610" height="400" alt="veiculo">
                 </div>
                 <form method="GET">
                 <div class="foto-dados-veiculo">
-                    <h2>Marca: <?php echo($marca->getNomeMarca());?></h2>
-                    <h1><?php echo($modelo->getNomeModelo());?></h1>
+                    <h2>Marca: <?php echo utf8_encode($marca->getNomeMarca());?></h2>
+                    <h1><?php echo utf8_encode($modelo->getNomeModelo());?></h1>
                     <h2>Ano: 2016</h2>
-                    <h1>R$ <?php echo($veiculo->getValorHora()); ?>/H</h1>
+                    <h1>R$ <?php echo utf8_encode($veiculo->getValorHora()); ?>/H</h1>
                     <h2>Acessórios:</h2>
                 </div>
                 <?php if(isset($_SESSION['idCliente']['idCliente'])):?>

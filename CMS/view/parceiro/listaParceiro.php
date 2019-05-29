@@ -31,7 +31,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($parceiro->getNome());?>
+        <?php echo utf8_encode($parceiro->getNome());?>
     
     </div>
     <div class="dados-func">
@@ -41,7 +41,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($parceiro->getSite());?>
+        <?php echo utf8_encode($parceiro->getSite());?>
     
     </div>
     
@@ -60,11 +60,11 @@
             <?php } ?> 
         </a>
     
-        <a href="#" onclick="selectRouter('parceiros', 'buscar', <?php echo($parceiro->getIdParceiro());?>)">
+        <a href="#" onclick="selectRouter('parceiros', 'buscar', <?php echo utf8_encode($parceiro->getIdParceiro());?>)">
             <img src="view/imagens/pencil.png" width="25" heigth="28">
         </a>
     
-        <a href="#" onclick="selectRouter('parceiros', 'excluir', <?php echo($parceiro->getIdParceiro());?>)">
+        <a href="#" onclick="selectRouter('parceiros', 'excluir', <?php echo utf8_encode($parceiro->getIdParceiro());?>)">
             <img src="view/imagens/trash.png" width="25" heigth="28">
         </a>
 

@@ -43,8 +43,8 @@
             <div class="administrador">
             <div class="icone"><img src="view/imagens/settings.png" heigth="32" width="32"></div>
                 <div class="texto">
-                    <h1><?php echo($funcionario->getNome());?></h1>
-                    <p><?php echo($nivel->getNome());?></p>
+                    <h1><?php echo utf8_encode($funcionario->getNome());?></h1>
+                    <p><?php echo utf8_encode($nivel->getNome());?></p>
                 </div>
                 
             </div>

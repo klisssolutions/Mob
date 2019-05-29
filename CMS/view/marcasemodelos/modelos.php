@@ -45,7 +45,7 @@
             Modelo:
             </td>
             <td class="txt-func">
-              <input type="text" class="input-func" name="txtModelo" maxlength="15" value="<?php echo($nomeModelo)?>" size="20" required>
+              <input type="text" class="input-func" name="txtModelo" maxlength="15" value="<?php echo utf8_encode($nomeModelo)?>" size="20" required>
             </td>
         </tr>
         <tr>
@@ -60,7 +60,7 @@
                     $selected = ($idMarca == $marca->getIdMarca() ? "selected" : null);
                 ?>
                   
-                  <option value="<?php echo($marca->getIdMarca()); ?>" <?php echo($selected); ?>><?php echo($marca->getNomeMarca()); ?></option>
+                  <option value="<?php echo utf8_encode($marca->getIdMarca()); ?>" <?php echo utf8_encode($selected); ?>><?php echo utf8_encode($marca->getNomeMarca()); ?></option>
 
                 <?php } ?>
               </select>
@@ -72,7 +72,7 @@
             <input type="button" value="Voltar" class="btn-fun" onclick="listaModelos();">
             </td>
             <td class="titulo-func-cad">
-              <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo($router)?>">
+              <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo utf8_encode($router)?>">
             </td>
         </tr>
     </table>

@@ -65,49 +65,49 @@ $veiculos = $controllerVeiculo->listarVeiculosCliente();
                     </div>
                 </div>
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
                 <div class="nav-menu-usuario-clicado">
                     <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_CUPONS); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
                 </div>
@@ -145,17 +145,17 @@ $veiculos = $controllerVeiculo->listarVeiculosCliente();
 
                 <div class="box-veiculo">
                     <div class="img-veiculo">
-                        <img src="<?php echo('/Mobshare/arquivos/'.$foto_veiculo->getFotoVeiculo()) ?>" width="320" height="225" alt="veiculo">
+                        <img src="<?php echo utf8_encode('/Mobshare/arquivos/'.$foto_veiculo->getFotoVeiculo()) ?>" width="320" height="225" alt="veiculo">
                     </div>
                     <div class="texto-modelo">
-                        <label class="negrito">Modelo: </label><?php echo($modelo->getNomeModelo())?>
+                        <label class="negrito">Modelo: </label><?php echo utf8_encode($modelo->getNomeModelo())?>
                     </div>
                     <div class="texto-marca">
-                        <label class="negrito">Marca: </label> <?php echo($marca->getNomeMarca())?>
+                        <label class="negrito">Marca: </label> <?php echo utf8_encode($marca->getNomeMarca())?>
                     </div>
                     <div class="texto-ano">
                         
-                        <label class="negrito">Ano: </label> <?php echo($veiculos[$i]->getAno())?>
+                        <label class="negrito">Ano: </label> <?php echo utf8_encode($veiculos[$i]->getAno())?>
 
                     </div>
 

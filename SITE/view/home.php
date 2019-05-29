@@ -105,16 +105,16 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                 <!-- caixa onde fica a informaçao do veiculo -->
                 <div class="box-veiculo">
                     <div class="img-veiculo">
-                        <img src="<?php echo('/Mobshare/arquivos/'.$foto_veiculo->getFotoVeiculo()) ?>" width="320" height="225" alt="<?php echo($modelo->getNomeModelo())?>">
+                        <img src="<?php echo utf8_encode('/Mobshare/arquivos/'.$foto_veiculo->getFotoVeiculo()) ?>" width="320" height="225" alt="<?php echo utf8_encode($modelo->getNomeModelo())?>">
                     </div>
                     <div class="texto-modelo">
-                        <?php echo($modelo->getNomeModelo())?>
+                        <?php echo utf8_encode($modelo->getNomeModelo())?>
                     </div>
                     <div class="texto-km">
-                        Marca: <?php echo($marca->getNomeMarca())?>
+                        Marca: <?php echo utf8_encode($marca->getNomeMarca())?>
                     </div>
                     <div class="texto-regiao">
-                        Ano: <?php echo($veiculos[$i]->getAno())?>
+                        Ano: <?php echo utf8_encode($veiculos[$i]->getAno())?>
 
                     </div>
                     <div class="texto-avaliacao">
@@ -143,14 +143,14 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
         <div class="caixa-padrao">
             <div class="caixa-como-funciona">
                 <div class="texto-como-funciona">
-                        <h1><?php echo($banners[$i]->getTitulo())?></h1>
-                        <p><?php echo($banners[$i]->getTexto())?></p>
-                        <a href="<?php echo($banners[$i]->getHref())?>">
-                            <h2><?php echo($banners[$i]->getNomeBotao())?></h2>
+                        <h1><?php echo utf8_encode($banners[$i]->getTitulo())?></h1>
+                        <p><?php echo utf8_encode($banners[$i]->getTexto())?></p>
+                        <a href="<?php echo utf8_encode($banners[$i]->getHref())?>">
+                            <h2><?php echo utf8_encode($banners[$i]->getNomeBotao())?></h2>
                         </a>
                 </div>
                 <div class="img-como-funciona">
-                    <img class="cm-segunda-imagem" src="<?php echo('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="590" alt="<?php echo($banners[$i]->getTitulo())?>">
+                    <img class="cm-segunda-imagem" src="<?php echo utf8_encode('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="590" alt="<?php echo utf8_encode($banners[$i]->getTitulo())?>">
                 </div>
             
             </div>
@@ -161,13 +161,13 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
         ?>
       <div class="caixa-como-funciona">
                 <div class="img-como-funciona">
-                    <img class="cm-primeira-imagem" src="<?php echo('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="480" alt="<?php echo($banners[$i]->getTitulo())?>">
+                    <img class="cm-primeira-imagem" src="<?php echo utf8_encode('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="480" alt="<?php echo utf8_encode($banners[$i]->getTitulo())?>">
                 </div>
                 <div class="texto-como-funciona">
-                    <h1><?php echo($banners[$i]->getTitulo())?></h1>
-                    <p><?php echo($banners[$i]->getTexto())?></p>
-                    <a href="<?php echo($banners[$i]->getHref())?>">
-                        <h2><?php echo($banners[$i]->getNomeBotao())?></h2>
+                    <h1><?php echo utf8_encode($banners[$i]->getTitulo())?></h1>
+                    <p><?php echo utf8_encode($banners[$i]->getTexto())?></p>
+                    <a href="<?php echo utf8_encode($banners[$i]->getHref())?>">
+                        <h2><?php echo utf8_encode($banners[$i]->getNomeBotao())?></h2>
                     </a>
                 </div>
                 

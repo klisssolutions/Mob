@@ -119,7 +119,6 @@ class bannerDAO{
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
         $listBanners[] = new Banner();
-
         $listBanners = null;
         while($rsBanner=$select->fetch(PDO::FETCH_ASSOC)){
             $banner = new Banner();

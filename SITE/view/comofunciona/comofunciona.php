@@ -36,11 +36,11 @@
         
         <div class="box-como-funciona-segundo">
             <div class="image-como-funciona2">
-                    <img src="<?php echo("/Mobshare/arquivos/".$funcionamento->getFoto());?>" width="700" height="400"  alt="App da MobShare">
+                    <img src="<?php echo utf8_encode("/Mobshare/arquivos/".$funcionamento->getFoto());?>" width="700" height="400"  alt="App da MobShare">
             </div>
             <div class="texto-como-funciona2">
-                    <h2><?php echo($funcionamento->getTitulo());?></h2>
-                    <p><?php echo($funcionamento->getDescricao());?></p>
+                    <h2><?php echo utf8_encode($funcionamento->getTitulo());?></h2>
+                    <p><?php echo utf8_encode($funcionamento->getDescricao());?></p>
                    
             </div>
         </div>
@@ -49,13 +49,13 @@
             
             <div class="texto-como-funciona4">
             
-                    <h2><?php echo($funcionamento->getTitulo());?></h2>
-                    <p><?php echo($funcionamento->getDescricao());?></p>
+                    <h2><?php echo utf8_encode($funcionamento->getTitulo());?></h2>
+                    <p><?php echo utf8_encode($funcionamento->getDescricao());?></p>
             
                     
             </div>
             <div class="image-como-funciona4">
-                <img src="<?php echo("/Mobshare/arquivos/".$funcionamento->getFoto());?>" width="700" height="400"  alt="App da MobShare">
+                <img src="<?php echo utf8_encode("/Mobshare/arquivos/".$funcionamento->getFoto());?>" width="700" height="400"  alt="App da MobShare">
 
         </div>
 </div>

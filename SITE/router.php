@@ -38,7 +38,7 @@ if(isset($_GET["controller"])){
                     $controllerParceiro->inserirParceiro();
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>parceiro();</script>");
+                    echo utf8_encode("<script>parceiro();</script>");
                 break;
 
                 case "EXCLUIR":
@@ -46,7 +46,7 @@ if(isset($_GET["controller"])){
                     $controllerParceiro->excluirParceiro();
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>parceiro();</script>");
+                    echo utf8_encode("<script>parceiro();</script>");
                 break;
 
                 case "BUSCAR":
@@ -59,7 +59,7 @@ if(isset($_GET["controller"])){
                 case "ATUALIZAR":
                     $controllerParceiro->atualizarParceiro();
 
-                    echo("<script>parceiro();</script>");
+                    echo utf8_encode("<script>parceiro();</script>");
                 break;
             }
 
@@ -88,9 +88,9 @@ if(isset($_GET["controller"])){
                     $controllerCliente->inserirCliente(1);
 
                     //Encaminha para a pagina de usuario
-                    echo("<script>alert('Cliente cadastrado. Por favor faça seu Login');</script>");
+                    echo utf8_encode("<script>alert('Cliente cadastrado. Por favor faça seu Login');</script>");
                     
-                    echo("<script>window.location.replace('" . LINK_SITE_LOGIN . "');</script>");
+                    echo utf8_encode("<script>window.location.replace('" . LINK_SITE_LOGIN . "');</script>");
                     
                     break;
                 }
@@ -103,7 +103,7 @@ if(isset($_GET["controller"])){
                     $controllerCliente->inserirCliente(1);
 
                     //Encaminha para a pagina de usuario
-                    echo("<script>alert('Cliente cadastrado. Por favor faça seu Login');</script>");
+                    echo utf8_encode("<script>alert('Cliente cadastrado. Por favor faça seu Login');</script>");
                     
                     require_once(IMPORT_SITE_LOGIN);
                     
@@ -130,13 +130,11 @@ if(isset($_GET["controller"])){
                     
                     $controllerCliente->atualizarCliente();
 
-                    echo("<script>verPerfil()</script>");
+                    echo utf8_encode("<script>verPerfil()</script>");
 
                     //Encaminha para a pagina de usuario
                     
                     require_once(IMPORT_SITE_USUARIO);
-
-                    
                     
                 break;
             }
@@ -156,7 +154,7 @@ if(isset($_GET["controller"])){
                     $controllerFuncionamento->inserirFuncionamento();
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>comoFunciona();</script>");
+                    echo utf8_encode("<script>comoFunciona();</script>");
                 break;
 
                 case "EXCLUIR":
@@ -164,7 +162,7 @@ if(isset($_GET["controller"])){
                     $controllerFuncionamento->excluirFuncionamento();
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>comoFunciona();</script>");
+                    echo utf8_encode("<script>comoFunciona();</script>");
                 break;
 
                 case "BUSCAR":
@@ -177,7 +175,7 @@ if(isset($_GET["controller"])){
                 case "ATUALIZAR":
                     $controllerFuncionamento->atualizarFuncionamento();
 
-                    echo("<script>comoFunciona();</script>");
+                    echo utf8_encode("<script>comoFunciona();</script>");
                 break;
             }       
         break;
@@ -195,7 +193,7 @@ if(isset($_GET["controller"])){
 
                 //Encaminha para a pagina de funcionario
                 
-                echo("<script>cadastrarEndereco();</script>");
+                echo utf8_encode("<script>cadastrarEndereco();</script>");
 
             break;
 
@@ -204,7 +202,7 @@ if(isset($_GET["controller"])){
                 $controllerEndereco->excluirEndereco();
 
                 //Encaminha para a pagina de funcionario
-                echo("<script>cadastrarEndereco();</script>");
+                echo utf8_encode("<script>cadastrarEndereco();</script>");
             break;
 
             case "BUSCAR":
@@ -217,7 +215,7 @@ if(isset($_GET["controller"])){
             case "ATUALIZAR":
                 $controllerEndereco->atualizarEndereco();
 
-                echo("<script>cadastrarEndereco();</script>");
+                echo utf8_encode("<script>cadastrarEndereco();</script>");
             break;
         }       
     break;
@@ -236,14 +234,14 @@ if(isset($_GET["controller"])){
                 $controllerTermos->inserirTermos();
 
                 //Encaminha para a pagina de TERMOS
-                echo("<script>termos();</script>");
+                echo utf8_encode("<script>termos();</script>");
                 break;
 
             case "EXCLUIR":
                 $controllerTermos->excluirTermos();
 
                 //Encaminha para a pagina de TERMOS
-                echo("<script>termos();</script>");
+                echo utf8_encode("<script>termos();</script>");
                 break;
 
             case "BUSCAR":
@@ -255,7 +253,7 @@ if(isset($_GET["controller"])){
             case "ATUALIZAR":
                 $controllerTermos->atualizarTermos();
 
-                echo("<script>termos();</script>");
+                echo utf8_encode("<script>termos();</script>");
                 break;
         }
         break;
@@ -274,14 +272,14 @@ if(isset($_GET["controller"])){
                 $controllerMarca->inserirMarcas();
 
                 //Encaminha para a pagina de TERMOS
-                echo("<script>marcas();</script>");
+                echo utf8_encode("<script>marcas();</script>");
                 break;
 
             case "EXCLUIR":
                 $controllerMarca->excluirMarcas();
 
                 //Encaminha para a pagina de TERMOS
-                echo("<script>marcas();</script>");
+                echo utf8_encode("<script>marcas();</script>");
                 break;
 
             case "BUSCAR":
@@ -293,7 +291,7 @@ if(isset($_GET["controller"])){
             case "ATUALIZAR":
                 $controllerMarca->atualizarMarcas();
 
-                echo("<script>marcas();</script>");
+                echo utf8_encode("<script>marcas();</script>");
                 break;
         }
         break;
@@ -317,7 +315,7 @@ switch($modo){
 
         //Encaminha para a pagina de TERMOS
            
-        echo("<script>veiculo();</script>");
+        echo utf8_encode("<script>veiculo();</script>");
         
         break;
 
@@ -325,7 +323,7 @@ switch($modo){
         $controllerMarca->excluirMarcas();
 
         //Encaminha para a pagina de TERMOS
-        echo("<script>marcas();</script>");
+        echo utf8_encode("<script>marcas();</script>");
         break;
 
     case "BUSCAR":
@@ -337,7 +335,7 @@ switch($modo){
     case "ATUALIZAR":
         $controllerMarca->atualizarMarcas();
 
-        echo("<script>marcas();</script>");
+        echo utf8_encode("<script>marcas();</script>");
         break;
 }
 break;
@@ -356,14 +354,14 @@ case "VEICULOS":
     
         $idVeiculo = $controllerVeiculo->inserirVeiculo();
 
-        echo($idVeiculo);
+        echo utf8_encode($idVeiculo);
 
         if($erro){
-            echo(ALERT_INSERIR_VEICULO_ERRO);
+            echo utf8_encode(ALERT_INSERIR_VEICULO_ERRO);
         }else{
-            echo(ALERT_INSERIR_VEICULO_SUCESSO);
+            echo utf8_encode(ALERT_INSERIR_VEICULO_SUCESSO);
 
-            echo("<script>cadastrarImagemVeiculo(". $_POST["sltCategoria"] .", " . $idVeiculo . ");</script>");
+            echo utf8_encode("<script>cadastrarImagemVeiculo(". $_POST["sltCategoria"] .", " . $idVeiculo . ");</script>");
         }
         
 
@@ -377,10 +375,10 @@ case "VEICULOS":
     
      $idVeiculo = $controllerVeiculo->atualizarVeiculo();
 
-     echo($idVeiculo);
+     echo utf8_encode($idVeiculo);
      
 
-     echo("<script>veiculo();</script>");
+     echo utf8_encode("<script>veiculo();</script>");
      break; 
 
  }
@@ -405,14 +403,14 @@ break;
 
                 $controllerBanner->inserir();
              
-                echo("<script>banner();</script>");
+                echo utf8_encode("<script>banner();</script>");
              break;
 
              case "EXCLUIR":
 
              $controllerBanner->excluir();
              
-             echo("<script>banner();</script>");
+             echo utf8_encode("<script>banner();</script>");
              break;    
              
              case "BUSCAR":
@@ -428,7 +426,7 @@ break;
             
                  $controllerBanner->atualizar();
                  
-                 echo("<script>banner();</script>");
+                 echo utf8_encode("<script>banner();</script>");
              break;                  
 
          }  
@@ -468,7 +466,7 @@ break;
                     //Chamando o método de inserir um novo Duvidas Frequentes
                     $controllerDuvidasFrequentes->inserirDuvida();
                     //Encaminha para a pagina de Duvidas Frequentes
-                    echo("<script>duvida();</script>");
+                    echo utf8_encode("<script>duvida();</script>");
                     break;
                      
                 case "EXCLUIR":
@@ -476,13 +474,13 @@ break;
                     $controllerDuvidasFrequentes->excluirDuvida();
                     //Encaminha para a pagina de funcionario
                     
-                    echo("<script>duvida();</script>");
+                    echo utf8_encode("<script>duvida();</script>");
                     break;
                     
                     
                  case "ATUALIZAR":
                     $controllerDuvidasFrequentes->atualizarLista();
-                    echo("<script>duvida();</script>");
+                    echo utf8_encode("<script>duvida();</script>");
                     break;        
             
                 case "BUSCAR":
@@ -508,7 +506,7 @@ break;
                     $erro = $controllerFaleConosco->inserirFaleConosco();
                     //Encaminha para a pagina de Duvidas Frequentes
                    if(!$erro){
-                       echo("<script>alert('dasdasd');</script>");
+                       echo utf8_encode("<script>alert('dasdasd');</script>");
                    }
                     header("Location: view/faleconosco/faleconosco.php");
                     break;
@@ -518,13 +516,13 @@ break;
                     $controllerFaleConosco->excluirDuvida();
                     //Encaminha para a pagina de funcionario
                     
-                    echo("<script>faleConosco();</script>");
+                    echo utf8_encode("<script>faleConosco();</script>");
                     break;
                     
                     
                  case "ATUALIZAR":
                     $controllerFaleConosco->atualizarLista();
-                    echo("<script>faleConosco();</script>");
+                    echo utf8_encode("<script>faleConosco();</script>");
                     break;   
     }
             

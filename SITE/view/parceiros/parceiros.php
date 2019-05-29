@@ -43,7 +43,7 @@
             <?php
                 foreach($parceiros as $parceiro){ ?>    
                 <div>
-                    <img data-u="image" src="<?php echo("/Mobshare/arquivos/".$parceiro->getLogo()); ?>" alt="parceiro"/>
+                    <img data-u="image" src="<?php echo utf8_encode("/Mobshare/arquivos/".$parceiro->getLogo()); ?>" alt="parceiro"/>
                 </div>
                 <?php
                 } ?>    
@@ -85,13 +85,13 @@
            
                                     <div class="box-texto-imagem">
                                         <div class="img-parceiro">
-                                            <img src="<?php echo("/Mobshare/arquivos/".$parceiro->getLogo());?>" alt="parceiro" width="471" height="277"  >
+                                            <img src="<?php echo utf8_encode("/Mobshare/arquivos/".$parceiro->getLogo());?>" alt="parceiro" width="471" height="277"  >
                                         </div>
                                     </div>
                                     <div class="box-texto-imagem">
                                         <div class="txt-parceiro">
-                                            <h2><?php echo($parceiro->getNome());?></h2>
-                                            <p><?php echo($parceiro->getDescricao());?></p>
+                                            <h2><?php echo utf8_encode($parceiro->getNome());?></h2>
+                                            <p><?php echo utf8_encode($parceiro->getDescricao());?></p>
                                         </div>
                                     </div>
                                     <?php 
@@ -103,13 +103,13 @@
                                 <div class="box-parceiro">
                                     <div class="box-texto-imagem">
                                         <div class="txt-parceiro">
-                                            <h2><?php echo($parceiro->getNome());?></h2>
-                                            <p><?php echo($parceiro->getDescricao());?></p>
+                                            <h2><?php echo utf8_encode($parceiro->getNome());?></h2>
+                                            <p><?php echo utf8_encode($parceiro->getDescricao());?></p>
                                         </div>
                                     </div>
                                     <div class="box-texto-imagem">
                                         <div class="img-parceiro">
-                                            <img src="<?php echo("/Mobshare/arquivos/".$parceiro->getLogo());?> " alt="parceiro" width="471" height="277"  >
+                                            <img src="<?php echo utf8_encode("/Mobshare/arquivos/".$parceiro->getLogo());?> " alt="parceiro" width="471" height="277"  >
                                         </div>
                                     </div>
                                 </div>

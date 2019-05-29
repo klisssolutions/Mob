@@ -17,30 +17,19 @@ class conexaoMySQL{
     private $database;
 
     public function __construct(){
-        $local = "curso";
-        //$local = "casa";
-
-        if($local == "curso"){
-            $this ->server = "10.107.144.16:3306";
-            $this ->user = "kliss";
-            $this ->password = "klisskliss123";
-        }else{
-            $this ->server = "localhost";
-            $this ->user = "root";
-            $this ->password = "bcd127";
-        }
-        
-        $this ->database = "mydb";
+        $this ->server = "192.168.1.1";
+        $this ->user = "mob";
+        $this ->password = "kliss123";
+        $this ->database = "dbmob";
     }
 
     //Abre conexão com o BD
     public function connectDataBase(){
         try{
             $conexao = new PDO("mysql:host=".$this->server.";dbname=".$this->database, $this->user,$this->password, null);
-
             return $conexao;
         }catch(PDOException $erro){
-            echo(MSG_ERRO_CONEXAO."<br>
+            echo utf8_encode(MSG_ERRO_CONEXAO."<br>
                 Linha:".$erro->getLine()."<br>
                 Mensagem:".$erro->getMessage()
             );

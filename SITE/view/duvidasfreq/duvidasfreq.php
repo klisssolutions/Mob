@@ -46,9 +46,9 @@ require_once(IMPORT_DUVIDAS_FREQUENTES_CONTROLLER);
                 
                     
                 <div class="duvida">
-                    <h2><?php echo($duvida->getPerguntas());?></h2> 
+                    <h2><?php echo utf8_encode($duvida->getPerguntas());?></h2> 
                   
-                    <p> <?php echo($duvida->getResposta());?></p>
+                    <p> <?php echo utf8_encode($duvida->getResposta());?></p>
                 </div> 
                     <?php
                  }}

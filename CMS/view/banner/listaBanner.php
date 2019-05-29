@@ -33,7 +33,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($banner->getIdBanner());?>
+        <?php echo utf8_encode($banner->getIdBanner());?>
     
     </div>
     <div class="dados-func">
@@ -42,18 +42,18 @@
         
     </div>
     <div class="dados-resp-func">
-        <?php echo($banner->getTitulo());?>
+        <?php echo utf8_encode($banner->getTitulo());?>
     </div>
     
     <div class="opcao">
     
-        <a href="#" onclick="selectRouter('banner', 'buscar', <?php echo($banner->getIdBanner());?>)">
+        <a href="#" onclick="selectRouter('banner', 'buscar', <?php echo utf8_encode($banner->getIdBanner());?>)">
         <img src="view/imagens/pencil.png" width="25" heigth="28"></a>
     
     </div>
     <div class="opcao">
     
-        <a href="#" onclick="selectRouter('banner', 'excluir', <?php echo($banner->getIdBanner());?>)">
+        <a href="#" onclick="selectRouter('banner', 'excluir', <?php echo utf8_encode($banner->getIdBanner());?>)">
         <img src="view/imagens/trash.png" width="25" heigth="28">
         </a>
 

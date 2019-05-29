@@ -17,11 +17,11 @@ $modo = $_GET["modo"];
 
 if($modo == "devolver"){
     $controllerLocacao->devolver();
-    echo("<script>alert('Veículo devolvido.');</script>");
+    echo utf8_encode("<script>alert('Veículo devolvido.');</script>");
 }else{
     $controllerLocacao->receber();
-    echo("<script>alert('Veículo recebido.');</script>");
+    echo utf8_encode("<script>alert('Veículo recebido.');</script>");
 }
 
-echo("<script>window.location.replace('" . LINK_SITE_HISTORICO . "');</script>");
+echo utf8_encode("<script>window.location.replace('" . LINK_SITE_HISTORICO . "');</script>");
 ?>

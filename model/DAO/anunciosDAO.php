@@ -61,14 +61,14 @@ class anunciosDAO{
             }else{
                 $sql = $sql . " and quilometragem < ".$KM  ;
             }
-            //echo($KM);
+            //echo utf8_encode($KM);
         }    
 
         
         
         
 
-       //echo($sql);
+       //echo utf8_encode($sql);
         //Abrindo conexão com o BD
         $PDO_conex = $this->conex->connectDataBase();
 

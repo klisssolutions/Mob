@@ -30,7 +30,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($nivel->getIdNivel());?>
+        <?php echo utf8_encode($nivel->getIdNivel());?>
     
     </div>
     <div class="dados-func">
@@ -39,18 +39,18 @@
         
     </div>
     <div class="dados-resp-func">
-        <?php echo($nivel->getNome());?>
+        <?php echo utf8_encode($nivel->getNome());?>
     </div>
     
     <div class="opcao">
     
-        <a href="#" onclick="selectRouter('niveis', 'buscar', <?php echo($nivel->getIdNivel());?>)">
+        <a href="#" onclick="selectRouter('niveis', 'buscar', <?php echo utf8_encode($nivel->getIdNivel());?>)">
         <img src="view/imagens/pencil.png" width="25" heigth="28"></a>
     
     </div>
     <div class="opcao">
     
-        <a href="#" onclick="selectRouter('niveis', 'excluir', <?php echo($nivel->getIdNivel());?>)">
+        <a href="#" onclick="selectRouter('niveis', 'excluir', <?php echo utf8_encode($nivel->getIdNivel());?>)">
         <img src="view/imagens/delete.png" width="25" heigth="28">
         </a>
 

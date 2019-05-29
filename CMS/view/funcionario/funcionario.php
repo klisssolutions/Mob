@@ -41,7 +41,7 @@
             Nome:
             </td>
             <td class="txt-func">
-              <input type="text" class="input-func" name="txtnome" maxlength="25" value="<?php echo($nome)?>" size="20" required>
+              <input type="text" class="input-func" name="txtnome" maxlength="25" value="<?php echo utf8_encode($nome)?>" size="20" required>
             </td>
         </tr>
         <tr>
@@ -49,7 +49,7 @@
             E-mail:
             </td>
             <td class="txt-func">
-              <input type="email" class="input-func" name="txtemail" maxlength="25" value="<?php echo($email)?>" size="20" required>
+              <input type="email" class="input-func" name="txtemail" maxlength="25" value="<?php echo utf8_encode($email)?>" size="20" required>
             </td>
         </tr>
         <tr>
@@ -57,7 +57,7 @@
                 Senha
             </td>
             <td class="txt-func">
-              <input type="password"  class="input-func" name="txtsenha" maxlength="10" value="<?php echo($senha)?>" size="20" required>
+              <input type="password"  class="input-func" name="txtsenha" maxlength="10" value="<?php echo utf8_encode($senha)?>" size="20" required>
             </td>
         </tr>
         <tr>
@@ -70,7 +70,7 @@
                 <?php foreach($niveis as $nivel){ 
                         $selected = ($idNivel == $nivel->getIdNivel() ? "selected" : null);
                 ?>
-                  <option value="<?php echo($nivel->getIdNivel()); ?>" <?php echo($selected); ?>><?php echo($nivel->getNome()); ?></option>
+                  <option value="<?php echo utf8_encode($nivel->getIdNivel()); ?>" <?php echo utf8_encode($selected); ?>><?php echo utf8_encode($nivel->getNome()); ?></option>
                 <?php } ?>
               </select>
             </td>
@@ -81,7 +81,7 @@
             <input type="button" value="Voltar" class="btn-fun" onclick="funcionario();">
             </td>
             <td class="titulo-func-cad">
-              <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo($router)?>">
+              <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo utf8_encode($router)?>">
             </td>
         </tr>
     </table>

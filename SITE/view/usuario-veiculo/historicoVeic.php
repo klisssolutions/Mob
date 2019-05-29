@@ -50,49 +50,49 @@ $usuario = $controllerCliente->buscarCliente();
                     </div>
                 </div>
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
                 <div class="nav-menu-usuario-clicado">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_CUPONS); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
                 </div>
@@ -117,23 +117,23 @@ $usuario = $controllerCliente->buscarCliente();
 
                 <div class="box-veiculo">
                     <div class="texto-modelo">
-                        <label class="negrito">Dono: </label> <?php echo($locador->getNome());?>
+                        <label class="negrito">Dono: </label> <?php echo utf8_encode($locador->getNome());?>
                     </div>
 
                     <div class="texto-modelo">
-                        <label class="negrito">Veiculo: </label> <?php echo($locacao->getVeiculo());?>
+                        <label class="negrito">Veiculo: </label> <?php echo utf8_encode($locacao->getVeiculo());?>
                     </div>
 
                     <div class="texto-modelo">
-                        <label class="negrito">Data Locação: </label> <?php echo($dataInicio);?>
+                        <label class="negrito">Data Locação: </label> <?php echo utf8_encode($dataInicio);?>
                     </div>
 
                     <div class="texto-modelo">
-                        <label class="negrito">Data Devolução: </label> <?php echo($dataFim);?>
+                        <label class="negrito">Data Devolução: </label> <?php echo utf8_encode($dataFim);?>
                     </div>
                     <?php if(!$locacao->getDevolvido()): ?>
                     <div class="texto-ano">
-                        <a href="devolucao.php?modo=devolver&id=<?php echo($locacao->getIdLocacao()); ?>">
+                        <a href="devolucao.php?modo=devolver&id=<?php echo utf8_encode($locacao->getIdLocacao()); ?>">
                             <input type="button" value="Devolver">
                         </a>
                     </div>
@@ -151,24 +151,24 @@ $usuario = $controllerCliente->buscarCliente();
 
                 <div class="box-veiculo">
                     <div class="texto-modelo">
-                        <label class="negrito">Cliente: </label> <?php echo($cliente->getNome());?>
+                        <label class="negrito">Cliente: </label> <?php echo utf8_encode($cliente->getNome());?>
                     </div>
 
                     <div class="texto-modelo">
-                        <label class="negrito">Veiculo: </label> <?php echo($locacao->getVeiculo());?>
+                        <label class="negrito">Veiculo: </label> <?php echo utf8_encode($locacao->getVeiculo());?>
                     </div>
 
                     <div class="texto-modelo">
-                        <label class="negrito">Data Locação: </label> <?php echo($dataInicio);?>
+                        <label class="negrito">Data Locação: </label> <?php echo utf8_encode($dataInicio);?>
                     </div>
 
                     <div class="texto-modelo">
-                        <label class="negrito">Data Devolução: </label> <?php echo($dataFim);?>
+                        <label class="negrito">Data Devolução: </label> <?php echo utf8_encode($dataFim);?>
                     </div>
                     
                     <?php if(!$locacao->getRecebido()): ?>
                     <div class="texto-ano">
-                        <a href="devolucao.php?modo=receber&id=<?php echo($locacao->getIdLocacao()); ?>">
+                        <a href="devolucao.php?modo=receber&id=<?php echo utf8_encode($locacao->getIdLocacao()); ?>">
                             <input type="button" value="Receber">
                         </a>
                     </div>

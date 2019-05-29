@@ -34,7 +34,7 @@
     </div>
     <div class="infoDados">
     
-        <?php echo($locacao->getIdLocacao()) ?>
+        <?php echo utf8_encode($locacao->getIdLocacao()) ?>
     
     </div>
     <div class="dados">
@@ -44,7 +44,7 @@
     </div>
     <div class="infoDados">
     
-        <?php echo($locacao->getLocador()) ?>
+        <?php echo utf8_encode($locacao->getLocador()) ?>
     
     </div>
 
@@ -55,7 +55,7 @@
     </div>
     <div class="infoDados">
     
-    <?php echo($locacao->getLocatario()) ?>
+    <?php echo utf8_encode($locacao->getLocatario()) ?>
     
     </div>
 
@@ -66,7 +66,7 @@
     </div>
     <div class="infoDados">
     
-        <?php echo($locacao->getVeiculo()) ?>
+        <?php echo utf8_encode($locacao->getVeiculo()) ?>
     
     </div>
     

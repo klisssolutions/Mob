@@ -43,7 +43,7 @@
                 Pergunta:
             </td>
             <td class="txt-func">
-              <input type="text" class="input-func" size="20" name="txtPerguntas" value="<?php echo($perguntas);?>">
+              <input type="text" class="input-func" size="20" name="txtPerguntas" value="<?php echo utf8_encode($perguntas);?>">
             </td>
         </tr>
         <tr>
@@ -51,7 +51,7 @@
                 Resposta:
             </td>
             <td class="txt-func">
-              <input type="text" class="input-func" size="20" name="txtResposta" value="<?php echo($resposta);?>">
+              <input type="text" class="input-func" size="20" name="txtResposta" value="<?php echo utf8_encode($resposta);?>">
             </td>
         </tr>
         <tr>
@@ -59,8 +59,8 @@
               Situação:
           </td>
           <td class="txt-func">
-            <input type="radio" value="1" name="ativo" <?php echo($chkAtivar);?>>Ativar<br>
-            <input type="radio" value="0" name="ativo" <?php echo($chkDesativar);?>>Desativar
+            <input type="radio" value="1" name="ativo" <?php echo utf8_encode($chkAtivar);?>>Ativar<br>
+            <input type="radio" value="0" name="ativo" <?php echo utf8_encode($chkDesativar);?>>Desativar
           </td>
       </tr>
     
@@ -70,7 +70,7 @@
             </td>
     
             <td class="titulo-func-cad">
-                 <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo($router)?>">
+                 <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo utf8_encode($router)?>">
             </td>
         </tr>
 </table>

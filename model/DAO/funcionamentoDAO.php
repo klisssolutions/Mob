@@ -112,6 +112,9 @@
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listFuncionamento[] = new Funcionamento();
+        $listFuncionamento = null;
+
         while($rsFuncionamento=$select->fetch(PDO::FETCH_ASSOC)){
             $listFuncionamento[] = new Funcionamento();
             $listFuncionamento[$cont]->setIdFuncionamento($rsFuncionamento["idFuncionamento"]);

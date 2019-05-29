@@ -66,49 +66,49 @@ if($id){
                     </div>
                 </div>
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
                 <div class="nav-menu-usuario-clicado">
                     <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_CUPONS); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
                 </div>
@@ -125,44 +125,44 @@ if($id){
                             Meus dados do perfil
                         </div>
                         <div class="foto-perfil">
-                            <img src="<?php echo($foto)?>" width="310" height="310" id="prev" alt="Usuário">
+                            <img src="<?php echo utf8_encode($foto)?>" width="310" height="310" id="prev" alt="Usuário">
                         </div>
                     </div>
                     <div class="info-perfil">
                         <div class="dados-perfil">
                             <div class="dados">
                                 <h1>Nome completo:</h1>
-                                <input type="text" class="input-usuario" name="txtnome" value="<?php echo($nome)?>">
+                                <input type="text" class="input-usuario" name="txtnome" value="<?php echo utf8_encode($nome)?>">
                             </div>
                             <div class="dados">
                                 <h1>Foto de Perfil:</h1>
-                                <input type="file" class="input-usuario" name="imgPerfil" value="<?php echo($foto)?>" onchange="preview(this)">
+                                <input type="file" class="input-usuario" name="imgPerfil" value="<?php echo utf8_encode($foto)?>" onchange="preview(this)">
                             </div>
                         </div>
                         <div class="dados-perfil">
                             <div class="dados">
                                 <h1>Data de Nascimento:</h1>
-                                <input type="date" class="input-usuario" name="txtdtnasc" value="<?php echo($dtNasc)?>">
+                                <input type="date" class="input-usuario" name="txtdtnasc" value="<?php echo utf8_encode($dtNasc)?>">
                             </div>
                             <div class="dados">
                                 <h1>CPF:</h1>
-                                <input type="text"class="input-usuario" name="txtcpf" value="<?php echo($cpf)?>">
+                                <input type="text"class="input-usuario" name="txtcpf" value="<?php echo utf8_encode($cpf)?>">
                             </div>
                         </div>
                         <div class="dados-perfil">
                             <div class="dados">
                                 <h1>Email:</h1>
-                                <input type="email" class="input-usuario" name="txtemail" value="<?php echo($email)?>">
+                                <input type="email" class="input-usuario" name="txtemail" value="<?php echo utf8_encode($email)?>">
                             </div>
                             <div class="dados">
                                 <h1>Senha:</h1>
-                                <input type="password" class="input-usuario" name="txtsenha" value="<?php echo($senha)?>">
+                                <input type="password" class="input-usuario" name="txtsenha" value="<?php echo utf8_encode($senha)?>">
                             </div>
                         </div>
                         <div class="dados-perfil">
                             <div class="dados">
                                 <h1>Numero da CNH:</h1>
-                                <input type="text" class="input-usuario" name="txtcnh" value="<?php echo($cnh)?>">
+                                <input type="text" class="input-usuario" name="txtcnh" value="<?php echo utf8_encode($cnh)?>">
                             </div>
 
                             <div class="dados">
@@ -173,11 +173,11 @@ if($id){
 
                                     <option value="">Selecione uma categoria</option>
                                     
-                                    <option value="Tipo A" <?php echo($categoriaA); ?>>Tipo A</option>
+                                    <option value="Tipo A" <?php echo utf8_encode($categoriaA); ?>>Tipo A</option>
                                     
-                                    <option value="Tipo B" <?php echo($categoriaB); ?>>Tipo B</option>
+                                    <option value="Tipo B" <?php echo utf8_encode($categoriaB); ?>>Tipo B</option>
                                     
-                                    <option value="Tipo B" <?php echo($categoriaAB); ?>>Tipo AB</option>
+                                    <option value="Tipo B" <?php echo utf8_encode($categoriaAB); ?>>Tipo AB</option>
                                 </select>
                             </div>
                         </div>
@@ -191,7 +191,7 @@ if($id){
                             </div>
                             
                             <div class="dados">
-                                 <input class="btn-usuario" type="submit" name="btnSalvar" value="Salvar" onclick="<?php echo($router); ?>">
+                                 <input class="btn-usuario" type="submit" name="btnSalvar" value="Salvar" onclick="<?php echo utf8_encode($router); ?>">
                             </div>
                         </div>
                     </div>

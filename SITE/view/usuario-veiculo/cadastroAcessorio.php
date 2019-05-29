@@ -16,7 +16,7 @@ require_once($_SESSION["importInclude"]);
     <title>Painel do Usuário </title>
 
 
-                <div class="titulo-lista"><?php echo($id); ?></div>
+                <div class="titulo-lista"><?php echo utf8_encode($id); ?></div>
                 
                 <form id="form" method="post" enctype="multipart/form-data">
                     <table class="dash-cad">
@@ -45,7 +45,7 @@ require_once($_SESSION["importInclude"]);
                                 <input type="button" value="Voltar" class="btn-dash" onclick="veiculo();">
                             </td>
                             <td class="titulo-dash-cad">
-                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo($router); ?>">
+                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo utf8_encode($router); ?>">
                             </td>
                         </tr>
                     </table>
@@ -72,7 +72,7 @@ require_once($_SESSION["importInclude"]);
                                 <input type="button" value="Voltar" class="btn-dash" onclick="veiculo();">
                             </td>
                             <td class="titulo-dash-cad">
-                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo($router); ?>">
+                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo utf8_encode($router); ?>">
                             </td>
                         </tr>
                     </table>

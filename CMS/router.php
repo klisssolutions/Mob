@@ -37,13 +37,13 @@ if(isset($_GET["controller"])){
 
                     //Mostra mensagem de erro ou sucesso
                     if($erro){
-                        echo(ALERT_INSERIR_NIVEL_ERRO);
+                        echo utf8_encode(ALERT_INSERIR_NIVEL_ERRO);
                     }else{
-                        echo(ALERT_INSERIR_NIVEL_SUCESSO);
+                        echo utf8_encode(ALERT_INSERIR_NIVEL_SUCESSO);
                     }
 
                     //Encaminha para a pagina de nivel
-                    echo("<script>nivel();</script>");
+                    echo utf8_encode("<script>nivel();</script>");
                     break;
                 case "ATUALIZAR":
                     //Chamando o método de atualizar nivel
@@ -51,13 +51,13 @@ if(isset($_GET["controller"])){
 
                     //Mostra mensagem de erro ou sucesso
                     if($erro){
-                        echo(ALERT_ATUALIZAR_NIVEL_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_NIVEL_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_NIVEL_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_NIVEL_SUCESSO);
                     }
 
                     //Encaminha para a pagina de nivel
-                    echo("<script>nivel();</script>");
+                    echo utf8_encode("<script>nivel();</script>");
                     break;
                 case "EXCLUIR":
                     //Chama o método para excluir o nivel
@@ -65,13 +65,13 @@ if(isset($_GET["controller"])){
 
                     //Mostra mensagem de erro ou sucesso
                     if($erro){
-                        echo(ALERT_EXCLUIR_NIVEL_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_NIVEL_ERRO);
                     }else{
-                        echo(ALERT_EXCLUIR_NIVEL_SUCESSO);
+                        echo utf8_encode(ALERT_EXCLUIR_NIVEL_SUCESSO);
                     }
 
                     //Encaminha para a pagina de nivel
-                    echo("<script>nivel();</script>");
+                    echo utf8_encode("<script>nivel();</script>");
                     break;
                 case "BUSCAR":
                     //Chama o método para pegar o nível escolhido
@@ -97,13 +97,13 @@ if(isset($_GET["controller"])){
                     $erro = $controllerFuncionario->inserirFuncionario();
 
                     if($erro){
-                        echo(ALERT_INSERIR_FUNCIONARIO_ERRO);
+                        echo utf8_encode(ALERT_INSERIR_FUNCIONARIO_ERRO);
                     }else{
-                        echo(ALERT_INSERIR_FUNCIONARIO_SUCESSO);
+                        echo utf8_encode(ALERT_INSERIR_FUNCIONARIO_SUCESSO);
                     }
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>funcionario();</script>");
+                    echo utf8_encode("<script>funcionario();</script>");
                     break;
 
                 case "EXCLUIR":
@@ -111,13 +111,13 @@ if(isset($_GET["controller"])){
                     $erro = $controllerFuncionario->excluirFuncionario();
 
                     if($erro){
-                        echo(ALERT_EXCLUIR_FUNCIONARIO_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_FUNCIONARIO_ERRO);
                     }else{
-                        echo(ALERT_EXCLUIR_FUNCIONARIO_SUCESSO);
+                        echo utf8_encode(ALERT_EXCLUIR_FUNCIONARIO_SUCESSO);
                     }
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>funcionario();</script>");
+                    echo utf8_encode("<script>funcionario();</script>");
                     break;
 
                 case "BUSCAR":
@@ -130,19 +130,19 @@ if(isset($_GET["controller"])){
                     $erro = $controllerFuncionario->atualizarFuncionario();
 
                     if($erro){
-                        echo(ALERT_ATUALIZAR_FUNCIONARIO_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_FUNCIONARIO_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_FUNCIONARIO_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_FUNCIONARIO_SUCESSO);
                     }
 
-                    echo("<script>funcionario();</script>");
+                    echo utf8_encode("<script>funcionario();</script>");
                     break;
 
                 case "LOGAR":
                     $idFuncionario = $controllerFuncionario->logar();
                     //Verifica se retornou um funcionário corretamente para mostrar um erro
                     if(!$idFuncionario){
-                        echo(ALERT_LOGIN_ERRO);
+                        echo utf8_encode(ALERT_LOGIN_ERRO);
                     }
 
                     require_once(IMPORT_CMS_INDEX);
@@ -163,13 +163,13 @@ if(isset($_GET["controller"])){
                     $erro = $controllerParceiro->inserirParceiro();
 
                     if($erro){
-                        echo(ALERT_INSERIR_PARCEIRO_ERRO);
+                        echo utf8_encode(ALERT_INSERIR_PARCEIRO_ERRO);
                     }else{
-                        echo(ALERT_INSERIR_PARCEIRO_SUCESSO);
+                        echo utf8_encode(ALERT_INSERIR_PARCEIRO_SUCESSO);
                     }
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>parceiro();</script>");
+                    echo utf8_encode("<script>parceiro();</script>");
                 break;
 
                 case "EXCLUIR":
@@ -177,13 +177,13 @@ if(isset($_GET["controller"])){
                     $erro = $controllerParceiro->excluirParceiro();
 
                     if($erro){
-                        echo(ALERT_EXCLUIR_PARCEIRO_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_PARCEIRO_ERRO);
                     }else{
-                        echo(ALERT_EXCLUIR_PARCEIRO_SUCESSO);
+                        echo utf8_encode(ALERT_EXCLUIR_PARCEIRO_SUCESSO);
                     }
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>parceiro();</script>");
+                    echo utf8_encode("<script>parceiro();</script>");
                 break;
 
                 case "BUSCAR":
@@ -197,12 +197,12 @@ if(isset($_GET["controller"])){
                     $erro = $controllerParceiro->atualizarParceiro();
 
                     if($erro){
-                        echo(ALERT_ATUALIZAR_PARCEIRO_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_PARCEIRO_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_PARCEIRO_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_PARCEIRO_SUCESSO);
                     }
 
-                    echo("<script>parceiro();</script>");
+                    echo utf8_encode("<script>parceiro();</script>");
                 break;
             }
 
@@ -221,13 +221,13 @@ if(isset($_GET["controller"])){
                     $erro = $controllerFuncionamento->inserirFuncionamento();
 
                     if($erro){
-                        echo(ALERT_INSERIR_FUNCIONAMENTO_ERRO);
+                        echo utf8_encode(ALERT_INSERIR_FUNCIONAMENTO_ERRO);
                     }else{
-                        echo(ALERT_INSERIR_FUNCIONAMENTO_SUCESSO);
+                        echo utf8_encode(ALERT_INSERIR_FUNCIONAMENTO_SUCESSO);
                     }
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>comoFunciona();</script>");
+                    echo utf8_encode("<script>comoFunciona();</script>");
                 break;
 
                 case "EXCLUIR":
@@ -235,13 +235,13 @@ if(isset($_GET["controller"])){
                     $erro = $controllerFuncionamento->excluirFuncionamento();
 
                     if($erro){
-                        echo(ALERT_EXCLUIR_FUNCIONAMENTO_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_FUNCIONAMENTO_ERRO);
                     }else{
-                        echo(ALERT_EXCLUIR_FUNCIONAMENTO_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_FUNCIONAMENTO_ERRO);
                     }
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>comoFunciona();</script>");
+                    echo utf8_encode("<script>comoFunciona();</script>");
                 break;
 
                 case "BUSCAR":
@@ -255,12 +255,12 @@ if(isset($_GET["controller"])){
                     $erro = $controllerFuncionamento->atualizarFuncionamento();
 
                     if($erro){
-                        echo(ALERT_ATUALIZAR_FUNCIONAMENTO_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_FUNCIONAMENTO_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_FUNCIONAMENTO_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_FUNCIONAMENTO_SUCESSO);
                     }
 
-                    echo("<script>comoFunciona();</script>");
+                    echo utf8_encode("<script>comoFunciona();</script>");
                 break;
             }
         break;
@@ -283,12 +283,12 @@ if(isset($_GET["controller"])){
                     $erro = $controllerPendencia->atualizarPendencia("USUARIO");
 
                     if($erro){
-                        echo(ALERT_ATUALIZAR_PENDENCIA_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_PENDENCIA_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_PENDENCIA_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_PENDENCIA_SUCESSO);
                     }
 
-                    echo("<script>aprovacaoUsuario();</script>");
+                    echo utf8_encode("<script>aprovacaoUsuario();</script>");
                 break;
             }
         break;
@@ -311,12 +311,12 @@ if(isset($_GET["controller"])){
                     $erro = $controllerPendencia->atualizarPendencia("VEICULO");
 
                     if($erro){
-                        echo(ALERT_ATUALIZAR_PENDENCIA_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_PENDENCIA_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_PENDENCIA_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_PENDENCIA_SUCESSO);
                     }
 
-                    echo("<script>aprovacaoVeiculo();</script>");
+                    echo utf8_encode("<script>aprovacaoVeiculo();</script>");
                 break;
             }       
         break;
@@ -335,26 +335,26 @@ if(isset($_GET["controller"])){
                     $erro = $controllerTermos->inserirTermos();
 
                     if($erro){
-                        echo(ALERT_INSERIR_TERMO_ERRO);
+                        echo utf8_encode(ALERT_INSERIR_TERMO_ERRO);
                     }else{
-                        echo(ALERT_INSERIR_TERMO_SUCESSO);
+                        echo utf8_encode(ALERT_INSERIR_TERMO_SUCESSO);
                     }
     
                     //Encaminha para a pagina de TERMOS
-                    echo("<script>termo();</script>");
+                    echo utf8_encode("<script>termo();</script>");
                     break;
     
                 case "EXCLUIR":
                     $erro = $controllerTermos->excluirTermos();
 
                     if($erro){
-                        echo(ALERT_EXCLUIR_TERMO_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_TERMO_ERRO);
                     }else{
-                        echo(ALERT_EXCLUIR_TERMO_SUCESSO);
+                        echo utf8_encode(ALERT_EXCLUIR_TERMO_SUCESSO);
                     }
     
                     //Encaminha para a pagina de TERMOS
-                    echo("<script>termo();</script>");
+                    echo utf8_encode("<script>termo();</script>");
                     break;
     
                 case "BUSCAR":
@@ -367,12 +367,12 @@ if(isset($_GET["controller"])){
                     $erro = $controllerTermos->atualizarTermos();
 
                     if($erro){
-                        echo(ALERT_ATUALIZAR_TERMO_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_TERMO_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_TERMO_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_TERMO_SUCESSO);
                     }
     
-                    echo("<script>termo();</script>");
+                    echo utf8_encode("<script>termo();</script>");
                     break;
             }
             break;
@@ -391,26 +391,26 @@ if(isset($_GET["controller"])){
                     $erro = $controllerMarca->inserirMarcas();
 
                     if($erro){
-                        echo(ALERT_INSERIR_MARCA_ERRO);
+                        echo utf8_encode(ALERT_INSERIR_MARCA_ERRO);
                     }else{
-                        echo(ALERT_INSERIR_MARCA_SUCESSO);
+                        echo utf8_encode(ALERT_INSERIR_MARCA_SUCESSO);
                     }
     
                     //Encaminha para a pagina de Marcas
-                    echo("<script>listaMarcas();</script>");
+                    echo utf8_encode("<script>listaMarcas();</script>");
                     break;
     
                 case "EXCLUIR":
                     $erro = $controllerMarca->excluirMarcas();
 
                     if($erro){
-                        echo(ALERT_EXCLUIR_MARCA_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_MARCA_ERRO);
                     }else{
-                        echo(ALERT_EXCLUIR_MARCA_SUCESSO);
+                        echo utf8_encode(ALERT_EXCLUIR_MARCA_SUCESSO);
                     }
     
                     //Encaminha para a pagina de Marcas
-                    echo("<script>listaMarcas();</script>");
+                    echo utf8_encode("<script>listaMarcas();</script>");
                     break;
     
                 case "BUSCAR":
@@ -423,12 +423,12 @@ if(isset($_GET["controller"])){
                     $erro = $controllerMarca->atualizarMarcas();
 
                     if($erro){
-                        echo(ALERT_ATUALIZAR_MARCA_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_MARCA_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_MARCA_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_MARCA_SUCESSO);
                     }
     
-                    echo("<script>listaMarcas();</script>");
+                    echo utf8_encode("<script>listaMarcas();</script>");
                     break;
             }
             break;
@@ -447,26 +447,26 @@ if(isset($_GET["controller"])){
                     $erro = $controllerModelo->inserirModelos();
 
                     if($erro){
-                        echo(ALERT_INSERIR_MODELO_ERRO);
+                        echo utf8_encode(ALERT_INSERIR_MODELO_ERRO);
                     }else{
-                        echo(ALERT_INSERIR_MODELO_SUCESSO);
+                        echo utf8_encode(ALERT_INSERIR_MODELO_SUCESSO);
                     }
     
                     //Encaminha para a pagina de Marcas
-                    echo("<script>listaModelos();</script>");
+                    echo utf8_encode("<script>listaModelos();</script>");
                 break;
     
                 case "EXCLUIR":
                     $erro = $controllerModelo->excluirModelos();
 
                     if($erro){
-                        echo(ALERT_EXCLUIR_MODELO_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_MODELO_ERRO);
                     }else{
-                        echo(ALERT_EXCLUIR_MODELO_SUCESSO);
+                        echo utf8_encode(ALERT_EXCLUIR_MODELO_SUCESSO);
                     }
     
                     //Encaminha para a pagina de Marcas
-                    echo("<script>listaModelos();</script>");
+                    echo utf8_encode("<script>listaModelos();</script>");
                 break;
     
                 case "BUSCAR":
@@ -479,12 +479,12 @@ if(isset($_GET["controller"])){
                     $erro = $controllerModelo->atualizarModelos();
 
                     if($erro){
-                        echo(ALERT_ATUALIZAR_MODELO_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_MODELO_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_MODELO_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_MODELO_SUCESSO);
                     }
     
-                    echo("<script>listaModelos();</script>");
+                    echo utf8_encode("<script>listaModelos();</script>");
                 break;
             }
         break;
@@ -503,14 +503,14 @@ if(isset($_GET["controller"])){
 
                $controllerBanner->inserir();
             
-               echo("<script>banner();</script>");
+               echo utf8_encode("<script>banner();</script>");
             break;
 
             case "EXCLUIR":
 
             $controllerBanner->excluir();
             
-            echo("<script>banner();</script>");
+            echo utf8_encode("<script>banner();</script>");
             break;    
             
             case "BUSCAR":
@@ -526,7 +526,7 @@ if(isset($_GET["controller"])){
            
                 $controllerBanner->atualizar();
                 
-                echo("<script>banner();</script>");
+                echo utf8_encode("<script>banner();</script>");
             break;                  
 
         }  
@@ -547,13 +547,13 @@ if(isset($_GET["controller"])){
                     $erro = $controllerDuvidasFrequentes->inserirDuvida();
 
                     if($erro){
-                        echo(ALERT_INSERIR_DUVIDA_ERRO);
+                        echo utf8_encode(ALERT_INSERIR_DUVIDA_ERRO);
                     }else{
-                        echo(ALERT_INSERIR_DUVIDA_SUCESSO);
+                        echo utf8_encode(ALERT_INSERIR_DUVIDA_SUCESSO);
                     }
 
                     //Encaminha para a pagina de Duvidas Frequentes
-                    echo("<script>duvida();</script>");
+                    echo utf8_encode("<script>duvida();</script>");
                     break;
                      
                 case "EXCLUIR":
@@ -561,25 +561,25 @@ if(isset($_GET["controller"])){
                     $erro = $controllerDuvidasFrequentes->excluirDuvida();
 
                     if($erro){
-                        echo(ALERT_EXCLUIR_DUVIDA_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_DUVIDA_ERRO);
                     }else{
-                        echo(ALERT_EXCLUIR_DUVIDA_SUCESSO);
+                        echo utf8_encode(ALERT_EXCLUIR_DUVIDA_SUCESSO);
                     }
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>duvida();</script>");
+                    echo utf8_encode("<script>duvida();</script>");
                     break;
                        
                 case "ATUALIZAR":
                     $erro = $controllerDuvidasFrequentes->atualizarLista();
 
                     if($erro){
-                        echo(ALERT_ATUALIZAR_DUVIDA_ERRO);
+                        echo utf8_encode(ALERT_ATUALIZAR_DUVIDA_ERRO);
                     }else{
-                        echo(ALERT_ATUALIZAR_DUVIDA_SUCESSO);
+                        echo utf8_encode(ALERT_ATUALIZAR_DUVIDA_SUCESSO);
                     }
 
-                    echo("<script>duvida();</script>");
+                    echo utf8_encode("<script>duvida();</script>");
                     break;        
             
                 case "BUSCAR":
@@ -603,13 +603,13 @@ if(isset($_GET["controller"])){
                     $erro = $controllerFaleConosco->inserirFaleConosco();
 
                     if($erro){
-                        echo(ALERT_INSERIR_FALE_ERRO);
+                        echo utf8_encode(ALERT_INSERIR_FALE_ERRO);
                     }else{
-                        echo(ALERT_INSERIR_FALE_SUCESSO);
+                        echo utf8_encode(ALERT_INSERIR_FALE_SUCESSO);
                     }
 
                     //Encaminha para a pagina de Duvidas Frequentes
-                    echo("<script>faleConosco();</script>");
+                    echo utf8_encode("<script>faleConosco();</script>");
                     break;
                      
                 case "EXCLUIR":
@@ -617,13 +617,13 @@ if(isset($_GET["controller"])){
                     $erro = $controllerFaleConosco->excluirFaleConosco();
 
                     if($erro){
-                        echo(ALERT_EXCLUIR_FALE_ERRO);
+                        echo utf8_encode(ALERT_EXCLUIR_FALE_ERRO);
                     }else{
-                        echo(ALERT_EXCLUIR_FALE_SUCESSO);
+                        echo utf8_encode(ALERT_EXCLUIR_FALE_SUCESSO);
                     }
 
                     //Encaminha para a pagina de funcionario
-                    echo("<script>faleConosco();</script>");
+                    echo utf8_encode("<script>faleConosco();</script>");
                     break;
                 }
                 
@@ -636,22 +636,22 @@ if(isset($_GET["controller"])){
                         case "ACEITAR":
                             $erro = $controllerCancelamento->aceitarCancelamento();
                             if($erro){
-                                echo(ALERT_ACEITAR_ERRO);
+                                echo utf8_encode(ALERT_ACEITAR_ERRO);
                             }else{
-                                echo(ALERT_ACEITAR_SUCESSO);
+                                echo utf8_encode(ALERT_ACEITAR_SUCESSO);
                             }
-                            echo("<script>cancelamento();</script>");
+                            echo utf8_encode("<script>cancelamento();</script>");
                         break;  
                         
                         case "RECUSAR":
                             $erro = $controllerCancelamento->recusarCancelamento();
                             if($erro){
-                                echo(ALERT_RECUSAR_ERRO);
+                                echo utf8_encode(ALERT_RECUSAR_ERRO);
                             }else{
-                                echo(ALERT_RECUSAR_SUCESSO);
+                                echo utf8_encode(ALERT_RECUSAR_SUCESSO);
                             }
                         
-                            echo("<script>cancelamento();</script>");
+                            echo utf8_encode("<script>cancelamento();</script>");
                         break;                  
         
                     }

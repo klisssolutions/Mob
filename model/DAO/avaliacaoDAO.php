@@ -158,7 +158,6 @@ class avaliacaoDAO{
         /* instaciar antes do while serve para não dá erro
         quando não houver nenhum registro*/
         $listAvaliacao[] = new Avaliacao();
-
         $listAvaliacao = null;
         while($rsAvalicao=$select->fetch(PDO::FETCH_ASSOC)){
             $avaliacao = new Avaliacao();

@@ -41,7 +41,7 @@ $termos = $controllerTermos->listarTermos();
             ?>
                 <div class="termo">
                     <p> 
-                    <?php echo($termo->getTexto());?> 
+                    <?php echo utf8_encode($termo->getTexto());?> 
                     </p>
                 </div>
             <?php }} ?> 

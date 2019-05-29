@@ -74,7 +74,7 @@ if(isset($_GET["btnFiltro"])){
                                         
                                     
                                 ?>
-                                <option value="<?php echo($marca->getIdMarca())?>"><?php echo($marca->getNomeMarca())?></option>  
+                                <option value="<?php echo utf8_encode($marca->getIdMarca())?>"><?php echo utf8_encode($marca->getNomeMarca())?></option>  
                                 <?php
                                     }
                                 ?>                          
@@ -89,7 +89,7 @@ if(isset($_GET["btnFiltro"])){
                                         
                                     
                                 ?>
-                                <option value="<?php echo($modelo->getIdModelo())?>"><?php echo($modelo->getNomeModelo())?></option>  
+                                <option value="<?php echo utf8_encode($modelo->getIdModelo())?>"><?php echo utf8_encode($modelo->getNomeModelo())?></option>  
                                 <?php
                                     }
                                 ?> 
@@ -169,17 +169,17 @@ if(isset($_GET["btnFiltro"])){
                     ?>
                     <div class="box-veiculo-anuncio">
                         <div class="imagem-anuncio">
-                                <img src="<?php echo("/Mobshare/arquivos/".$foto_veiculo->getFotoVeiculo()) ?>" width="320" height="225" alt="veiculo">
+                                <img src="<?php echo utf8_encode("/Mobshare/arquivos/".$foto_veiculo->getFotoVeiculo()) ?>" width="320" height="225" alt="veiculo">
                                 
                         </div>
                          <div class="texto-modelo">
-                             <?php echo($modelo->getNomeModelo()) ?>
+                             <?php echo utf8_encode($modelo->getNomeModelo()) ?>
                         </div>
                          <div class="texto-km">
-                         Marca: <?php echo($marca->getNomeMarca())?>
+                         Marca: <?php echo utf8_encode($marca->getNomeMarca())?>
                         </div>
                         <div class="texto-regiao">
-                            Ano: <?php echo($veiculos[$i]->getAno())?>
+                            Ano: <?php echo utf8_encode($veiculos[$i]->getAno())?>
                         </div>
                         <div class="texto-avaliacao">
                             <img src="../images/5estrelas.png" width="150" height="30" alt="veiculo">

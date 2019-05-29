@@ -86,13 +86,13 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                         ?>
                         <div class="box-av">
                             <div class="img-avaliacao">
-                                <img src="<?php echo("/Mobshare/arquivos/".$foto_veiculo->getFotoVeiculo()) ?>" width="400" height="230" alt="<?php echo($modelo->getNomeModelo()) ?>">
+                                <img src="<?php echo utf8_encode("/Mobshare/arquivos/".$foto_veiculo->getFotoVeiculo()) ?>" width="400" height="230" alt="<?php echo utf8_encode($modelo->getNomeModelo()) ?>">
                             </div>
                             <div class="titulo-veiculo">
-                                <h2>  <?php echo($avaliacaoVeiculo->getNomeModelo()) ?></h2>
+                                <h2>  <?php echo utf8_encode($avaliacaoVeiculo->getNomeModelo()) ?></h2>
                             </div>
                             <div class="texto-av">
-                              <h2>Marca: <?php echo($avaliacaoVeiculo->getNomeMarca()) ?> </h2>
+                              <h2>Marca: <?php echo utf8_encode($avaliacaoVeiculo->getNomeMarca()) ?> </h2>
                             </div>
                             <div class="texto-av">
                             <?php 

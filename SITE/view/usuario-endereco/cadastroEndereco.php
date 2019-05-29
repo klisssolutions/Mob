@@ -58,49 +58,49 @@ if(isset($_GET['id'])){
                     </div>
                 </div>
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
                 <div class="nav-menu-usuario-clicado">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_CUPONS); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
                 </div>
@@ -125,7 +125,7 @@ if(isset($_GET['id'])){
                                 Rua:
                             </td>
                             <td class="txt-dash">
-                                <input type="text" class="input-dash" name="txtRua" value="<?php echo($rua)?>" required>
+                                <input type="text" class="input-dash" name="txtRua" value="<?php echo utf8_encode($rua)?>" required>
                             </td>
                         </tr>
                         <tr>
@@ -133,7 +133,7 @@ if(isset($_GET['id'])){
                                 Numero:
                             </td>
                             <td class="txt-dash">
-                                <input type="number" class="input-dash" name="txtNumber" value="<?php echo($numero)?>" required>
+                                <input type="number" class="input-dash" name="txtNumber" value="<?php echo utf8_encode($numero)?>" required>
                             </td>
                         </tr>
                         <tr>
@@ -141,7 +141,7 @@ if(isset($_GET['id'])){
                                 Complemento:
                             </td>
                             <td class="txt-dash">
-                                <input type="text" class="input-dash" name="txtComplemento" value="<?php echo($complemento)?>">
+                                <input type="text" class="input-dash" name="txtComplemento" value="<?php echo utf8_encode($complemento)?>">
                             </td>
                         </tr>
                         <tr>
@@ -149,7 +149,7 @@ if(isset($_GET['id'])){
                                 Cidade:
                             </td>
                             <td class="txt-dash">
-                                <input type="text" class="input-dash" name="txtCidade" value="<?php echo($cidade)?>" required>
+                                <input type="text" class="input-dash" name="txtCidade" value="<?php echo utf8_encode($cidade)?>" required>
                             </td>
                         </tr>
                         <tr>
@@ -157,7 +157,7 @@ if(isset($_GET['id'])){
                                 UF:
                             </td>
                             <td class="txt-dash">
-                                <input type="text" class="input-dash" name="txtUf" maxlength="2" size="6" value="<?php echo($uf)?>" required>
+                                <input type="text" class="input-dash" name="txtUf" maxlength="2" size="6" value="<?php echo utf8_encode($uf)?>" required>
                             </td>
                         </tr>
                         
@@ -166,7 +166,7 @@ if(isset($_GET['id'])){
                                 <input type="button" value="Voltar" class="btn-dash" onclick="cadastrarEndereco();">
                             </td>
                             <td class="titulo-dash-cad">
-                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo($router); ?>">
+                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo utf8_encode($router); ?>">
                             </td>
                         </tr>
                     </table>

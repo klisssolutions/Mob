@@ -43,6 +43,6 @@ if($modo == "LISTA"){
 
 }
 //Converter para o JSON a variavel result q é gerada pelas ações
-echo(json_encode($result));
+echo utf8_encode(json_encode($result));
 
 ?>

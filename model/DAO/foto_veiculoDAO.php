@@ -33,17 +33,17 @@ class foto_veiculoDAO{
             (idVeiculo, fotoVeiculo, perfil) VALUES (
         '".$foto_veiculo->getIdVeiculo()."',
         '".$foto_veiculo->getFotoVeiculo()."',
-        'frontal');"; echo('<br>');
+        'frontal');"; echo utf8_encode('<br>');
 
         $PDO_conex = $this->conex->connectDataBase();
 
         //Executa no BD o script Insert e retorna verdadeiro/falso
         if($PDO_conex->query($sql)){
             $erro = false;
-            echo($sql);
+            echo utf8_encode($sql);
         }else{
             $erro = true;
-            echo($sql);
+            echo utf8_encode($sql);
         }
        
         //Fecha a conexão com o BD
@@ -80,10 +80,10 @@ class foto_veiculoDAO{
         //Executa no BD o script Insert e retorna verdadeiro/falso
         if($PDO_conex->query($sql)){
             $erro = false;
-            echo($sql);
+            echo utf8_encode($sql);
         }else{
             $erro = true;
-            echo($sql);
+            echo utf8_encode($sql);
         }
        
         //Fecha a conexão com o BD
@@ -150,8 +150,9 @@ class foto_veiculoDAO{
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listFoto_Veiculo[] = new Foto_Veiculo();
+        $listFoto_Veiculo = null;
         while($rsFoto_Veiculo=$select->fetch(PDO::FETCH_ASSOC)){
-            
             $listFoto_Veiculo[] = new Foto_Veiculo();
             $listFoto_Veiculo[$cont]->setIdFoto_Veiculo($rsFoto_Veiculo["idFoto_Veiculo"]);
             $listFoto_Veiculo[$cont]->setIdVeiculo($rsFoto_Veiculo["idVeiculo"]);

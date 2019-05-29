@@ -43,7 +43,7 @@
     </div>
     <div class="dados-resp-func">
     
-      <?php echo($duvida->getPerguntas());?>
+      <?php echo utf8_encode($duvida->getPerguntas());?>
     
     </div>
     <div class="dados-func">
@@ -53,7 +53,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($duvida->getResposta());?>
+        <?php echo utf8_encode($duvida->getResposta());?>
     
     </div>
     
@@ -73,10 +73,10 @@
     </a>
     
         <a class="opcao2" href="#" onclick="selectRouter('duvidas','buscar',<?php
-        echo($duvida->getIdPergunta());?>)"><img src="view/imagens/pencil.png" width="25" heigth="28"></a>
+        echo utf8_encode($duvida->getIdPergunta());?>)"><img src="view/imagens/pencil.png" width="25" heigth="28"></a>
     
         <a href="#" class="opcao2" onclick="selectRouter('duvidas','excluir',<?php
-        echo($duvida->getIdPergunta());?>)"><img src="view/imagens/trash.png" width="25" heigth="28"></a>
+        echo utf8_encode($duvida->getIdPergunta());?>)"><img src="view/imagens/trash.png" width="25" heigth="28"></a>
 
     
     </div>

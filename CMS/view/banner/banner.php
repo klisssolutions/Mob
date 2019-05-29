@@ -33,7 +33,7 @@
               Titulo:
             </div>
           <div class="texto-niveis">
-            <input type="text" class="input-func" name="txttitulo" size="20" maxlength="15" value="<?php echo($titulo) ?>" required>
+            <input type="text" class="input-func" name="txttitulo" size="20" maxlength="15" value="<?php echo utf8_encode($titulo) ?>" required>
           </div>
         </div>
         <div class="linha">
@@ -41,7 +41,7 @@
             Texto:
           </div>
           <div class="input2">
-            <input type="text" class="input-func" name="txttexto" size="20" maxlength="30" value="<?php echo( $texto ) ?>" required>
+            <input type="text" class="input-func" name="txttexto" size="20" maxlength="30" value="<?php echo utf8_encode( $texto ) ?>" required>
           </div>
         </div>
 
@@ -50,7 +50,7 @@
             Url redirecionamento:
           </div>
           <div class="input2">
-            <input type="text" class="input-func" name="txturl" size="20" maxlength="30" value="<?php echo($url) ?>" required>
+            <input type="text" class="input-func" name="txturl" size="20" maxlength="30" value="<?php echo utf8_encode($url) ?>" required>
           </div>
         </div>        
  
@@ -59,7 +59,7 @@
             Nome botão:
           </div>
           <div class="input2">
-            <input type="text" class="input-func" name="txtnomebotao" size="20" maxlength="30" value="<?php echo($nomeBotao) ?>" required>
+            <input type="text" class="input-func" name="txtnomebotao" size="20" maxlength="30" value="<?php echo utf8_encode($nomeBotao) ?>" required>
           </div>
         </div> 
 
@@ -69,12 +69,12 @@
             Imagem:
           </div>
           <div class="input2">
-             <input type="file" name="imgBanner" id="imgBanner" accept="image/*" onchange="preview(this)" value="<?php echo($foto)?>">
+             <input type="file" name="imgBanner" id="imgBanner" accept="image/*" onchange="preview(this)" value="<?php echo utf8_encode($foto)?>">
           </div>
         </div>
 
         <div class="linha-imagem" align="center">
-          <img src="<?php echo($foto); ?>" id="prev">
+          <img src="<?php echo utf8_encode($foto); ?>" id="prev">
         </div>
 
         <div class="linha">
@@ -82,7 +82,7 @@
             <input type="button" value="Voltar" class="btn-fun" onclick="banner();">
             </div>
             <div class="texto-niveis-check">
-              <input type="submit" value="Salvar" class="btn-fun" onclick="<?php echo($router);?>">
+              <input type="submit" value="Salvar" class="btn-fun" onclick="<?php echo utf8_encode($router);?>">
             </div>
         </div>
     </div>

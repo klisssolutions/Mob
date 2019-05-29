@@ -48,49 +48,49 @@ require_once($_SESSION["importInclude"]);
                     </div>
                 </div>
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
                     <div class="nav-menu-usuario">
                         <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
                     </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                     <div class="nav-menu-usuario">
                         <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
                     </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
                     <div class="nav-menu-usuario-clicado">
                         <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
                     </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
                     <div class="nav-menu-usuario">
                         <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
                     </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                     <div class="nav-menu-usuario">
                         <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
                     </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
                     <div class="nav-menu-usuario">
                         <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
                     </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_CUPONS); ?>">
                     <div class="nav-menu-usuario">
                         <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
                     </div>
@@ -121,16 +121,16 @@ require_once($_SESSION["importInclude"]);
                             </div>
                             <div class="dados-resp-dash">
                             
-                                <?php echo($endereco->getRua());?>, <?php echo($endereco->getNumero());?>  - <?php echo($endereco->getCidade());?> - <?php echo($endereco->getUf());?> <?php echo($endereco->getComplemento());?>
+                                <?php echo utf8_encode($endereco->getRua());?>, <?php echo utf8_encode($endereco->getNumero());?>  - <?php echo utf8_encode($endereco->getCidade());?> - <?php echo utf8_encode($endereco->getUf());?> <?php echo utf8_encode($endereco->getComplemento());?>
                             
                             </div>
                             <div class="opcao">
                                 
-                                <a href="#" onclick="selectRouter('endereco', 'buscar', <?php echo($endereco->getIdEndereco());?>)">
+                                <a href="#" onclick="selectRouter('endereco', 'buscar', <?php echo utf8_encode($endereco->getIdEndereco());?>)">
                                     <img src="../images/pencil.png" width="25" heigth="28">
                                 </a>
                             
-                                <a href="#" onclick="selectRouter('endereco', 'excluir', <?php echo($endereco->getIdEndereco());?>)">
+                                <a href="#" onclick="selectRouter('endereco', 'excluir', <?php echo utf8_encode($endereco->getIdEndereco());?>)">
                                     <img src="../images/trash.png" width="25" heigth="28">
                                 </a>
 

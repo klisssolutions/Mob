@@ -35,7 +35,7 @@
             Nome da Marca:
             </td>
             <td class="txt-func">
-              <input type="text" class="input-func" name="txtMarca" maxlength="15" value="<?php echo($nomeMarca)?>" size="20" required>
+              <input type="text" class="input-func" name="txtMarca" maxlength="15" value="<?php echo utf8_encode($nomeMarca)?>" size="20" required>
             </td>
         </tr>
         
@@ -44,7 +44,7 @@
             <input type="button" value="Voltar" class="btn-fun" onclick="listaMarcas();">
             </td>
             <td class="titulo-func-cad">
-              <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo($router)?>">
+              <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo utf8_encode($router)?>">
             </td>
         </tr>
     </table>

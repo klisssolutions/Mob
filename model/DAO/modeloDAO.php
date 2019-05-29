@@ -102,6 +102,8 @@ public function update(Modelo $modelo){
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listModelos[] = new Modelo();
+        $listModelos = null;
         while($rsModelos=$select->fetch(PDO::FETCH_ASSOC)){
             $listModelos[] = new Modelo();
             $listModelos[$cont]->setIdModelo($rsModelos["idModelo"]);

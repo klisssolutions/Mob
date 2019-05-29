@@ -22,7 +22,7 @@ if(isset($_SESSION['idCliente'])){
     <div class="content-login">
         <form class="login" method="POST" action="../router.php?controller=clientes&modo=logar">
             <div class="img-login">
-               <a href="<?php echo(LINK_SITE_HOME); ?>"><img src="images/logo.png" width="364" height="150"  alt="MobShare"></a>
+               <a href="<?php echo utf8_encode(LINK_SITE_HOME); ?>"><img src="images/logo.png" width="364" height="150"  alt="MobShare"></a>
             </div>
             <div class="txt-login">
                 <h1>Login:</h1>
@@ -34,7 +34,7 @@ if(isset($_SESSION['idCliente'])){
             </div>
             <div class="btn-login">
                 <button class="btn-login-form">Entrar</button>
-                <p>Não é cadastrado?  <a href="<?php echo(LINK_SITE_CADASTRO); ?>"><span class="link">Cadastrar!</span></a></p>
+                <p>Não é cadastrado?  <a href="<?php echo utf8_encode(LINK_SITE_CADASTRO); ?>"><span class="link">Cadastrar!</span></a></p>
             </div>
         </form>
         <div class="rodape-login">

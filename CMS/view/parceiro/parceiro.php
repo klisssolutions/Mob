@@ -32,7 +32,7 @@
                   Nome:
               </td>
               <td class="txt-func">
-                <input type="text" size="25" class="input-func" name="txtNome" required value="<?php echo($nome)?>">
+                <input type="text" size="25" class="input-func" name="txtNome" required value="<?php echo utf8_encode($nome)?>">
               </td>
           </tr>
           <tr>
@@ -40,7 +40,7 @@
                   Site:
               </td>
               <td class="txt-func">
-                <input type="text" size="25" class="input-func" name="txtSite" value="<?php echo($site)?>">
+                <input type="text" size="25" class="input-func" name="txtSite" value="<?php echo utf8_encode($site)?>">
               </td>
           </tr>
           <tr>
@@ -48,7 +48,7 @@
                   Email:
               </td>
               <td class="txt-func">
-                <input type="email" size="25" class="input-func" name="txtEmail" required value="<?php echo($email)?>">
+                <input type="email" size="25" class="input-func" name="txtEmail" required value="<?php echo utf8_encode($email)?>">
               </td>
           </tr>
           <tr>
@@ -56,12 +56,12 @@
                   Logo:
               </td>
               <td class="txt-func">
-                <input type="file" name="imgLogo" id="foto" accept="image/*" onchange="preview(this)" value="<?php echo($logo)?>">
+                <input type="file" name="imgLogo" id="foto" accept="image/*" onchange="preview(this)" value="<?php echo utf8_encode($logo)?>">
               </td>
           </tr>
           <tr>
             <td colspan="2" align="center">
-              <img src="<?php echo($logo); ?>" id="prev">
+              <img src="<?php echo utf8_encode($logo); ?>" id="prev">
             </td>
           </tr>
           <tr>
@@ -69,7 +69,7 @@
                   Descrição:
               </td>
               <td class="txt-func">
-                <textarea name="txtDescricao" maxlength="250" required><?php echo($descricao)?></textarea>
+                <textarea name="txtDescricao" maxlength="250" required><?php echo utf8_encode($descricao)?></textarea>
               </td>
           </tr>
           <tr>
@@ -89,7 +89,7 @@
                 <input type="button" value="Voltar" class="botao2" onclick="parceiro();">
               </td>
               <td class="input2">
-                <input type="submit" value="Enviar" class="botao2" onclick="<?php echo($router); ?>">
+                <input type="submit" value="Enviar" class="botao2" onclick="<?php echo utf8_encode($router); ?>">
               </td>
           </tr>
   </table>

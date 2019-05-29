@@ -25,7 +25,7 @@
                   Nome:
               </td>
               <td class="titulo-func-cad">
-                <?php echo($nome); ?>
+                <?php echo utf8_encode($nome); ?>
               </td>
           </tr>
           <tr>
@@ -33,7 +33,7 @@
                   ID:
               </td>
               <td class="titulo-func-cad">
-              <?php echo($id); ?>
+              <?php echo utf8_encode($id); ?>
               </td>
           </tr>
           <tr>
@@ -41,7 +41,7 @@
                   Motivo:
               </td>
               <td class="titulo-func-cad">
-                <textarea name="txtDescricao" class="input-func2" required><?php echo($motivo); ?></textarea>
+                <textarea name="txtDescricao" class="input-func2" required><?php echo utf8_encode($motivo); ?></textarea>
               </td>
           </tr>
           <tr>
@@ -50,13 +50,13 @@
               </td>
               <td class="titulo-func-cad">
                 
-                  <input type="checkbox" name="chkaberto" <?php echo($chkAberto); ?>>
+                  <input type="checkbox" name="chkaberto" <?php echo utf8_encode($chkAberto); ?>>
                 </select>
               </td>
           </tr>
           <tr>
               <td class="titulo-func-cad">
-                <input type="submit" value="Aceitar" class="btn-fun" onclick="<?php echo($router);?>">
+                <input type="submit" value="Aceitar" class="btn-fun" onclick="<?php echo utf8_encode($router);?>">
               </td>
           </tr>
   </table>

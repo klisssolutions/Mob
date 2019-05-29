@@ -45,7 +45,7 @@
               Nome:
             </div>
           <div class="texto-niveis">
-            <input type="text" class="input-func" name="txtnome" size="20" maxlength="15" value="<?php echo($nome); ?>" required>
+            <input type="text" class="input-func" name="txtnome" size="20" maxlength="15" value="<?php echo utf8_encode($nome); ?>" required>
           </div>
         </div>
         <div class="linha">
@@ -53,7 +53,7 @@
             Descrição:
           </div>
           <div class="input2">
-            <input type="text" class="input-func" name="txtdescricao" size="20" maxlength="30" value="<?php echo($descricao); ?>" required>
+            <input type="text" class="input-func" name="txtdescricao" size="20" maxlength="30" value="<?php echo utf8_encode($descricao); ?>" required>
           </div>
         </div>
         <div class="linha">
@@ -61,31 +61,31 @@
             Permissões:
           </div>
             <div class="texto-niveis-check">
-              <input type="checkbox" name="chkfuncionario" value="1" <?php echo($chkFuncionario); ?>>Funcionários<br>
+              <input type="checkbox" name="chkfuncionario" value="1" <?php echo utf8_encode($chkFuncionario); ?>>Funcionários<br>
             </div>
           </div>
         <div class="linha">
             <div class="texto-niveis-check">
-              <input type="checkbox" name="chkmarketing" value="1"<?php echo($chkMarketing); ?>>E-mail Marketing<br>
+              <input type="checkbox" name="chkmarketing" value="1"<?php echo utf8_encode($chkMarketing); ?>>E-mail Marketing<br>
             </div>
             <div class="texto-niveis-check">
-              <input type="checkbox" name="chklocacao" value="1"<?php echo($chkLocacao); ?>>Lista de locações<br>
-            </div>
-        </div>
-        <div class="linha">
-            <div class="texto-niveis-check">
-              <input type="checkbox" name="chkpagina" value="1"<?php echo($chkPagina); ?>>Conteúdo<br>
-            </div>
-            <div class="texto-niveis-check">
-              <input type="checkbox" name="chkaprovacao" value="1"<?php echo($chkAprovacao); ?>>Aprovar Cadastros<br>
+              <input type="checkbox" name="chklocacao" value="1"<?php echo utf8_encode($chkLocacao); ?>>Lista de locações<br>
             </div>
         </div>
         <div class="linha">
             <div class="texto-niveis-check">
-              <input type="checkbox" name="chkcancelamento" value="1"<?php echo($chkCancelamento); ?>>Cancelamento<br>
+              <input type="checkbox" name="chkpagina" value="1"<?php echo utf8_encode($chkPagina); ?>>Conteúdo<br>
             </div>
             <div class="texto-niveis-check">
-              <input type="checkbox" name="chkmodelo" value="1"<?php echo($chkModelo); ?>>Marcas e modelos<br>
+              <input type="checkbox" name="chkaprovacao" value="1"<?php echo utf8_encode($chkAprovacao); ?>>Aprovar Cadastros<br>
+            </div>
+        </div>
+        <div class="linha">
+            <div class="texto-niveis-check">
+              <input type="checkbox" name="chkcancelamento" value="1"<?php echo utf8_encode($chkCancelamento); ?>>Cancelamento<br>
+            </div>
+            <div class="texto-niveis-check">
+              <input type="checkbox" name="chkmodelo" value="1"<?php echo utf8_encode($chkModelo); ?>>Marcas e modelos<br>
             </div>
         </div>
         <div class="linha">
@@ -93,7 +93,7 @@
             <input type="button" value="Voltar" class="btn-fun" onclick="nivel();">
             </div>
             <div class="texto-niveis-check">
-              <input type="submit" value="Salvar" class="btn-fun" onclick="<?php echo($router);?>">
+              <input type="submit" value="Salvar" class="btn-fun" onclick="<?php echo utf8_encode($router);?>">
             </div>
         </div>
     </div>

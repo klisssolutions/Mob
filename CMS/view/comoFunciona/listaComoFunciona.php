@@ -32,7 +32,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($funcionamento->getTitulo());?>
+        <?php echo utf8_encode($funcionamento->getTitulo());?>
     
     </div>
     <div class="dados-func">
@@ -42,7 +42,7 @@
     </div>
     <div class="dados-resp-func">
     
-        <?php echo($funcionamento->getDescricao());?>
+        <?php echo utf8_encode($funcionamento->getDescricao());?>
     
     </div>
     
@@ -60,11 +60,11 @@
             <?php } ?> 
         </a>
     
-        <a href="#" onclick="selectRouter('funcionamento', 'buscar', <?php echo($funcionamento->getIdFuncionamento());?>)">
+        <a href="#" onclick="selectRouter('funcionamento', 'buscar', <?php echo utf8_encode($funcionamento->getIdFuncionamento());?>)">
             <img src="view/imagens/pencil.png" width="25" heigth="28">
         </a>
     
-        <a href="#" onclick="selectRouter('funcionamento', 'excluir', <?php echo($funcionamento->getIdFuncionamento());?>)">
+        <a href="#" onclick="selectRouter('funcionamento', 'excluir', <?php echo utf8_encode($funcionamento->getIdFuncionamento());?>)">
             <img src="view/imagens/trash.png" width="25" heigth="28">
         </a>
 

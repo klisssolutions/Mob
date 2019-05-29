@@ -102,6 +102,8 @@ class nivelDAO{
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listNiveis[] = new Nivel();
+        $listNiveis = null;
         while($rsNiveis=$select->fetch(PDO::FETCH_ASSOC)){
             $listNiveis[] = new Nivel();
             $listNiveis[$cont]->setIdNivel($rsNiveis["idNivel"]);

@@ -164,6 +164,6 @@ if($modo == "INSERIR"){
     $result["mensagem"] = "Modo inválido.";
 }
 
-echo(json_encode($result));
+echo utf8_encode(json_encode($result));
 
 ?>

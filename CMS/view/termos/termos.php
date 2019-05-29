@@ -36,7 +36,7 @@
           Titulo do Termo:
       </td>
       <td class="resp-termo">
-        <input type="text" name="txtTitulo" class="input-func" value="<?php echo($titulo)?>">
+        <input type="text" name="txtTitulo" class="input-func" value="<?php echo utf8_encode($titulo)?>">
       </td>
   </tr>
   <tr>
@@ -44,7 +44,7 @@
           Texto:
       </td>
       <td class="resp-termo">
-        <input type="text" name="txtTexto" class="input-func" value="<?php echo($texto)?>">
+        <input type="text" name="txtTexto" class="input-func" value="<?php echo utf8_encode($texto)?>">
       </td>
   </tr>
   <tr>
@@ -64,7 +64,7 @@
         <input type="button" value="Voltar" class="btn-fun" onclick="termo();">
       </td>
       <td class="input2">
-        <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo($router)?>">
+        <input type="submit" value="Enviar" class="btn-fun" onclick="<?php echo utf8_encode($router)?>">
       </td>
   </tr>
 

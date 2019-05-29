@@ -130,8 +130,10 @@ class clienteDAO{
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listClientes[] = new Cliente();
+        $listClientes = null;
         while($rsClientes=$select->fetch(PDO::FETCH_ASSOC)){
-            $listClientes[] = new Nivel();
+            $listClientes[] = new Cliente();
             $listClientes[$cont]->setIdCliente($rsClientes["idCliente"]);
             $listClientes[$cont]->setNome($rsClientes["nome"]);
             $listClientes[$cont]->setCpf($rsClientes["cpf"]);

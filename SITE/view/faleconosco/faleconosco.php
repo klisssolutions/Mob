@@ -28,7 +28,7 @@ $router = PASTA_PROJETO."/SITE/router.php?controller=FALE_CONOSCO&modo=inserir&i
         <div class="box-fale-conosco">
         <div class="fale-conosco">
             <!-- FORMULÁRIO DO FALE CONOSCO -->
-            <form id="form" method="post" action="<?php echo($router)?>">
+            <form id="form" method="post" action="<?php echo utf8_encode($router)?>">
                 <div class="titulo-fale-conosco">
                     <h2>Fale Conosco:</h2>
                 </div>

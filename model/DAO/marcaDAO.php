@@ -70,7 +70,7 @@ class marcaDAO{
         SET nomeMarca = '".$marca->getNomeMarca()."'
         WHERE idMarca = '".$marca->getIdMarca()."';";
         
-        echo($sql);
+        echo utf8_encode($sql);
         
         //Abrindo conexão com o BD
         $PDO_conex = $this->conex->connectDataBase();
@@ -103,14 +103,13 @@ class marcaDAO{
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listMarcas[] = new Marca();
+        $listMarcas = null;
+
         while($rsMarcas=$select->fetch(PDO::FETCH_ASSOC)){
             $listMarcas[] = new Marca();
             $listMarcas[$cont]->setIdMarca($rsMarcas["idMarca"]);
             $listMarcas[$cont]->setNomeMarca($rsMarcas["nomeMarca"]);
-            
- 
-            
-
             
             $cont++;
         }

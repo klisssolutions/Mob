@@ -130,7 +130,7 @@ public function listarNaoConfirmados(){
         $vvisualizacao_cancelamento->setNome($rsVisualizacao_cancelamentos["nome"]);
 
         $listVisualizacao_cancelamentos[$cont] = $vvisualizacao_cancelamento;
-
+        
         $cont++;
     }
 

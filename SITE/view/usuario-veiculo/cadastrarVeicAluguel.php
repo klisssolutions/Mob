@@ -65,49 +65,49 @@ require_once($_SESSION["importInclude"]);
                     </div>
                 </div>
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_PERFIL); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/black-male-user-symbol.png" width="28" height="28"  alt="Usuário">Meu perfil</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Notificações</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_VISUALIZAR_ENDERECO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Meus endereços</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_OPCAO_VEICULO); ?>">
                 <div class="nav-menu-usuario-clicado">
                     <h2><img src="../images/car (1).png" width="28" height="28"  alt="Usuário">Meus veículos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_NOTIFICACAO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_NOTIFICACAO); ?>">
                 <div class="nav-menu-usuario">
                     <h2><img src="../images/tag.png" width="28" height="28"  alt="Usuário">Vendas</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_HISTORICO_VEICULO); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/script.png" width="28" height="28"  alt="Usuário">Meus históricos</h2>
                 </div>
                 </a>
 
                 <!-- ITEM - MENU -->
-                <a href="<?php echo(LINK_DASHBOARD_CUPONS); ?>">
+                <a href="<?php echo utf8_encode(LINK_DASHBOARD_CUPONS); ?>">
                 <div class="nav-menu-usuario">
                     <h2> <img src="../images/coupon.png" width="28" height="28"  alt="Usuário">Cupons</h2>
                 </div>
@@ -133,7 +133,7 @@ require_once($_SESSION["importInclude"]);
                                     <?php foreach($categorias as $categoria){ 
                                             $selected = ($idCategoria_Veiculo == $categoria->getIdCategoria_Veiculo() ? "selected" : null);
                                     ?>
-                                    <option value="<?php echo($categoria->getIdCategoria_Veiculo()); ?>" <?php echo($selected); ?>><?php echo($categoria->getNomeCategoria()); ?></option>
+                                    <option value="<?php echo utf8_encode($categoria->getIdCategoria_Veiculo()); ?>" <?php echo utf8_encode($selected); ?>><?php echo utf8_encode($categoria->getNomeCategoria()); ?></option>
                                     <?php } ?>
                                 </select>
 
@@ -150,7 +150,7 @@ require_once($_SESSION["importInclude"]);
                                     <?php foreach($modelos as $modelo){ 
                                             $selected = ($idModelo == $modelo->getIdModelo() ? "selected" : null);
                                     ?>
-                                    <option value="<?php echo($modelo->getIdModelo()); ?>" <?php echo($selected); ?>><?php echo($modelo->getNomeModelo()); ?></option>
+                                    <option value="<?php echo utf8_encode($modelo->getIdModelo()); ?>" <?php echo utf8_encode($selected); ?>><?php echo utf8_encode($modelo->getNomeModelo()); ?></option>
                                     <?php } ?>
                                 </select>
 
@@ -222,7 +222,7 @@ require_once($_SESSION["importInclude"]);
                                     <?php foreach($enderecos as $endereco){ 
                                         $selected = ($idEndereco == $endereco->getIdEndereco() ? "selected" : null);
                                     ?>
-                                    <option value="<?php echo($endereco->getIdEndereco()); ?>" <?php echo($selected); ?>><?php echo($endereco->getRua() . ', ' . $endereco->getCidade() . ', ' . $endereco->getUf()); ?></option>
+                                    <option value="<?php echo utf8_encode($endereco->getIdEndereco()); ?>" <?php echo utf8_encode($selected); ?>><?php echo utf8_encode($endereco->getRua() . ', ' . $endereco->getCidade() . ', ' . $endereco->getUf()); ?></option>
                                     <?php } ?>
                                 </select>
                             </td>
@@ -232,7 +232,7 @@ require_once($_SESSION["importInclude"]);
                                 <input type="button" value="Voltar" class="btn-dash" onclick="veiculo();">
                             </td>
                             <td class="titulo-dash-cad">
-                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo($router); ?>">
+                                <input type="submit" value="Enviar" class="btn-dash" onclick="<?php echo utf8_encode($router); ?>">
                             </td>
                         </tr>
                     </table>

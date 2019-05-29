@@ -134,9 +134,6 @@ class solicitacao_locacaoDAO{
             $vSolicitacao_Locacao->setVeiculo($rsSolicitacoes["veiculo"]);
             $vSolicitacao_Locacao->setHorarioInicio($rsSolicitacoes["horarioInicio"]);
             $vSolicitacao_Locacao->setHorarioFim($rsSolicitacoes["horarioFim"]);
-            
-            
-            
 
             $listSolicitacoes[$cont] = $vSolicitacao_Locacao;
             $cont++;

@@ -32,15 +32,15 @@ if (is_array($modelos) || is_object($modelos))
     <div>
     <div class="info-termo">
         <h1>Modelo:</h1>
-        <p><?php echo($modelo->getNomeModelo());?></p>
+        <p><?php echo utf8_encode($modelo->getNomeModelo());?></p>
     </div>
     <div class="opcoes-termo">
     <!-- icone de edição -->
-    <a href="#" onclick="selectRouter('modelo', 'buscar', <?php echo($modelo->getIdModelo());?>)">
+    <a href="#" onclick="selectRouter('modelo', 'buscar', <?php echo utf8_encode($modelo->getIdModelo());?>)">
          <img src="view/imagens/pencil.png" width="25" heigth="28"  alt="Editar" >
     </a>
     <!-- ícone de deletar -->
-    <a href="#" onclick="selectRouter('modelo', 'excluir', <?php echo($modelo->getIdModelo());?>)">
+    <a href="#" onclick="selectRouter('modelo', 'excluir', <?php echo utf8_encode($modelo->getIdModelo());?>)">
          <img src="view/imagens/trash.png" width="25" heigth="28" alt="Apagar" >
     </a>
     </div>

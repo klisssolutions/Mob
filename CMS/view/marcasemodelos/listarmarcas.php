@@ -33,16 +33,16 @@ if (is_array($marcas) || is_object($marcas))
     <div>
     <div class="info-termo">
         <h1>Marca:</h1>
-        <p><?php echo($marca->getNomeMarca());?></p>
+        <p><?php echo utf8_encode($marca->getNomeMarca());?></p>
     </div>
     <div class="opcoes-termo">
     
     <!-- icone de edição -->
-    <a href="#" onclick="selectRouter('marca', 'buscar', <?php echo($marca->getIdMarca());?>)">
+    <a href="#" onclick="selectRouter('marca', 'buscar', <?php echo utf8_encode($marca->getIdMarca());?>)">
          <img src="view/imagens/pencil.png" width="25" heigth="28">
     </a>
     <!-- ícone de deletar -->
-    <a href="#" onclick="selectRouter('marca', 'excluir', <?php echo($marca->getIdMarca());?>)">
+    <a href="#" onclick="selectRouter('marca', 'excluir', <?php echo utf8_encode($marca->getIdMarca());?>)">
          <img src="view/imagens/trash.png" width="25" heigth="28" alt="apagar">
     </a>
     </div>

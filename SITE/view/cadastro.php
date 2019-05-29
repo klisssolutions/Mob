@@ -68,7 +68,7 @@ require_once($_SESSION["importInclude"]);
             </div>
             <div class="aceite-termo">
             <label>Ao clicar em cadastrar declaro que aceito os <a href="termosdeuso/termosdeuso.php"><span class="link">termos de uso.</span></a></label>
-        <br><label>Já tem login?  <a href="<?php echo(LINK_SITE_LOGIN); ?>"><span class="link">Entrar</span></a></label>
+        <br><label>Já tem login?  <a href="<?php echo utf8_encode(LINK_SITE_LOGIN); ?>"><span class="link">Entrar</span></a></label>
             </div>
             <div class="aceite-termo">
                 <input type="submit" class="btn-cad" value="Cadastrar"/>

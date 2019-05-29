@@ -34,7 +34,7 @@
                 '".$parceiro->getAtivo()."');
             ";
 
-            //Abrindo conexão com o BD
+        //Abrindo conexão com o BD
         $PDO_conex = $this->conex->connectDataBase();
 
         //Executa no BD o script Insert e retorna verdadeiro/falso
@@ -43,6 +43,7 @@
         }else{
             $erro = true;
         }
+
         //Fecha a conexão com o BD
         $this->conex->closeDataBase();
         return $erro;
@@ -120,6 +121,8 @@
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listParceiros[] = new Parceiro();
+        $listParceiros = null;
         while($rsParceiros=$select->fetch(PDO::FETCH_ASSOC)){
             $listParceiros[] = new Parceiro();
             $listParceiros[$cont]->setIdParceiro($rsParceiros["idParceiro"]);

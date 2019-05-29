@@ -70,6 +70,7 @@ class pendenciaDAO{
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
         $listPendencias[] = new Pendencia();
         $listPendencias = null;
+        
         while($rsPendencias=$select->fetch(PDO::FETCH_ASSOC)){
             $pendencia = new Pendencia();
             $pendencia->setIdPendencia($rsPendencias["idPendencia"]);

@@ -40,16 +40,16 @@ public function insertRelacionamento($idEndereco){
 
     //Abrindo conexão com o BD
     $PDO_conex = $this->conex->connectDataBase();
-echo($sql);
+echo utf8_encode($sql);
     //Executa no BD o script Insert e retorna verdadeiro/falso
     if($PDO_conex->query($sql)){
         
         $erro = false;
-        echo('<script>alert("Endereço cadastrado com sucesso");</script>');
+        echo utf8_encode('<script>alert("Endereço cadastrado com sucesso");</script>');
     }else{
-        echo($sql);
+        echo utf8_encode($sql);
         $erro = true;
-        echo('<script>alert("Erro no cadastro");</script>');
+        echo utf8_encode('<script>alert("Erro no cadastro");</script>');
     }
     //Fecha a conexão com o BD
     $this->conex->closeDataBase();
@@ -65,7 +65,7 @@ public function selecionarUltimoInserido(){
         //executa o script de select no bd
         $select = $PDO_conex->query($sql);
         
-        echo($sql);
+        echo utf8_encode($sql);
 
         /* $select->fetch no formado pdo retorna os dados do BD
         também retorna com característica do PDO como o fetch
@@ -112,12 +112,12 @@ public function insert(Endereco $endereco){
             //Fecha a conexão com o BD
             $this->conex->closeDataBase();
             return $idEndereco;            
-            //echo($sql);
+            //echo utf8_encode($sql);
         }else{
             $erro = true;
             $this->conex->closeDataBase();
             return $erro;  
-            echo($sql);
+            echo utf8_encode($sql);
         }
     
 }
@@ -128,7 +128,7 @@ public function delete($id){
     
     //Abrindo conexão com o BD
     $PDO_conex = $this->conex->connectDataBase();
-    echo($sql);
+    echo utf8_encode($sql);
     //Executa no BD o script Insert e retorna verdadeiro/falso
     if($PDO_conex->query($sql)){
         $erro = false;
@@ -152,7 +152,7 @@ public function update(Endereco $endereco){
     
     //Abrindo conexão com o BD
     $PDO_conex = $this->conex->connectDataBase();
-    echo($sql);
+    echo utf8_encode($sql);
     //Executa no BD o script Insert e retorna verdadeiro/falso
     if($PDO_conex->query($sql)){
         $erro = false;
@@ -179,6 +179,8 @@ public function update(Endereco $endereco){
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listEndereco[] = new Endereco();
+        $listEndereco = null;
         while($rsEndereco=$select->fetch(PDO::FETCH_ASSOC)){
             $listEndereco[] = new Endereco();
             $listEndereco[$cont]->setIdEndereco($rsEndereco["idEndereco"]);
