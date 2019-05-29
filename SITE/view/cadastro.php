@@ -23,13 +23,10 @@ require_once($_SESSION["importInclude"]);
     <div class="content-cadastro">
         <div class="caixa-padrao">
         <div class="cadastro">
-        <form class="s" method="POST" action="cadastro.php" id="form">
+        <form class="s" method="POST" action="../router.php?controller=clientes&modo=inserir" id="form" enctype="multipart/form-data">
 
             <div class="img-cadastro">
-                
                 <img src="images/user.png" id="prev" width="150" height="150"  alt="Foto de perfil">
-
-                
             </div>
 
             <div class="txt-div-cadastro">
@@ -74,10 +71,8 @@ require_once($_SESSION["importInclude"]);
         <br><label>Já tem login?  <a href="<?php echo(LINK_SITE_LOGIN); ?>"><span class="link">Entrar</span></a></label>
             </div>
             <div class="aceite-termo">
-                <input type="submit" class="btn-cad" value="Cadastrar" onclick="<?php echo($router); ?>"/>
-                
+                <input type="submit" class="btn-cad" value="Cadastrar"/>
             </div>
-            
         </form>
 </div>
         </div>

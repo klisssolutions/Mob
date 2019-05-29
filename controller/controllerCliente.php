@@ -53,7 +53,6 @@ class controllerCliente{
                 $senha = $_POST["txtsenha"];
                 //Verificar Foto
                 $fotoPerfil = enviarImagem($_FILES['imgPerfil']);
-                
 
                 //Guardando os dados do post no objeto da classe
                 $cliente->setNome($nome);

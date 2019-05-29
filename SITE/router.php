@@ -81,6 +81,18 @@ if(isset($_GET["controller"])){
 
                     require_once(IMPORT_SITE_INDEX);
                     break;
+
+                    case "INSERIR":
+                    //Chamando o método de inserir um novo funcionario
+                    
+                    $controllerCliente->inserirCliente(1);
+
+                    //Encaminha para a pagina de usuario
+                    echo("<script>alert('Cliente cadastrado. Por favor faça seu Login');</script>");
+                    
+                    echo("<script>window.location.replace('" . LINK_SITE_LOGIN . "');</script>");
+                    
+                    break;
                 }
             break;
             switch ($modo){
@@ -92,7 +104,7 @@ if(isset($_GET["controller"])){
 
                     //Encaminha para a pagina de usuario
                     echo("<script>alert('Cliente cadastrado. Por favor faça seu Login');</script>");
-
+                    
                     require_once(IMPORT_SITE_LOGIN);
                     
                 break;
