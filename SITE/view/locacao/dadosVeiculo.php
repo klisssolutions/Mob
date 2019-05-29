@@ -69,20 +69,19 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
     <?php require_once(HEADER);?>
     <!-- CAIXA QUE SEGURA O CONTEÚDO EMBAIXO DO MENU -->
     <div class="content">
-        <div class="caixa-dados-veiculo">
-            
+        <div class="caixa-dados-veiculo">    
         <div class="caixa-padrao">
             <div class="dados-veiculo">
                 <div class="foto-dados-veiculo">
                         <img src="<?php echo utf8_encode('/Mobshare/arquivos/'.$foto_veiculo->getFotoVeiculo()) ?>" width="610" height="400" alt="veiculo">
                 </div>
                 <form method="GET">
-                <div class="foto-dados-veiculo">
+                <div class="usuario-dados-veiculo">
                     <h2>Marca: <?php echo utf8_encode($marca->getNomeMarca());?></h2>
                     <h1><?php echo utf8_encode($modelo->getNomeModelo());?></h1>
                     <h2>Ano: 2016</h2>
                     <h1>R$ <?php echo utf8_encode($veiculo->getValorHora()); ?>/H</h1>
-                    <h2>Acessórios:</h2>
+                    <h3><img src="../images/5estrelas.png" width="200" height="35" alt="veiculo"></h3>
                 </div>
                 <?php if(isset($_SESSION['idCliente']['idCliente'])):?>
                 <div class="box-locar">
@@ -96,27 +95,11 @@ $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculo->getIdVeicul
                 </p>
                 <input type="submit" value="Quero alugar este!" class="inpt-dados" name="alugar">
                 </div>
-</div>
+            </div>
                 <?php endif; ?>
                 
                 </form>
-                <div class="dados-usuario-veiculo">
-                    <div class="caixa-padrao">
-                    <div class="caixa-dados-usuario">
-                        <div class="foto-dados-usuario">
-                            <img src="../images/jon.jpg" width="200" height="200" alt="veiculo">
-                        </div>
-                        <div class="nome-dados-usuario">
-                            <h1>Jaqueline Alves</h1>
-                        </div>
-                        <div class="nome-dados-usuario">
-                            <h2>Entrou em junho de 2015</h2>
-                        </div>
-                        <div class="avaliacao-usuario">
-                             <img src="../images/5estrelas.png" width="250" height="45" alt="veiculo">
-                        </div>
-                    </div>
-</div>
+            
                 </div>
                 
             </div>
