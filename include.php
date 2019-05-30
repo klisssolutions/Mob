@@ -423,7 +423,7 @@ if(!isset($incluso)){
 
     //Mensagens de parceiros
     define("MSG_INSERIR_VEICULO_ERRO", "Não foi possível inserir o veiculo.");
-    define("MSG_INSERIR_VEICULO_SUCESSO", "Veiculo inserido.");
+    define("MSG_INSERIR_VEICULO_SUCESSO", "Insira uma imagem.");
     define("MSG_ATUALIZAR_VEICULO_ERRO", "Não foi possível atualizar o veiculo.");
     define("MSG_ATUALIZAR_VEICULO_SUCESSO", "Veiculo atualizado.");
     define("MSG_EXCLUIR_VEICULO_ERRO", "Não foi possível excluir o veiculo.");
