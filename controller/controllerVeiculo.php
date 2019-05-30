@@ -73,9 +73,11 @@ class controllerVeiculo{
         return $veiculoDAO->delete($id);
     }
 
-    public function atualizarNivel(){
+    public function atualizarVeiculo(){
         //Instancia do DAO
-        $nivelDAO = new nivelDAO();
+        $veiculoDAO = new veiculoDAO();
+
+        $id = $_GET["id"];
 
         //Verifica qual metodo esta sendo requisitado do formulario(POST ou GET)
         if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -136,11 +138,13 @@ class controllerVeiculo{
         //Instancia do DAO
         $veiculoDAO = new veiculoDAO();
 
-        
+        $veiculo = new Veiculo();
+
         //Pega o ID para realizar a busca
         $id = $_GET["id"];
 
-        $veiculo = new Veiculo();
+        var_dump($_GET["id"]);
+
         $veiculo = $veiculoDAO->selectById($id);
         return $veiculo;
     }
