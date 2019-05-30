@@ -107,7 +107,7 @@ class veiculoDAO{
     }
 
     //Atualiza um registro no banco de dados.
-    public function update(Nivel $nivel){
+    public function update(Veiculo $veiculo){
        $sql = UPDATE . TABELA_VEICULO . " 
         SET cor = '".$veiculo->getCor()."',
             altura = '".$veiculo->getAltura()."',
