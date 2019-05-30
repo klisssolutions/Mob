@@ -25,6 +25,24 @@ select:focus {
     outline: 0;
 }
 
+.caixa-padrao{
+    width: 1400px;
+    /*Para estender as caixas automaticamente*/
+    height: auto;
+    /* overflow: hidden; */
+    margin-right: auto;
+    margin-left: auto;  
+}
+
+.caixa-padrao-header{
+    width: 1500px;
+    /*Para estender as caixas automaticamente*/
+    height: auto;
+    /* overflow: hidden; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /********** CABEÇALHO ***********/
 header {
     width: 100%;
@@ -96,15 +114,17 @@ header {
     margin-top: 20px;
     font-family: Mont;
     color: #fff;
+    border-radius: 20px;
     font-size: 16px;
     background-color: #002171;
     align-content: center;
     text-align: center;
-    border-radius: 25px;
 }
 
 .botao-login:hover {
-    background-color: #ffd800;
+    background-color: #102840;
+    border: 1px solid #ecdd04;
+    color: #ecdd04;
 }
 
 .texto-cadastrar h1 {
@@ -118,16 +138,17 @@ header {
 
 /******** CAIXA QUE FICA ABAIXO DO CABEÇALHO SEGURANDO AS INFORMAÇÕES *******/
 .content {
-    width: 100%;
+    width: 1500px;
     min-height: 800px;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: black;
 }
 
-/*********** RODAPÉ *******/
 footer {
     width: 100%;
-    height: 200px;
+    height: 250px;
     float: left;
     background-color: #102840;
 }
@@ -188,11 +209,23 @@ footer {
 
 a:link {
     text-decoration: none;
+    color: #fff;
+}
+
+.link{
+    color: #ecdd04;
+}
+
+.link-veic{
+    color: #fff;
+}
+.link-veic:hover{
+    color: #000;
 }
 
 .menu-rodape-item a:hover {
     transition: 2s;
-    color: #ffd800;
+    color: #5e85e1;
 }
 
 .logotipo-rodape {
@@ -243,7 +276,7 @@ a:link {
     height: 75%;
     margin-left: 90px;
     font-family: Mont;
-    color: #ffd800;
+    color: #ffff00;
     margin-top: 0px;
     font-size: 18px;
     align-content: center;
@@ -274,9 +307,9 @@ a:link {
 
 .texto-direitos {
     width: 100%;
-    padding-top: 80px;
+    clear: both;
     height: 25px;
-    background-color: #102840;
+    padding-top: 10px;
 }
 
 .texto-direitos h1 {
@@ -284,31 +317,30 @@ a:link {
     font-family: Mont;
     font-size: 12px;
     color: #fff;
-    margin-left: -70px;
     font-weight: normal;
     text-align: center;
     align-content: center;
 }
-
 /********** FORMATAÇÃO PADRONIZADA FINAL ************/
 .box-painel-usuario {
-    height: 1200px;
+    height: 1150px;
     width: 100%;
     background-color: #cecece;
 }
 
 .menu-lateral-usuario {
-    width: 400px;
+    width: 30%;
     height: 100%;
     background-color: #102840;
     float: left;
 }
 
 .conteudo-usuario {
-    width: 1400px;
-    height: 100%;
-    /* background-color: #ba3135; */
+    width: 68%;
+    height: 1150px;
     float: left;
+    
+    overflow: auto;
     margin-left: 20px;
 }
 
@@ -328,6 +360,7 @@ a:link {
 
 .imagem-usuario img {
     border-radius: 85px;
+    margin-left: 40px;
 }
 
 .nome-usuario-menu {
@@ -387,15 +420,16 @@ a:link {
     margin-top: 40px;
     padding: 5px 5px 5px 5px;
     float: right;
-    margin-right: 20px;
+    margin-right: 40px;
     font-family: Mont;
     border-radius: 28px;
 }
 
 
 .nav-menu-usuario-button h3:hover {
-    background-color: #aca9a9;
-    color: black;
+    background-color: #102840;
+    color: #ffd800;
+    border: 1px solid #ffd800;
     cursor: pointer;
 }
 
@@ -481,12 +515,15 @@ a:link {
     margin-left: 40px;
     font-size: 20px;
 }
-
+.btn-usuario-visu{
+    border-radius: 30px;
+    margin-left: 240px;
+}
 .btn-usuario,
 .btn-usuario-visu,
 .btn-usuario-canc {
     height: 40px;
-    width: 100px;
+    width: 120px;
     border: none;
     background-color: #102840;
     margin-top: 20px;
@@ -494,24 +531,36 @@ a:link {
     font-weight: bold;
     font-family: Mont;
     font-size: 18px;
+    
+    border-radius: 30px;
 }
 
-.btn-usuario:hover,
-.btn-usuario-visu:hover,
-.btn-usuario-canc:hover {
+.btn-usuario-visu:hover{
     background-color: #ffd800;
-    color: #fff;
+    color: #000;
     cursor: pointer;
 }
 
+
+.btn-usuario:hover {
+    background-color: green;
+    color: #fff;cursor: pointer;
+
+}
 .btn-usuario-visu {
     /*background-color: green;*/
-    margin-left: 750px;
+    /* margin-left: 750px; */
 }
 
 .btn-usuario-canc {
-    margin-left: 290px;
+    margin-left: 170px;
 
+}
+
+.btn-usuario-canc:hover{
+    background-color: darkred;
+    color: #fff;
+    cursor: pointer;
 }
 
 /****************** PÁGINA: EDICÃO DO ENDEREÇO *********************/
@@ -545,7 +594,6 @@ a:link {
 .imagem {
     width: 128px;
     height: 128px;
-    margin-bottom: 50px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -553,12 +601,12 @@ a:link {
 }
 
 .gerenciar-dashboard {
-    margin-left: 350px;
-    margin-top: 250px;
+    margin-left: 50px;
+    margin-top: 350px;
 }
 
 .gerenciar-dash {
-    width: 200px;
+    width: 250px;
     height: 250px;
     float: left;
     margin-left: 150px;
@@ -566,9 +614,10 @@ a:link {
 }
 
 .gerenciar-dash:hover {
-    background-color: rgb(100, 100, 100);
+    background-color: #5e85e1;
     color: #eeeeee;
     transition: 1s;
+    border-radius: 150px;
 }
 
 .botoes-dash {
@@ -581,20 +630,23 @@ a:link {
 
 .btn-dash {
     width: 120px;
-    height: 30px;
+    height: 35px;
     margin-top: 10px;
     border: none;
-    background-color: #606e75;
+    background-color: #002171;
     padding: 5px 5px 5px 5px;
     font-family: Mont;
     color: #fff;
     font-weight: bold;
     margin-left: 50px;
+    border-radius: 25px;
 }
 
 .btn-dash:hover {
-    background-color: #cccccc;
-    color: #102840;
+    background-color: #cecece;
+    color: #002171;
+    border: 1px solid #002171;
+    cursor: pointer;
 }
 
 .listaDadosDash {

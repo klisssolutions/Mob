@@ -100,7 +100,7 @@ $clientes = $controllerCliente->buscarCliente();
                             <div class="titulo-dash">Aluguel</div>
                         </div>
                     </a>
-                    <a href="listaVeicVenda.php">
+                    <a href="ListaVeicVenda.php">
                         <div class="gerenciar-dash">
                             <div class="imagem">
                                 <img src="view/imagens/arrows.png" width="128" heigth="128">

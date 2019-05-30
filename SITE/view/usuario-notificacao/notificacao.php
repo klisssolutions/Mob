@@ -24,7 +24,8 @@ $clientes = $controllerCliente->buscarCliente();
 $controllerSolicitacao_Locacao = new controllerSolicitacao_Locacao();
 
 $solicitacao_locacoes = new Solicitacao_Locacao();
-
+$vSolicitacoes_Locacao[] = new Solicitacao_Locacao();
+$vSolicitacoes_Locacao = null;
 $vSolicitacoes_Locacao = $controllerSolicitacao_Locacao->listarSolicitacaoLocacaoPorLocador();
 
 //var_dump($vSolicitacoes_Locacao);

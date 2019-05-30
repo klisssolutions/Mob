@@ -490,7 +490,122 @@ break;
                     
                     break;    
             }
-           break; 
+           break;
+
+           case "SOLICITACAO":
+
+        //Import da controller de TERMOS
+        require_once(IMPORT_SOLICITACAO_LOCACAO_CONTROLLER);
+                
+        //Instancia da controller de TERMOS
+        $controllerSolicitacao_Locacao = new controllerSolicitacao_Locacao();
+
+        switch($modo){
+            case "ACEITAR":
+                //Chamando o método de inserir um novo TERMO
+                $id = $_GET['id'];
+                $controllerSolicitacao_Locacao->aceitarSolicitacao($id);
+
+                //Encaminha para a pagina de TERMOS
+                // echo utf8_encode("<script>marcas();</script>");
+                break;
+
+            case "RECUSAR":
+                $controllerSolicitacao_Locacao->recusarSolicitacao();
+
+                //Encaminha para a pagina de TERMOS
+                // echo utf8_encode("<script>marcas();</script>");
+                break;
+
+           
+        }
+        break;
+        case "FOTO_VEICULO":
+
+//Import da controller de TERMOS
+require_once(IMPORT_FOTO_VEICULO_CONTROLLER);
+        
+//Instancia da controller de TERMOS
+$controllerFoto_Veiculo = new controllerFoto_Veiculo();
+
+switch($modo){
+    case "INSERIR":
+
+        $_POST['veiculo'] = $_SESSION['idVeiculo'];
+        //Chamando o método de inserir um novo TERMO
+        $controllerFoto_Veiculo->inserirFoto_Veiculo();
+
+        //Encaminha para a pagina de TERMOS
+           
+        echo utf8_encode("<script>veiculo();</script>");
+        
+        break;
+
+    case "EXCLUIR":
+        $controllerMarca->excluirMarcas();
+
+        //Encaminha para a pagina de TERMOS
+        echo utf8_encode("<script>marcas();</script>");
+        break;
+
+    case "BUSCAR":
+        $marca = $controllerMarca->buscarMarcas();
+
+        require_once(IMPORT_CADASTRO_MARCAS);
+        break;
+
+    case "ATUALIZAR":
+        $controllerMarca->atualizarMarcas();
+
+        echo utf8_encode("<script>marcas();</script>");
+        break;
+}
+break;
+
+
+
+case "VEICULOS":
+
+ require_once(IMPORT_VEICULO_CONTROLLER);
+
+ $controllerVeiculo = new controllerVeiculo();
+
+ switch($modo){
+
+    case "INSERIR":
+    
+        $idVeiculo = $controllerVeiculo->inserirVeiculo();
+
+        echo utf8_encode($idVeiculo);
+
+        if($erro){
+            echo utf8_encode(ALERT_INSERIR_VEICULO_ERRO);
+        }else{
+            echo utf8_encode(ALERT_INSERIR_VEICULO_SUCESSO);
+
+            echo utf8_encode("<script>cadastrarImagemVeiculo(". $_POST["sltCategoria"] .", " . $idVeiculo . ");</script>");
+        }
+        
+
+
+     break;
+
+
+     case "ATUALIZAR":
+
+
+    
+     $idVeiculo = $controllerVeiculo->atualizarVeiculo();
+
+     echo utf8_encode($idVeiculo);
+     
+
+     echo utf8_encode("<script>veiculo();</script>");
+     break; 
+
+ }
+                    
+break;
         
             case "FALE_CONOSCO":
         

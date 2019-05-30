@@ -150,7 +150,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                         </a>
                 </div>
                 <div class="img-como-funciona">
-                    <img class="cm-segunda-imagem" src="<?php echo utf8_encode('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="600" height="590" alt="<?php echo utf8_encode($banners[$i]->getTitulo())?>">
+                    <img class="cm-segunda-imagem" src="<?php echo utf8_encode('/Mobshare/arquivos/'.$banners[$i]->getImagem())?>" width="650" height="590" alt="<?php echo utf8_encode($banners[$i]->getTitulo())?>">
                 </div>
             
             </div>

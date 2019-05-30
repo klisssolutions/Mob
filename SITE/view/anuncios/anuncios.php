@@ -96,6 +96,7 @@ if(isset($_GET["btnFiltro"])){
                             </select>
     
                         </div>
+                        <!--
                         <div class="filtros">
                             <h1>Cor:</h1>
                             <select class="select" name="cbCor">
@@ -135,6 +136,7 @@ if(isset($_GET["btnFiltro"])){
                                 <option value="5">5</option>
                             </select>
                         </div>
+                        -->
                         <!-- <div class="botao-filtrar">
                             Filtrar
                         </div> -->
