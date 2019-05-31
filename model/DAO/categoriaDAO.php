@@ -123,7 +123,7 @@ public function update(Modelo $modelo){
 
     //Seleciona um registro pelo ID.
     public function selectById($id){
-        $sql = SELECT. TABELA_MODELO. " where idModelo=".$id;
+        $sql = SELECT. TABELA_CATEGORIA. " where idCategoria_Veiculo=".$id;
 
         
 
@@ -137,17 +137,17 @@ public function update(Modelo $modelo){
         também retorna com característica do PDO como o fetch
         é necessário especificar o modelo de conversão.
         EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
-        $rsModelo=$select->fetch(PDO::FETCH_ASSOC);
-        $modelo = new Modelo();
-        $modelo->setIdModelo($rsModelo["idModelo"]);
-        $modelo->setIdMarca($rsModelo["idMarca"]);
-        $modelo->setNomeModelo($rsModelo["nomeModelo"]);
-
-       
+        $rsCategoria=$select->fetch(PDO::FETCH_ASSOC);
+        $categoria = new Categoria();
+        $categoria->setIdCategoria_Veiculo($rsCategoria["idCategoria_Veiculo"]);
+        $categoria->setIdTipo_Veiculo($rsCategoria["idTipo_Veiculo"]);
+        $categoria->setNomeCategoria($rsCategoria["nomeCategoria"]);
+        $categoria->setPorcentagemGanho($rsCategoria["porcentagemGanhoEmpresa"]);
+        
 
         $this->conex->closeDataBase();
 
-        return($modelo);
+        return($categoria);
     }
 }
 ?>
