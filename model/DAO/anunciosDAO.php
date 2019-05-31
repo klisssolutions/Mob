@@ -24,11 +24,11 @@ class anunciosDAO{
         $this->conex = new conexaoMySQL();
     }
 
-    public function filtrarAnuncios($marca, $modelo, $KM, $avaliacao, $tipoVeiculo){
+    public function filtrarAnuncios($marca, $modelo, $KM, $avaliacao, $tipoVeiculo, $uf, $cidade){
         $sql = "SELECT v.idVeiculo, mo.nomeModelo, ma.nomeMarca, ft.fotoVeiculo FROM veiculo as v
         join modelo as mo on v.idModelo = mo.idModelo join marca as ma on ma.idMarca = mo.idMarca join 
         foto_veiculo as ft on ft.idVeiculo = v.idVeiculo join categoria_veiculo as cv on cv.idCategoria_Veiculo = 
-        v.idCategoria_Veiculo join tipo_veiculo as tv on tv.idTipo_Veiculo = cv.idTipo_Veiculo ";
+        v.idCategoria_Veiculo join tipo_veiculo as tv on tv.idTipo_Veiculo = cv.idTipo_Veiculo join endereco as e on v.idEndereco = e.idEndereco ";
 
         if($avaliacao != "Selecione"){
             $sql = $sql . " join avaliacao_veiculo as av 
@@ -40,7 +40,13 @@ class anunciosDAO{
         
         $sql = $sql . " and ft.perfil = 'frontal' ";
         
+        if($uf != "Selecione"){
+            $sql = $sql . " and e.UF ='" . $uf."'" ;    
+        }
 
+        if($cidade != "Selecione"){
+            $sql = $sql . " and e.cidade ='" . $cidade."'" ;    
+        }
 
         if($tipoVeiculo != "0"){
             $sql = $sql . " and tv.idTipo_Veiculo =" . $tipoVeiculo ;    

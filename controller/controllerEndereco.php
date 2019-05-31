@@ -111,5 +111,20 @@ class controllerEndereco{
         $enderecoDAO = new enderecoDAO();
         return $enderecoDAO->selectAll();
     }
+
+
+    public function listaUF(){
+        //Instancia do DAO
+        $enderecoDAO = new enderecoDAO();
+        return $enderecoDAO->selecionarUF();
+    }
+
+
+    public function listaCidadePorUF(){
+        $UF = $_GET['cbUF'];
+        //Instancia do DAO
+        $enderecoDAO = new enderecoDAO();
+        return $enderecoDAO->selecionarCidadesPorUF($UF);
+    }
 }
 ?>

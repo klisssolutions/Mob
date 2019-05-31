@@ -40,7 +40,7 @@ public function insertRelacionamento($idEndereco){
 
     //Abrindo conexão com o BD
     $PDO_conex = $this->conex->connectDataBase();
-echo utf8_encode($sql);
+//echo utf8_encode($sql);
     //Executa no BD o script Insert e retorna verdadeiro/falso
     if($PDO_conex->query($sql)){
         
@@ -229,6 +229,64 @@ public function update(Endereco $endereco){
         $this->conex->closeDataBase();
 
         return($endereco);
+    }
+
+
+    public function selecionarUF(){
+        $sql = "select distinct UF from endereco";
+
+        //Abrindo conexão com o BD
+        $PDO_conex = $this->conex->connectDataBase();
+
+        //executa o script de select no bd
+        $select = $PDO_conex->query($sql);
+        $cont = 0;
+        
+        /* $select->fetch no formado pdo retorna os dados do BD
+        também retorna com característica do PDO como o fetch
+        é necessário especificar o modelo de conversão.
+        EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listUF = array();
+        
+        while($rsEndereco=$select->fetch(PDO::FETCH_ASSOC)){
+            
+
+            array_push($listUF, $rsEndereco['UF']);
+        }
+
+        $this->conex->closeDataBase();
+
+        return($listUF);
+
+    }
+
+
+    public function selecionarCidadesPorUF($UF){
+        $sql = "select distinct cidade from endereco where UF = '".$UF."';";
+
+        //Abrindo conexão com o BD
+        $PDO_conex = $this->conex->connectDataBase();
+
+        //executa o script de select no bd
+        $select = $PDO_conex->query($sql);
+        $cont = 0;
+        
+        /* $select->fetch no formado pdo retorna os dados do BD
+        também retorna com característica do PDO como o fetch
+        é necessário especificar o modelo de conversão.
+        EX: PDO::FETCH_ASSOC, PDO::FETCH_ARRAY etc. */
+        $listCidade = array();
+        
+        while($rsEndereco=$select->fetch(PDO::FETCH_ASSOC)){
+            
+
+            array_push($listCidade, $rsEndereco['cidade']);
+        }
+
+        $this->conex->closeDataBase();
+
+        return($listCidade);
+
     }
 }
 ?>
