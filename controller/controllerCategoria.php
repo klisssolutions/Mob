@@ -80,11 +80,11 @@ class controllerCategoria{
 
     public function buscarCategorias(){
         //ARRUMAR A BUSCA para a pagina inicial
-        $id = 1;
+        $id = $_GET["id"];
 
-        $modeloDAO = new modeloDAO();
+        $categoriaDAO = new categoriaDAO();
         
-        return $modeloDAO->selectById($id);
+        return $categoriaDAO->selectById($id);
     }
 
     public function buscarModelo($idModelo){
