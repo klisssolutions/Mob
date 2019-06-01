@@ -17,15 +17,15 @@ class conexaoMySQL{
     private $database;
 
     public function __construct(){
-        // $this ->server = "192.168.1.1";
-        // $this ->user = "mob";
-        // $this ->password = "kliss123";
-        // $this ->database = "dbmob";
+        $this ->server = "192.168.1.1";
+        $this ->user = "mob";
+        $this ->password = "kliss123";
+        $this ->database = "dbmob";
 
-        $this ->server = "localhost";
-        $this ->user = "root";
-        $this ->password = "bcd127";
-        $this ->database = "mydb";
+        // $this ->server = "localhost";
+        // $this ->user = "root";
+        // $this ->password = "bcd127";
+        // $this ->database = "mydb";
     }
 
     //Abre conexão com o BD

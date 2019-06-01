@@ -10,7 +10,6 @@
     $locacoes = $controllerV_detalhes_locacao->listarLocacoes();
 
 
-    //var_dump($locacoes);
 ?>
 
 

@@ -28,7 +28,6 @@ $vSolicitacoes_Locacao[] = new Solicitacao_Locacao();
 $vSolicitacoes_Locacao = null;
 $vSolicitacoes_Locacao = $controllerSolicitacao_Locacao->listarSolicitacaoLocacaoPorLocador();
 
-//var_dump($vSolicitacoes_Locacao);
 $aceitar = "router('SOLICITACAO', 'ACEITAR', '".$solicitacao_locacoes->getIdSolicitacao_Locacao()."')";
 
 $recusar = "router('SOLICITACAO', 'RECUSAR', '".$solicitacao_locacoes->getIdSolicitacao_Locacao()."')";
@@ -119,7 +118,7 @@ $recusar = "router('SOLICITACAO', 'RECUSAR', '".$solicitacao_locacoes->getIdSoli
                 <div class="titulo-lista">
                     <h1>Minhas Notificações:</h1>
                     <?php
-                    
+                    if(!is_null($vSolicitacoes_Locacao)):
                         foreach($vSolicitacoes_Locacao as $vsolicitacao_locacao){
 
                         $data = new DateTime($vsolicitacao_locacao->getHorarioInicio());
@@ -135,13 +134,17 @@ $recusar = "router('SOLICITACAO', 'RECUSAR', '".$solicitacao_locacoes->getIdSoli
                              no dia <?php echo utf8_encode($dataInicio);?> 
                              com fim no <?php echo utf8_encode($dataFim);?>.
                             </p>
-                            <input type="submit" value="aceitar" class="ipt-aceitar" onclick="router('SOLICITACAO', 'ACEITAR', <?php echo utf8_encode($vsolicitacao_locacao->getIdSolicitacao_Locacao());?>);">
-                           
-                            <input type="submit" value="recusar" class="ipt-recusar" onclick="router('SOLICITACAO', 'RECUSAR', <?php echo utf8_encode($vsolicitacao_locacao->getIdSolicitacao_Locacao());?>);">
+                            <a href="http://www.mob.com.br/Mobshare/SITE/router.php?controller=SOLICITACAO&modo=ACEITAR&id=<?php echo utf8_encode($vsolicitacao_locacao->getIdSolicitacao_Locacao());?>">
+                            <input type="button" value="aceitar" class="ipt-aceitar">
+                            </a>
+                            <a href="http://www.mob.com.br/Mobshare/SITE/router.php?controller=SOLICITACAO&modo=RECUSAR&id=<?php echo utf8_encode($vsolicitacao_locacao->getIdSolicitacao_Locacao());?>">
+                            <input type="button" value="recusar" class="ipt-recusar">
+                            </a>
                         </div>
                     </form>
                     <?php
                     }
+                endif;
                     ?>
                 </div>
             </div>

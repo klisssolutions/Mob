@@ -94,8 +94,8 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                     $avaliacaoVeiculo = new AvaliacaoVeiculo();
                     $avaliacao = new Avaliacao();
 
-
-                    $modelo = $controllerModelo->buscarModelos($veiculos[$i]->getIdModelo());
+                    $_GET["id"] = $veiculos[$i]->getIdModelo();
+                    $modelo = $controllerModelo->buscarModelos();
                     $_GET["id"] = $modelo->getIdMarca();
                     $marca = $controllerMarca->buscarMarcas();
                     $foto_veiculo = $controllerFoto_veiculo->listarFotoFrontal($veiculos[$i]->getIdVeiculo());
@@ -184,7 +184,6 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
 
     <!-- RODAPÉ-->
     <?php require_once(FOOTER);?>
-
 </body>
 
 </html>

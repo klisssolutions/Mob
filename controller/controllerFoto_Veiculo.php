@@ -33,9 +33,6 @@ class controllerFoto_Veiculo{
                 // $imagem = enviarImagem($_FILES ['foto'][0] = VALUE);
                 $imagens = $_FILES['foto']['name'];
 
-                
-                // var_dump($imagens);
-
                 $count = count($imagens);
 
 

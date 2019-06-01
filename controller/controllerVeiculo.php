@@ -143,8 +143,6 @@ class controllerVeiculo{
         //Pega o ID para realizar a busca
         $id = $_GET["id"];
 
-        var_dump($_GET["id"]);
-
         $veiculo = $veiculoDAO->selectById($id);
         return $veiculo;
     }

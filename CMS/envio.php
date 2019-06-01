@@ -43,7 +43,6 @@ try {
 
         $emails = $controllerCliente->listarEmails();
 
-//        var_dump($emails);
         $i = 0;
 
         while($i<count($emails)){

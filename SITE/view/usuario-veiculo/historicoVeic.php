@@ -17,8 +17,9 @@ $clientes = $controllerCliente->buscarCliente();
 
 $_GET["id"] = $_SESSION['idCliente']['idCliente'];
 
+$locacoes[] = new vhistorico_locacao();
+$locacoes = null;
 $locacoes = $controllerLocacao->listarHistoricoLocacaoPorLocador();
-
 $usuario = $controllerCliente->buscarCliente();
 
 ?>
@@ -105,6 +106,7 @@ $usuario = $controllerCliente->buscarCliente();
             <div class="conteudo-usuario">
                 <div class="titulo-lista">VEICULOS</div>
                 <?php
+                if(!is_null($locacoes)):
                 foreach($locacoes as $locacao):
                     $data = new DateTime($locacao->getHorarioInicio());
                     $dataInicio = date_format($data, "d/m/Y H:i");
@@ -182,6 +184,7 @@ $usuario = $controllerCliente->buscarCliente();
                  <?php 
                         endif;
                     endforeach;
+                endif;
                  ?>
             </div>
         </div>

@@ -134,8 +134,8 @@ if(!isset($incluso)){
     //Constantes com endereço da pasta para importar
     define("PASTA_RAIZ" , $_SERVER["DOCUMENT_ROOT"]);
     define("PASTA_PROJETO", "/Mobshare");
-    //define("PASTA_LINK", "http://www.mob.com.br");
-    define("PASTA_LINK", "http://localhost");
+    define("PASTA_LINK", "http://www.mob.com.br");
+    //define("PASTA_LINK", "http://localhost");
     define("RAIZ_IMPORT", PASTA_RAIZ . PASTA_PROJETO);
     define("RAIZ_LINK", PASTA_LINK . PASTA_PROJETO);
 
@@ -331,6 +331,9 @@ if(!isset($incluso)){
     
     //Import páginas de Duvidas Frequentes
     define("IMPORT_CADASTRO_DUVIDAS", RAIZ_IMPORT . "/CMS/view/duvidasFrequentes/duvidas.php");
+
+    //Import notificação
+    define("IMPORT_NOTIFICACAO", RAIZ_IMPORT . "/SITE/view/usuario-notificacao/notificacao.php");
 
     /*---------------------------------------------------------------*/
     /*--------------------------- ERROS -----------------------------*/
@@ -568,6 +571,5 @@ if(!isset($incluso)){
     define("LINK_DASHBOARD_OPCAO_VEICULO", RAIZ_LINK . "/SITE/view/usuario-veiculo/usuarioVeiculo.php");
     define("LINK_DASHBOARD_NOTIFICACAO", RAIZ_LINK . "/SITE/view/usuario-notificacao/notificacao.php");
     define("LINK_DASHBOARD_CUPONS", RAIZ_LINK . "/SITE/view/usuario-cupons/visualizarCupons.php");
-    
 }
 ?>

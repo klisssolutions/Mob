@@ -80,7 +80,7 @@ class controllerModelo{
 
     public function buscarModelos(){
         //ARRUMAR A BUSCA para a pagina inicial
-        $id = 1;
+        $id = $_GET["id"];
 
         $modeloDAO = new modeloDAO();
         

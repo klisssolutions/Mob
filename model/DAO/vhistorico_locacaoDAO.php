@@ -95,9 +95,6 @@ class vhistorico_locacaoDAO{
             $vhistorico_locacao->setDevolvido($rsSolicitacoes["devolvido"]);
             $vhistorico_locacao->setRecebido($rsSolicitacoes["recebido"]);
             $vhistorico_locacao->setValor($rsSolicitacoes["valor"]);
-            
-            
-            
 
             $listHistorico_locacoes[$cont] = $vhistorico_locacao;
             $cont++;

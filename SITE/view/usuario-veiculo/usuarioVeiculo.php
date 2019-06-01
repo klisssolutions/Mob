@@ -95,7 +95,7 @@ $clientes = $controllerCliente->buscarCliente();
                     <a href="ListaVeicAluguel.php">
                         <div class="gerenciar-dash">
                             <div class="imagem">
-                                <img src="view/imagens/teamwork.png" width="128" heigth="128">
+                                <img src="../images/carrogente.png" width="128" heigth="128">
                             </div>
                             <div class="titulo-dash">Aluguel</div>
                         </div>
@@ -103,7 +103,7 @@ $clientes = $controllerCliente->buscarCliente();
                     <a href="ListaVeicVenda.php">
                         <div class="gerenciar-dash">
                             <div class="imagem">
-                                <img src="view/imagens/arrows.png" width="128" heigth="128">
+                                <img src="../images/carrodinheiro.png" width="128" heigth="128">
                             </div>
                             <div class="titulo-dash">Vendas</div>
                         </div>

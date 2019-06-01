@@ -33,7 +33,6 @@ class veiculoDAO{
 
         //executa o script de select no bd
         $select = $PDO_conex->query($sql);
-        $idVeiculo;
 
         /* $select->fetch no formado pdo retorna os dados do BD
         também retorna com característica do PDO como o fetch
@@ -81,10 +80,7 @@ class veiculoDAO{
             $erro = true;
             $this->conex->closeDataBase();
             return $erro;  
-            echo utf8_encode($sql);
         }
-
-        
 
     }
 
@@ -136,8 +132,6 @@ class veiculoDAO{
         $this->conex->closeDataBase();
         return $erro;
     }
-
-   
 
     //Lista todos os registros do banco de dados.
     public function selectAll(){
