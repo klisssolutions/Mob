@@ -504,7 +504,6 @@ break;
                 //Chamando o método de inserir um novo TERMO
                 $id = $_GET['id'];
                 $controllerSolicitacao_Locacao->aceitarSolicitacao($id);
-                $solicitacao_Locacao
                 //Encaminha para a pagina de TERMOS
                 // echo utf8_encode("<script>marcas();</script>");
                 ?>
