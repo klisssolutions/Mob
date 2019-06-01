@@ -77,10 +77,13 @@ if($modo == "LISTA"){
         array_push($array_fotos,  $foto->getFotoVeiculo());        
     }
 
-    foreach($acessorios as $acessorio){
+    if(sizeof($acessorios)>0){
+        foreach($acessorios as $acessorio){
     
-        array_push($array_acessorios, $acessorio->getQuantidade()." ".$acessorio->getNomeAcessorio());        
-    }    
+            array_push($array_acessorios, $acessorio->getQuantidade()." ".$acessorio->getNomeAcessorio());        
+        } 
+    }
+       
 
 
 

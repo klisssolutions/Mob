@@ -141,7 +141,7 @@ class veiculoDAO{
 
     //Lista todos os registros do banco de dados.
     public function selectAll(){
-        $sql = SELECT.TABELA_VEICULO;
+        $sql = SELECT.TABELA_VEICULO ." order by rand()";
 
         //Abrindo conexão com o BD
         $PDO_conex = $this->conex->connectDataBase();
@@ -251,7 +251,7 @@ class veiculoDAO{
         return($veiculo);
     }
 
-    public function filtrarVeiculos($marca, $modelo, $KM, $avaliacao){
+    public function filtrarVeiculos($marca, $modelo){
         $sql = SELECT.TABELA_VEICULO;
 
         if($modelo != "0"){
@@ -263,16 +263,16 @@ class veiculoDAO{
             $sql = $sql . " and idModelo in(select idModelo from modelo where idMarca = ".$marca.")"  ;    
         }
 
-        if($KM != "padrao"){
-            if($KM = "500000"){
-                $sql = $sql . " and quilometragem > ".$KM  ;
-            }else if($KM = "0"){
-                $sql = $sql . " and quilometragem = ".$KM  ;   
-            }else{
-                $sql = $sql . " and quilometragem < ".$KM  ;
-            }
-            echo utf8_encode($KM);
-        }
+        // if($KM != "padrao"){
+        //     if($KM = "500000"){
+        //         $sql = $sql . " and quilometragem > ".$KM  ;
+        //     }else if($KM = "0"){
+        //         $sql = $sql . " and quilometragem = ".$KM  ;   
+        //     }else{
+        //         $sql = $sql . " and quilometragem < ".$KM  ;
+        //     }
+        //     echo utf8_encode($KM);
+        // }
 
         //Abrindo conexão com o BD
         $PDO_conex = $this->conex->connectDataBase();

@@ -70,7 +70,7 @@ class anunciosDAO{
             //echo utf8_encode($KM);
         }    
 
-        
+            
         
         
 

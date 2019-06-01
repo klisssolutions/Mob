@@ -152,11 +152,11 @@ class controllerVeiculo{
     public function filtrarVeiculos(){
         $marca = $_GET['cbMarca'];
         $modelo = $_GET['cbModelo'];
-        $KM = $_GET['cbKM'];
-        $avaliacao = $_GET['cbAvaliacao'];
+        // $KM = $_GET['cbKM'];
+        // $avaliacao = $_GET['cbAvaliacao'];
 
         $veiculoDAO = new veiculoDAO();
-        return($veiculoDAO->filtrarVeiculos($marca, $modelo, $KM, $avaliacao));
+        return($veiculoDAO->filtrarVeiculos($marca, $modelo));
     }
 }
 ?>

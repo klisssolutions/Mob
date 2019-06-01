@@ -135,7 +135,7 @@ if(!isset($incluso)){
     define("PASTA_RAIZ" , $_SERVER["DOCUMENT_ROOT"]);
     define("PASTA_PROJETO", "/Mobshare");
     //define("PASTA_LINK", "http://www.mob.com.br");
-    define("PASTA_LINK", "localhost://");
+    define("PASTA_LINK", "http://localhost");
     define("RAIZ_IMPORT", PASTA_RAIZ . PASTA_PROJETO);
     define("RAIZ_LINK", PASTA_LINK . PASTA_PROJETO);
 
