@@ -171,7 +171,7 @@ if(isset($_GET["btnFiltro"])){
                     ?>
                     <div class="box-veiculo-anuncio">
                         <div class="imagem-anuncio">
-                                <img src="<?php echo utf8_encode("/Mobshare/arquivos/".$foto_veiculo->getFotoVeiculo()) ?>" width="320" height="225" alt="veiculo">
+                                <img src="<?php echo utf8_encode("/Mobshare/arquivos/".$foto_veiculo->getFotoVeiculo()) ?>" alt="veiculo">
                                 
                         </div>
                          <div class="texto-modelo">

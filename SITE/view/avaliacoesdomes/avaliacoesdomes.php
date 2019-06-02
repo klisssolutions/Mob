@@ -92,7 +92,7 @@ $avaliacao = $controllerAvaliacao->listarAvaliacao();
                                 <h2>  <?php echo utf8_encode($avaliacaoVeiculo->getNomeModelo()) ?></h2>
                             </div>
                             <div class="texto-av">
-                              <h2>Marca: <?php echo utf8_encode($avaliacaoVeiculo->getNomeMarca()) ?> </h2>
+                              <h3>Marca: <?php echo utf8_encode($avaliacaoVeiculo->getNomeMarca()) ?> </h3>
                             </div>
                             <div class="texto-av">
                             <?php 

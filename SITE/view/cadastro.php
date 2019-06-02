@@ -76,8 +76,7 @@ require_once($_SESSION["importInclude"]);
         </form>
 </div>
         </div>
-        <div class="rodape-login">
-        </div>
+       
     </div>              
 </body>
 </html>

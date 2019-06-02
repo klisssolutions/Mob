@@ -70,12 +70,23 @@ header {
     float: left;
 }
 
+.ocultar{
+    display: none;
+}
+
 .menu-item {
     width: 90%;
     height: 100%;
     margin-left: 100px;
     margin-top: 45px;
+    list-style:none; 
+  
 }
+
+.menu-item ul{
+    position:relative; 
+    float:left; 
+    }
 
 .menu-item a {
     padding: 10px 8px 10px 8px;
@@ -757,6 +768,11 @@ a:link {
 
 
 
+.imagem-anuncio img {
+    height: 225px;
+    width: 320px;
+}
+
 .imagem-anuncio {
     height: 225px;
     width: 320px;
@@ -829,7 +845,7 @@ a:link {
 }
 
 .texto-como-funciona2 {
-    width: 50%;
+    width: 100%;
     height: 100%;
     /* background-color: violet; */
     float: left;
@@ -843,11 +859,11 @@ a:link {
     color: #002171;
 }
 
-.texto-como-funciona2 p {
+/* .texto-como-funciona2 p {
     width: 500px;
     font-family: Mont;
     font-size: 20px;
-}
+} */
 
 .image-como-funciona2 {
     width: 50%;
@@ -941,7 +957,7 @@ a:link {
 }
 
 .texto-como-funciona4 p, .texto-como-funciona2 p {
-    width: 95%;
+    
     font-family: Mont;
     font-size: 20px;
     text-align: center;
@@ -1881,26 +1897,72 @@ header {
 }
 
 .menu-header {
-    width: 50%;
-    height: 100%;
-    float: left;
+    width: 150px;
+    height: 100px;
+    background-image: url(../images/menu.png);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    list-style: none;
+    margin-top: -160px;
+    cursor: pointer;
+    margin-left: -140px;
+    z-index: 999;
 }
 
 .menu-item {
-    width: 90%;
+    /* width: 90%;
     height: 100%;
     margin-left: 100px;
     margin-top: 45px;
-    display: none;
+    display: none; */
+    list-style:none; 
+    /* border:1px solid #c0c0c0;  */
+    float:left; 
+}
+
+.menu-item ul{
+    font-family: century gothic;
+    width: 300px;
+    height: auto; /*se zerar esse abre pra baixo*/
+    min-height: 25px;
+    margin-left: -120px;
+    font-size: 20px;
+    width: 0px; /*para ter o opacity */
+    opacity: 0; /* para efeito de transição*/
+    transition: 1s;
+    overflow: hidden; /*ocultar o conteudo que tiver dentro*/
+    position: relative;
+    padding: 30px;
+    font-size: 0px;
+    z-index: 999;
+}
+
+.menu-item{
+    margin-left: 50px;
+    margin-top: 40px;
+}
+.menu-header:hover >.menu-item ul{
+    background-color:#102840;
+    color: black;
+    transition: 1s;
+    cursor: pointer;
+    opacity: 1; /* para efeito de transição*/
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+    overflow: visible;
+    
+    margin-bottom: -30px;
+    
 }
 
 .menu-item a {
     padding: 10px 8px 10px 8px;
     margin-right: 5px;
-    margin-top: 50px;
     font-family: Mont;
     color: #fff;
-    font-size: 18px;
+    font-size: 26px;
+    text-align: center;
 }
 
 .menu-item a:hover {
@@ -1920,8 +1982,8 @@ header {
     width: 150px;
     padding: 10px 10px 10px 10px;
     margin-right: auto;
-    margin-left: 270px;
-    margin-top: -160px;
+    margin-left: 550px;
+    margin-top: -100px;
     font-family: Mont;
     color: #fff;
     border-radius: 20px;
@@ -1994,11 +2056,13 @@ footer {
     font-size: 18px;
     align-content: center;
     text-align: left;
+    display: none;
 }
 
 .menu-rodape-item {
     height: 85%;
     width: 100%;
+    display: none;
 
 }
 
@@ -2043,6 +2107,7 @@ a:link {
     width: 34%;
     height: 100%;
     float: left;
+    margin-left: -250px;
 }
 
 .img-logo-rodape {
@@ -2055,17 +2120,21 @@ a:link {
 
 .img-logo-rodape img {
     margin-left: -100px;
+    width: 350px;
+    height: 160px;
 }
 
 .img-redes-sociais {
     width:300px;;
     height: 20%;
-    margin-left: -50px;
+    margin-left: -65px;
 }
 
 .img-redes-sociais img {
     margin-left: 10px;
     margin-top: 10px;
+    width: 40px;
+    height: 40px;
 }
 
 .contato-rodape {
@@ -2088,7 +2157,7 @@ a:link {
     font-family: Mont;
     color: #ffff00;
     margin-top: 0px;
-    font-size: 18px;
+    font-size: 26px;
     align-content: center;
     text-align: center;
 }
@@ -2100,14 +2169,14 @@ a:link {
 }
 
 .contato-rodape-item a {
-    width: 280px;
+    width: 450px;
     height: 20px;
     font-family: Mont;
     color: #fff;
     margin-bottom: 5px;
     margin-left: 40px;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 26px;
     align-content: center;
     text-align: left;
     padding: 5px 20px 0px 20px;
@@ -2119,13 +2188,14 @@ a:link {
     width: 100%;
     clear: both;
     height: 25px;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .texto-direitos h1 {
-    margin-top: 0;
+    margin-top: 10pz;
     font-family: Mont;
-    font-size: 9px;
+    font-size: 18px;
     margin-left: -50px;
     color: #fff;
     font-weight: normal;
@@ -2286,7 +2356,7 @@ a:link {
 
 .botao-veiculo {
     width: 158px;
-    height: 30px;
+    height: 40px;
     font-size: 16px;
     background-color: #102840;
     color: #fff;
@@ -2298,7 +2368,7 @@ a:link {
     margin-left: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .botao-veiculo a {
@@ -2407,7 +2477,7 @@ a:link {
     border-radius: 35px;
     font-size: 24px;
     margin-left: 170px;
-    background-color: #102840;
+    /* background-color: #102840; */
     padding: 10px 40px 10px 40px;
 }
 
@@ -2415,5 +2485,1117 @@ a:link {
     background-color: #ffd800;
     color: #000;
     cursor: pointer;
+}
+/********************** PAGINA DE ANUNCIOS ***************************/
+.box-anuncios {
+    width: 100%;
+    min-height: 180px;
+    height: auto;
+    /* background-color: rgb(32, 32, 219); */
+    margin-top: 110px;
+    float: left;
+    overflow: hidden;
+}
+
+.box-pesquisa-anucios {
+    height: 20px;
+    width: 100%;
+}
+
+
+.box-anuncios-veiculos {
+    min-height: 500px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.box-filtros {
+    width: 100%;
+    height: 100%;
+    /* background-color: gold; */
+    float: left;
+    margin-left: -40px;
+    margin-top: 20px;
+    
+}
+
+.filtros {
+    width: 50%;
+    height: 145px;
+    float: left;
+}
+
+.filtros h1 {
+    font-family: Mont;
+    margin-left: 90px;
+    margin-top: 20px;
+    
+    font-size: 45px;
+    /* border-bottom: 1px solid black; */
+    width: 200px;
+}
+
+.filtros select {
+    border: none;
+    width: 240px;
+    height: 45px;
+    font-family: Mont;
+    font-size: 32px;
+    margin-top: 15px;
+    margin-left: 90px;
+    border: 1px solid #000;
+    /* background-color: #e9f0f6; */
+}
+
+.box-veiculos {
+    width: 100%;
+    height: 100%;
+    /* background-color:magenta; */
+    float: left;
+    margin-bottom: 40px;
+}
+
+.botao-filtrar {
+    width: 190px;
+    height: 48px;
+    margin-left: 420px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Mont;
+    color: #fff;
+    font-size: 35px;
+    border: none;
+    background-color: #002171;
+    border-radius: 15px;
+    align-content: center;
+    text-align: center;
+}
+
+.botao-filtrar:hover{
+    cursor: pointer;
+    background-color: #ffd800;
+}
+
+.box-veiculo-anuncio {
+    width: 100%;
+    height: 650px;
+    margin-left: 50px;
+    margin-top: 25px;
+    background-color: #ecebeb;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.box-veiculo-anuncio .texto-modelo {
+    font-weight: bold;
+    font-size: 38px;
+    /* height: 65px; */
+}
+
+.texto-km{
+    font-size: 30px;
+}
+
+
+.imagem-anuncio {
+    height: 315px;
+    width: 320px;
+}
+
+.imagem-anuncio img{
+    width: 550px; 
+    height: 300px;
+}
+
+.botao-veja {
+    width: 210px;
+    height: 40px;
+    padding: 10px 20px 10px 10px;
+    margin-left: 160px;
+    font-family: Mont;
+    color: #fff;
+    font-size: 32px;
+    background-color: #002171;
+    border-radius: 25px;
+    align-content: center;
+    text-align: center;
+}
+
+.botao-veja:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+
+/******************* como funciona ***************************/
+.box-como-funciona-primeiro {
+    height: 700px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.texto-como-funciona-pag {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.texto-como-funciona-pag p {
+    margin-top: 250px;
+    width: 500px;
+    font-family: Mont;
+    font-size: 20px;
+    margin-left: 280px;
+}
+
+.texto-como-funciona-pag h1 {
+    width: 500px;
+    font-family: Mont;
+    font-size: 40px;
+    margin-left: 280px;
+    margin-top: 10px;
+    color: #002171;
+}
+
+.image-como-funciona-pag {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.image-como-funciona-pag img {
+    margin-top: 130px;
+}
+
+.box-como-funciona-segundo {
+    min-height: 450px;
+    height: auto;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.texto-como-funciona2 {
+    width: 100%;
+    height: 100%;
+    /* background-color: violet; */
+    float: left;
+    margin-bottom: 100px;
+}
+
+.texto-como-funciona2 h2 {
+    width: 100%;
+    font-family: Mont;
+    font-size: 40px;
+    margin-left: 0px;   
+    color: #002171;
+}
+
+.texto-como-funciona2 p {
+    width: 500px;
+    font-family: Mont;
+    font-size: 20px;
+}
+
+.image-como-funciona2 {
+    width: 50%;
+    height: 100%;
+    /* background-color: springgreen; */
+}
+
+.image-como-funciona2 img, .image-como-funciona4 img {
+    /* margin-top: 100px;
+    margin-left: 100px; */
+    display: block;
+    position:relative;
+    /* background-color: slategrey; */
+}
+
+.box-como-funciona-terceiro {
+    height: 500px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.avaliacoes {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.avaliacoes h1 {
+    width: 100px;
+    font-family: Mont;
+    font-size: 32px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 100px;
+
+}
+
+.avaliacoes p {
+    width: 500px;
+    font-family: Mont;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.avaliacoes h2 {
+    width: 200px;
+    font-family: Mont;
+    font-size: 20px;
+    color: #002171;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.box-como-funciona-quarto {
+    min-height: 400px;
+    height: 100%;
+    width: 100%;
+    /* background-color: yellow; */
+    padding-top: 120px;
+}
+
+.image-como-funciona4 {
+    width: 50%;
+    height: 100%;
+    margin-bottom: 100px
+    /* background-color: peru; */
+}
+
+
+.texto-como-funciona4 {
+    width: 100%;
+    height: 100%;
+    /* background-color: tomato; */
+   
+    
+}
+
+.texto-como-funciona4 h2, .texto-como-funciona2 h2{
+    font-family: Mont;
+    font-size: 48px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #102840;
+    margin-top: 150px; 
+
+}
+
+.texto-como-funciona4 p, .texto-como-funciona2 p {
+    width: 100%;
+    font-family: Mont;
+    font-size: 35px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/******************** TERMOS *************************/
+.box-termos {
+    width: 100%;
+    min-height: 1600px;
+    height: auto;
+    overflow: hidden;
+    
+}
+
+.image-termos {
+    height: 160px;
+    width: 100%;
+    padding-top: 110px;
+    background-image: url(../images/nicole-baster-1178413-unsplash.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    margin-top: 110px;
+}
+
+.texto-sob-imagem {
+    height: 70px;
+    width: 400px;
+    float: left;
+    margin-left: 100px;
+    background-color: #102840;
+}
+
+.texto-sob-imagem h2 {
+    font-family: Mont;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.texto-termos {
+    min-height: 80px;
+    width: 100%;
+    margin-bottom: 20px;
+    float: left;
+    height: auto;
+    margin-top: 10px;
+
+}
+
+.termo {
+    height: 10%;
+    width: 100%;
+    float: left;
+}
+
+.termo p {
+    width: 100%;
+    height: 90%;
+    font-family: Mont;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    font-size: 32px;
+}
+
+/************* PÁGINA - DUVIDAS FREQUENTES *****************/
+.box-duvidas {
+    height: 1700px;
+    width: 100%;
+    background-color: #fff;
+
+}
+
+.duvidas-titulo {
+    height: 40%;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.texto-duvidas {
+    min-height: 70px;
+    width: 100%;
+    float: left;
+    height: auto;
+    overflow: hidden;
+    margin-top: -120px;
+}
+
+.titulo-duvidas {
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.titulo-duvidas h2 {
+    font-family: Mont;
+    font-size: 45px;
+    color: #002171;
+    margin-top: 250px;
+    text-align: center;
+}
+
+.image-duvidas {
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.image-faq {
+    width: 100%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/problem.png);
+    background-repeat: no-repeat;
+    background-size: 310px;
+    margin-top: 100px;
+}
+
+.duvida {
+    min-height: 50px;
+    height: auto;
+    width: 100%;
+    background-color: #ebebeb;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.duvida h2 {
+    font-family: Mont;
+    margin-top: 10px;
+    font-size: 45px;
+
+}
+
+.duvida p {
+    font-family: Mont;
+    font-size: 35px;
+}
+
+/**************** PÁG: PARCEIROS ****************/
+
+.box-parceiros {
+    width: 100%;
+    height: 1700px;
+    float: left;
+    background-color: #fff;
+    padding-bottom: 100px;
+
+}
+
+.box-parceiro1 {
+    height: 200px;
+    width: 100%;
+    margin-top: 100px;
+
+}
+
+.box-parceiro {
+    height: 550px;
+    width: 100%;
+    margin-top: 20px;
+    
+    /* background-color: aqua; */
+}
+
+.box-texto-imagem {
+    height: 100px;
+    width: 100%;
+    float: left;
+    
+}
+
+.txt-parceiro {
+    width: 100%;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 120px;
+    display: none;
+}
+
+.txt-parceiro h2 {
+    font-family: Mont;
+    font-size: 45px;
+    display: none;
+    /* border-bottom: 2px solid #000; */
+}
+
+.txt-parceiro p {
+    font-family: Mont;
+    font-size:  25px;
+    margin-top: 5px;
+    display: none;
+}
+
+.img-parceiro {
+    width: 100%;
+    height: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    /* float: left; */
+}
+
+.img-parceiro img{
+    width: 600px;
+    height: 350px;
+}
+
+.slider-parceiros {
+    width: 700px;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 160px;
+    margin-bottom: 65px;
+}
+
+.slider-parceiros img {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.txt-slider-parceiros {
+    width: 100%;
+    height: 10%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.txt-slider-parceiros h2 {
+    font-family: Mont;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 42px;
+    text-transform: uppercase;
+
+}
+
+/******************** PAG: AVALIAÇÃO DO MÊS ***********************/
+.box-avaliacoes {
+    width: 100%;
+    height: 1100px;
+
+}
+
+.avaliacoes {
+    width: 100%;
+    height: 100%;
+    /* background-color: rebeccapurple; */
+    margin-top: 150px;
+    float: left;
+
+}
+
+.titulo-av {
+    height: 10%;
+    width: 100%;
+}
+
+.titulo-av h2 {
+    width: 80%;
+    /* margin-top: -50px; */
+    float: left;
+    text-align: right;
+    font-size: 38px;
+    margin-left: 180px;
+    color: #000;
+}
+
+.box-avaliacao {
+    height: 90%;
+    width: 100%;
+    background-color: #fff;
+
+}
+
+.caixa-avaliacao {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 100%;
+}
+
+.box-av {
+    width: 550px;
+    height: 660px;
+    background-color: #e9f0f6;
+    
+    margin-top: 50px;
+    box-shadow: 1px 4px 6px 4px rgba(0, 0, 0, 0.2);
+    float: left;
+}
+
+.img-avaliacao {
+    height: 50%;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.img-avaliacao img{
+    width: 550px;
+    height: 340px;
+}
+
+.titulo-veiculo,
+.texto-av,
+.botao-avaliacao {
+    height: 40px;
+    width: 100%;
+    /* margin-bottom: 20px; */
+}
+
+.titulo-veiculo h2 {
+    font-family: Mont;
+    width: 400px;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.texto-av img{
+    width: 350px;
+    height: 60px;
+}
+.texto-av h2 {
+    width: 400px;
+    font-family: Mont;
+    text-align: left;
+    margin-left: 10px;
+    color: #000;
+    font-size: 28px;
+    font-weight: none;
+}
+
+.texto-av h3 {
+    width: 400px;
+    font-family: Mont;
+    text-align: left;
+    margin-left: 10px;
+    color: #000;
+    font-size: 28px;
+    font-weight: none;
+    margin-top: 80px;
+    
+}
+
+.btn-av {
+    border: none;
+    width: 190px;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    background-color: #002171;
+    float: left;
+    color: #ecebeb;
+    font-size: 30px;
+    font-family: Mont;
+    border-radius: 25px;
+    text-transform: uppercase;
+    margin-left: 140px;
+    margin-top: 40px;
+}
+
+/****************************** dados veiculo ****************/
+/********************** PAGINA: DADOS DO VEICULO *******************************/
+.caixa-dados-veiculo{
+    /* background-color: aqua; */
+    width: 100%;
+    margin-top: 110px;
+    float: left;
+    height: 1180px;
+}
+
+.dados-veiculo{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: violet;    */
+}
+
+.foto-dados-veiculo{
+    height: 400px;
+    width: 50%;
+    margin-top: 50px;
+    /* margin-bottom: 110px; */
+    /* background-color: tomato; */
+}
+
+.usuario-dados-veiculo{
+    height: 300px;
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+    margin-bottom: 110px;
+    /* background-color: sandybrown; */
+}
+
+.usuario-dados-veiculo h2{
+    font-family: Mont;
+    font-size: 38px;
+    color: #6d6d6d;
+}
+
+.usuario-dados-veiculo h1{
+    font-family: Mont;
+    color: #102840;
+    font-size: 40px;
+}
+
+.box-locar{
+    width: 100%;
+    height: 100px;
+    /* background-color: yellow; */
+    float: left;
+    /* background-color: springgreen; */
+}
+
+.box-locar p{
+    font-family: Mont;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.inpt-data{
+    width: 300px;
+    height: 50px;
+    font-family: Mont;
+    font-size: 35px;
+    border-radius: 25px;
+    border: none;
+    border: 1px solid #6d6d6d;
+    text-align: center;
+}
+
+
+
+.inpt-hora{
+    width: 150px;
+    height: 50px;
+    font-family: Mont;
+    font-size: 35px;
+    border-radius: 25px;
+    border: none;
+    border: 1px solid #6d6d6d;
+    text-align: center;
+}
+
+.inpt-dados{
+    border: none;
+    height: 60px;
+    border-radius: 25px;
+    padding: 10px 20px 10px 20px;
+    background-color: #002171;
+    color: #ecebeb;
+    font-size: 30px;
+    font-family: Mont;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 130px;
+    margin-top: 40px;
+}
+
+
+.inpt-dados:hover{
+    cursor: pointer;
+    background-color: #ffff00;
+}
+
+/********************* PÁG: FALE CONOSCO*******************/
+.box-fale-conosco {
+    width: 100%;
+    height: 1200px;
+    background-color: #e9f0f6;
+    background-image: url(../images/david-hellmann-433025-unsplash.jpg);
+    background-size: 100%;
+
+}
+
+.fale-conosco {
+    width: 530px;
+    height: 65%;
+    background-color: #102840;
+    margin-right: auto;
+    margin-left: 200px;
+    float: left;
+    margin-top: 200px;
+}
+
+.titulo-fale-conosco,
+.nome-fale-conosco,
+.email-fale-conosco,
+.assunto-fale-conosco,
+.botao-fale-conosco {
+    height: 100px;
+    width: 100%;
+    margin-top: 5px;
+    float: left;
+
+}
+
+.titulo-fale-conosco h2 {
+    font-family: Mont;
+    font-size: 35px;
+    color: #ffd800;
+    text-transform: uppercase;
+    border-bottom: 1px solid #102840;
+    margin-top: 40px;
+    width: 300px;
+    align-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.nome-fale-conosco h2,
+.email-fale-conosco h2,
+.assunto-fale-conosco h2,
+.botao-fale-conosco h2,
+.mensagem-fale-conosco h2 {
+    font-family: Mont;
+    margin-left: 100px;
+    color: #ecebeb;
+    margin-top: 6px;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: -10px;
+}
+
+.txt-fale-conosco {
+    border: none;
+    margin-left: 100px;
+    width: 350px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+
+.mensagem-fale-conosco {
+    width: 100%;
+    height: 350px;
+    float: left;
+}
+
+.mensagem-fale-conosco textarea {
+    width: 350px;
+    font-size: 18px;
+    font-family: Mont;
+    border: none;
+    margin-left: 100px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.btn-fale-conosco {
+    border: none;
+    width: 150px;
+    height: 70px;
+    padding: 10px 10px 10px 10px;
+    background-color: #002171;
+    float: left;
+    color: #ecebeb;
+    margin-top: -100px;
+    margin-left: 350px;
+    font-size: 26px;
+    font-family: Mont;
+    text-transform: uppercase;
+}
+
+.btn-fale-conosco:hover {
+    background-color: #ffd800;
+    color: #000;
+    cursor: pointer;
+}
+
+/*********** PAGINA CADASTRO **************/
+.content-cadastro {
+    width: 100%;
+    height: 1690px;
+    background-image: url(../images/fundo2.jpg);
+    background-size: 100%;
+    float: left;
+}
+
+
+.cadastro {
+    width: 695px;
+    height: 1100px;
+    background-color: #102840;
+margin-left: -50px;
+    margin-top: 250px;
+    margin-bottom: 70px;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
+
+}
+
+.img-cadastro {
+    width: 30%;
+    height: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    /* background-scolor: yellowgreen; */
+}
+
+.img-cadastro img {
+    width: 250px;
+    height: 250px;
+    border-radius: 80px;
+    background-size: 100%;
+}
+
+.txt-cadastro {
+    width: 100%;
+    height: 110px;
+    float: left;
+}
+
+.aceite-termo {
+    width: 80%;
+    height: 50px;
+    clear: both;
+    font-family: Mont;
+    font-size: 24px;
+    text-align: center;
+    color: #fefefe;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.txt-div-cadastro {
+    width: 50%;
+    height: 120px;
+    float: left;
+}
+
+.txt-cadastro h1,
+.txt-div-cadastro h1 {
+    font-family: Mont;
+    font-size: 28px;
+    color: #ecebeb;
+    margin-left: 30px;
+}
+
+.inpt-foto{
+    margin-left: 130px;
+    font-family: Mont;
+    font-size: 18px;
+    margin-top: 90px;
+    color: #ecebeb;
+}
+.input-cadastro {
+    border: none;
+    margin-top: 20px;
+    width: 520px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+.ipt-cad {
+    border: none;
+    margin-top: 10px;
+    width: 620px;
+    height: 55px;
+    margin-left: 30px;
+    font-family: Mont;
+    font-size: 28px;
+}
+
+.ipt-cads {
+    border: none;
+    margin-top: 10px;
+    width: 260px;
+    height: 55px;
+    font-family: Mont;
+    font-size: 28px;
+    margin-left: 30px;
+}
+
+.btn-cad {
+    border: none;
+    background-color: #fff;
+    color: #000;
+    width: 180px;
+    height: 50px;
+    margin-top: 90px;
+    font-family: Mont;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.btn-cad:hover{
+    background-color: #ffd800;
+    color: #000000;
+    cursor: pointer;
+}
+
+/******** PAG: LOGIN *************/
+.content-login {
+    width: 100%;
+    height: 1690px;
+    background-image: url(../images/fundo2.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
+    float: left;
+}
+
+.login {
+    width: 680px;
+    height: 770px;
+    background-color: #102840;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
+    margin-top: 360px;
+
+}
+
+.img-login {
+    width: 30%;
+    height: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    
+    margin-bottom: 10px;
+}
+
+.img-login img {
+    margin-left: -100px;
+    margin-top: 15px;
+    width: 420px;
+    height: 210px;
+}
+
+.txt-login {
+    width: 90%;
+    height: 20%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.txt-login h1 {
+    font-family: Mont;
+    font-size: 32px;
+    margin-top: 20px;
+    color: #ecebeb;
+    margin-bottom: 20px;
+}
+
+.input-login {
+    border: none;
+    margin-top: 10px;
+    width: 570px;
+    height: 70px;
+    border-radius: 35px;
+    font-size: 32px;
+    font-family: Mont;
+}
+
+
+.btn-login {
+    width: 90%;
+    height: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.btn-login-form {
+    border: none;
+    width: 250px;
+    height: 70px;
+    padding: 10px 20px 10px 20px;
+    background-color: #002171;
+    margin-left: 160px;
+    color: #fff;
+    border-radius: 35px;
+    font-size: 24px;
+    font-family: Mont;
+    text-transform: uppercase;
+    margin-top: 10px;
+
+}
+
+.btn-login-form:hover{
+    background-color: #102840;
+    border: 1px solid #ffd800;
+    cursor: pointer;
+    color: #ffd800;
+}
+.btn-login p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: Mont;
+    color: #e9f0f6;
 }
 }

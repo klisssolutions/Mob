@@ -11,9 +11,14 @@
     <!-- menu de navegação do cabeçalho -->
     <div class="menu-header">
         <nav class="menu-item">
-            <a href="<?php echo utf8_encode(LINK_SITE_ANUNCIO); ?>">Anuncios</a>
-            <a href="<?php echo utf8_encode(LINK_SITE_FUNCIONA); ?>">Como funciona</a>
-            <a href="<?php echo utf8_encode(LINK_SITE_MES); ?>">Melhores do Mês</a>
+        <li>
+            <ul><a href="<?php echo utf8_encode(LINK_SITE_ANUNCIO); ?>">Anuncios</a></ul>
+            <ul><a href="<?php echo utf8_encode(LINK_SITE_FUNCIONA); ?>">Como funciona</a></ul>
+            <ul ><a href="<?php echo utf8_encode(LINK_SITE_MES); ?>">Melhores do Mês</a></ul>
+            <ul class="ocultar"><a href="<?php echo utf8_encode(LINK_SITE_TERMO); ?>">Termos de Uso</a></ul>
+            <ul class="ocultar"><a href="<?php echo utf8_encode(LINK_SITE_DUVIDA); ?>">Duvidas</a></ul>
+            <ul class="ocultar"><a href="<?php echo utf8_encode(LINK_SITE_PARCEIRO); ?>">Parceiros</a></ul>
+        </li>
         </nav>
     </div>
     <!-- caixa onde ficará o botão de login-->
