@@ -1836,9 +1836,8 @@ a:link {
     background-color: #ffff00;
 }
 }/* ###### CSS PARA VERSÃo MOBILE ######## */
-@media screen and (max-device-width:680px)
+@media screen and (min-device-width:1px) and (max-device-width:600px)
 {
-
     
 .caixa-padrao{
     width: 600px;
@@ -1862,20 +1861,19 @@ header {
 
  
 .logotipo {
-    background-color: violet;
+    /* background-color: violet; */
     width: 30%;
     height: 100%;
 }
 
 .img-logotipo img{
-    width: 250px;
-    height: 80px;
+    width: 500px;
+    height: 200px;
 }
-/*
+
 .img-logotipo {
     margin-top: -15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 50px;
     width: 90%;
     height: 100%;
     z-index: 999;
@@ -1893,6 +1891,7 @@ header {
     height: 100%;
     margin-left: 100px;
     margin-top: 45px;
+    display: none;
 }
 
 .menu-item a {
@@ -1914,20 +1913,19 @@ header {
 .box-login {
     width: 20%;
     height: 100%;
-
     float: left;
 }
 
 .botao-login {
-    width: 80px;
+    width: 150px;
     padding: 10px 10px 10px 10px;
     margin-right: auto;
-    margin-left: auto;
-    margin-top: 20px;
+    margin-left: 270px;
+    margin-top: -160px;
     font-family: Mont;
     color: #fff;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 28px;
     background-color: #002171;
     align-content: center;
     text-align: center;
@@ -1945,9 +1943,10 @@ header {
     align-content: center;
     text-align: center;
     margin-top: 5px;
+    display: none;
 }
 
-*/
+
 
 /******** CAIXA QUE FICA ABAIXO DO CABEÇALHO SEGURANDO AS INFORMAÇÕES *******/
 .content {
@@ -1961,16 +1960,15 @@ header {
 /*********** RODAPÉ *******/
 footer {
     width: 100%;
-    height: 250px;
+    height:250px;
     float: left;
-    background-color: #102840;
 }
 
 .rodape {
     width: 100%;
     height: 100%;
 
-    background-color: #102840;
+    background-color:#102840;
 }
 
 .menu-rodape {
@@ -1989,10 +1987,10 @@ footer {
 .titulo-menu-rodape h1 {
     width: 100px;
     height: 75%;
-    margin-left: 120px;
     font-family: Mont;
     color: #ffd800;
     margin-top: 0px;
+    margin-left: -140px;
     font-size: 18px;
     align-content: center;
     text-align: left;
@@ -2009,7 +2007,7 @@ footer {
     height: 20px;
     font-family: Mont;
     color: #fff;
-    margin-left: 100px;
+    margin-left: -160px;
     margin-top: 10px;
     font-size: 16px;
     align-content: center;
@@ -2056,14 +2054,13 @@ a:link {
 }
 
 .img-logo-rodape img {
-    margin-left: 100px;
+    margin-left: -100px;
 }
 
 .img-redes-sociais {
-    width: 50%;
+    width:300px;;
     height: 20%;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: -50px;
 }
 
 .img-redes-sociais img {
@@ -2087,7 +2084,7 @@ a:link {
 .contato-menu-rodape h1 {
     width: 100px;
     height: 75%;
-    margin-left: 90px;
+    margin-left: 40px;
     font-family: Mont;
     color: #ffff00;
     margin-top: 0px;
@@ -2108,7 +2105,7 @@ a:link {
     font-family: Mont;
     color: #fff;
     margin-bottom: 5px;
-    margin-left: 80px;
+    margin-left: 40px;
     margin-top: 10px;
     font-size: 16px;
     align-content: center;
@@ -2128,7 +2125,8 @@ a:link {
 .texto-direitos h1 {
     margin-top: 0;
     font-family: Mont;
-    font-size: 12px;
+    font-size: 9px;
+    margin-left: -50px;
     color: #fff;
     font-weight: normal;
     text-align: center;
@@ -2146,16 +2144,16 @@ a:link {
 }
 
 .caixa-inf{
-    width: 780px;
-    height: 200px;
+    width: 600px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 310px;
+    padding-top: 280px;
 
     
 }
 .cor-div{
-    height: 100px;
+    height: 200px;
     /* padding-top: 50px; */
     background-color: rgba(7, 7, 7, 0.2);
 }
@@ -2166,6 +2164,7 @@ a:link {
     color: #ffff00;
     text-align: center;
     padding-top: 10px;
+    font-size: 40px;
     /* margin-top: 75px; */
 }
 
@@ -2173,6 +2172,7 @@ a:link {
     font-family: Mont;
     text-align: center;
     color: #fff;
+    font-size: 26px;
 }
 
 .caixa-pesquisa-home {
@@ -2196,7 +2196,6 @@ a:link {
     width: 100%;
     min-height: 900px;
     height: auto;
-    background-color: #fff;
 }
 
 .caixa-itens-home {
@@ -2206,7 +2205,7 @@ a:link {
 }
 
 .menu-veiculos {
-    width: 30%;
+    width: 100%;
     height: 100%;
     /* margin-left: 620px; */
     margin-top: 42px;
@@ -2222,7 +2221,7 @@ a:link {
     margin-top: 40px;
     font-family: Mont;
     color: #102840;
-    font-size: 28px;
+    font-size: 40px;
     /* background-color: #002171; */
     align-content: center;
     text-align: center;
@@ -2234,7 +2233,7 @@ a:link {
 
 
 .caixa-veiculos {
-    width: 1300px;
+    width: 100%;
     min-height: 600px;
     height: auto;
     margin-left: auto;
@@ -2243,8 +2242,8 @@ a:link {
 }
 
 .box-veiculo {
-    width: 320px;
-    min-height: 390px;
+    width: 550px;
+    min-height: 690px;
     height: auto;
     /*box-shadow: 1px 4px 6px 4px rgba(0, 0, 0, 0.2); */
     float: left;
@@ -2256,9 +2255,14 @@ a:link {
     box-shadow: 1px 4px 6px 4px rgba(0, 0, 0, 0.1);
 }
 
-.img-veiculo {
-    height: 225px;
-    width: 320px;
+.img-veiculo{
+    height: 375px;
+    width: 550px;
+}
+
+.img-veiculo img{
+    height: 375px;
+    width: 550px;
 }
 
 .texto-modelo,
@@ -2266,7 +2270,7 @@ a:link {
 .texto-regiao,
 .texto-avaliacao {
     font-family: Mont;
-    font-size: 16px;
+    font-size: 30px;
     margin-top: 16px;
     align-content: center;
     text-align: left;
@@ -2281,8 +2285,8 @@ a:link {
 }
 
 .botao-veiculo {
-    width: 78px;
-    height: 20px;
+    width: 158px;
+    height: 30px;
     font-size: 16px;
     background-color: #102840;
     color: #fff;
@@ -2290,8 +2294,8 @@ a:link {
     text-align: center;
     padding: 8px 40px 8px 45px;
     font-family: Mont;
-    font-size: 16px;
-    margin-left: 90px;
+    font-size: 30px;
+    margin-left: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 15px;
@@ -2321,7 +2325,6 @@ a:link {
 .img-como-funciona {
     width: 50%;
     height: 100%;
-    float: left;
     /* background-color: rosybrown; */
 }
 
@@ -2338,7 +2341,7 @@ a:link {
 }   
 
 .texto-como-funciona {
-    width: 50%;
+    width: 100%;
     margin-top: 120px;
     height: 50%;
     float: left;
@@ -2351,6 +2354,7 @@ a:link {
     font-family: Mont;
     color: #102840;
     text-align: center;
+    font-size: 50px;
    
 }
 
@@ -2358,9 +2362,10 @@ a:link {
     font-family: Mont;
     text-align: center;
     color: #000;
-    width: 80%;
+    width: 100%;
     margin-top: 10px;
     margin-left: auto;
+    font-size: 28px;
     margin-right: auto;
     word-break: break-all;
 }
@@ -2384,7 +2389,12 @@ a:link {
     margin-left: auto;
     margin-right: auto;
 
+}
 
+.cm-segunda-imagem img{
+    
+    width: 800px;
+    height: 600px;
 }
 
 .texto-como-funciona h2 {
@@ -2395,10 +2405,10 @@ a:link {
     color: #fff;
     line-height: 30px;
     border-radius: 35px;
-    font-size: 16px;
-    margin-left: 250px;
+    font-size: 24px;
+    margin-left: 170px;
     background-color: #102840;
-    padding: 5px 40px 0px 40px;
+    padding: 10px 40px 10px 40px;
 }
 
 .texto-como-funciona h2:hover {
