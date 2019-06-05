@@ -158,8 +158,20 @@ class controllerCliente{
         //Instancia do DAO
         $clienteDAO = new clienteDAO();
 
-        //Pega o ID para realizar a busca
+        //Pega o ID para realizar a busca - Logo tu MANU
         $id = $_SESSION['idCliente']['idCliente'];
+
+        $cliente = new Cliente();
+        $cliente = $clienteDAO->selectById($id);
+        return $cliente;
+    }
+
+    public function buscarClienteDono(){
+        //Instancia do DAO
+        $clienteDAO = new clienteDAO();
+
+        //Pega o ID para realizar a busca
+        $id = $_GET["id"];
 
         $cliente = new Cliente();
         $cliente = $clienteDAO->selectById($id);

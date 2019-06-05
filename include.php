@@ -3,8 +3,8 @@
     Projeto: MobShare
     Autor: Igor
     Data Criação: 23/03/2019
-    Data Modificação: 24/04/2019
-    Conteudo Modificação: Junção com as constantes criadas pelos outros
+    Data Modificação: 04/06/2019
+    Conteudo Modificação: Include CSS
     Autor da Modificação: Igor
     Objetivo: Arquivo com constantes para usar em outras classes
 */
@@ -67,6 +67,7 @@ if(!isset($incluso)){
     /*----------------------------------------------------------------------*/
     /*--------------------------- BANCO DE DADOS ---------------------------*/
     /*----------------------------------------------------------------------*/
+
     //Constantes de Banco de dados
     define("SELECT","SELECT * FROM ");
     define("INSERT","INSERT INTO ");
@@ -574,6 +575,5 @@ if(!isset($incluso)){
     define("LINK_DASHBOARD_OPCAO_VEICULO", RAIZ_LINK . "/SITE/view/usuario-veiculo/usuarioVeiculo.php");
     define("LINK_DASHBOARD_NOTIFICACAO", RAIZ_LINK . "/SITE/view/usuario-notificacao/notificacao.php");
     define("LINK_DASHBOARD_CUPONS", RAIZ_LINK . "/SITE/view/usuario-cupons/visualizarCupons.php");
-
 }
 ?>

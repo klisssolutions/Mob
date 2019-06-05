@@ -114,7 +114,7 @@ $usuario = $controllerCliente->buscarCliente();
                     $dataFim = date_format($data, "d/m/Y H:i");
                     if($locacao->getIdCliente() == $usuario->getIdCliente()):
                         $_GET["id"] = $locacao->getIdDono();
-                        $locador = $controllerCliente->buscarCliente();
+                        $locador = $controllerCliente->buscarClienteDono();
             ?>
 
                 <div class="box-veiculo">

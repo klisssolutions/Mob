@@ -7,8 +7,6 @@ require_once($_SESSION["importInclude"]);
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

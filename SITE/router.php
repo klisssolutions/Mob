@@ -112,13 +112,9 @@ if(isset($_GET["controller"])){
             switch ($modo){
                 case "BUSCAR":
                     //Chamando o método de inserir um novo funcionario
-                    
-                    
                     $user = $controllerCliente->buscarCliente();
 
                     //Encaminha para a pagina de usuario
-                    
-
                     require_once(IMPORT_SITE_USUARIO);
                     
                 break;
@@ -126,13 +122,11 @@ if(isset($_GET["controller"])){
             switch ($modo){
                 case "ATUALIZAR":
                     //Chamando o método de inserir um novo funcionario
-                    
                     $controllerCliente->atualizarCliente();
 
                     echo utf8_encode("<script>verPerfil()</script>");
 
                     //Encaminha para a pagina de usuario
-                    
                     require_once(IMPORT_SITE_USUARIO);
                     
                 break;
@@ -191,7 +185,6 @@ if(isset($_GET["controller"])){
                 $controllerEndereco->inserirEndereco();
 
                 //Encaminha para a pagina de funcionario
-                
                 echo utf8_encode("<script>cadastrarEndereco();</script>");
 
             break;
@@ -206,14 +199,11 @@ if(isset($_GET["controller"])){
 
             case "BUSCAR":
                 $endereco = $controllerEndereco->buscarEndereco();
-
                 require_once(IMPORT_CADASTRO_ENDERECO);
-
             break;
 
             case "ATUALIZAR":
                 $controllerEndereco->atualizarEndereco();
-
                 echo utf8_encode("<script>cadastrarEndereco();</script>");
             break;
         }       
@@ -340,7 +330,6 @@ switch($modo){
 break;
 
 
-
 case "VEICULOS":
 
  require_once(IMPORT_VEICULO_CONTROLLER);
@@ -364,29 +353,21 @@ case "VEICULOS":
         }
         
 
-
      break;
 
 
      case "ATUALIZAR":
-
-
     
      $idVeiculo = $controllerVeiculo->atualizarVeiculo();
 
      echo utf8_encode($idVeiculo);
      
-
      echo utf8_encode("<script>veiculo();</script>");
      break; 
 
  }
                     
 break;
-
-
-
-
 
      case "BANNER":
      
@@ -395,7 +376,6 @@ break;
 
          $controllerBanner= new controllerBanner();
 
-         
          switch($modo){
 
              case "INSERIR":
@@ -421,7 +401,6 @@ break;
              break;   
 
              case "ATUALIZAR":
-
             
                  $controllerBanner->atualizar();
                  
@@ -598,7 +577,6 @@ switch($modo){
         $controllerFoto_Veiculo->inserirFoto_Veiculo();
 
         //Encaminha para a pagina de TERMOS
-           
         echo utf8_encode("<script>veiculo();</script>");
         
         break;
