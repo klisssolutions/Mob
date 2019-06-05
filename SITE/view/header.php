@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="<?php echo utf8_encode(LINK_CSS); ?>">
 <header>
 <div class="caixa-padrao">
     <!-- onde fica o login-->

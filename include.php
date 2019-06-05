@@ -134,8 +134,8 @@ if(!isset($incluso)){
     //Constantes com endereço da pasta para importar
     define("PASTA_RAIZ" , $_SERVER["DOCUMENT_ROOT"]);
     define("PASTA_PROJETO", "/Mobshare");
-    //define("PASTA_LINK", "http://www.mob.com.br");
-    define("PASTA_LINK", "http://localhost");
+    define("PASTA_LINK", "http://www.mob.com.br");
+    //define("PASTA_LINK", "http://localhost");
     define("RAIZ_IMPORT", PASTA_RAIZ . PASTA_PROJETO);
     define("RAIZ_LINK", PASTA_LINK . PASTA_PROJETO);
 
@@ -546,6 +546,9 @@ if(!isset($incluso)){
     define("LINK_SITE_HISTORICO", RAIZ_LINK . "/SITE/view/usuario-veiculo/historicoVeic.php");
     define("LINK_SITE_CADASTRO", RAIZ_LINK . "/SITE/view/cadastro.php");
 
+    //Constantes com os links do CSS
+    define("LINK_CSS", RAIZ_LINK . "/SITE/view/css/style.css");
+
     //Constantes com os links das imagens
     define("LINK_IMAGEM_LOGO", RAIZ_LINK . "/SITE/view/images/logo.png");
     define("LINK_IMAGEM_FACEBOOK", RAIZ_LINK . "/SITE/view/images/social-facebook.png");
@@ -571,5 +574,6 @@ if(!isset($incluso)){
     define("LINK_DASHBOARD_OPCAO_VEICULO", RAIZ_LINK . "/SITE/view/usuario-veiculo/usuarioVeiculo.php");
     define("LINK_DASHBOARD_NOTIFICACAO", RAIZ_LINK . "/SITE/view/usuario-notificacao/notificacao.php");
     define("LINK_DASHBOARD_CUPONS", RAIZ_LINK . "/SITE/view/usuario-cupons/visualizarCupons.php");
+
 }
 ?>
